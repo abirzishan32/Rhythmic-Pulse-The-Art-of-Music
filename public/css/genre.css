@@ -1,0 +1,206 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #252c37;
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	-webkit-font-smoothing: antialiased;
+
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    margin: 0 auto;
+    
+}
+
+p{
+	margin:0;
+	padding:0;
+	font-size: 14px;
+	line-height: 24px;
+}
+
+a {
+    padding: 5px;
+    text-decoration: none;
+    color: #000000;
+}
+
+div#header {
+    
+    width: auto;
+    background-color: #F3F2ED;
+}
+
+div#header h1 {
+    height: 80px;
+    line-height: 80px;
+    margin: 0;
+    padding-left: 10px;
+}
+
+.btn{
+    font-size: 16px;
+    margin-left: 10px;
+
+    cursor: pointer;
+
+}
+
+
+.video {
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+div#container {
+    text-align: left;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+div#content{
+    width: auto;
+    background: #F6F0E0;
+    padding-top: 10px;
+    margin-top: 10px;
+    border: 1px solid #CCC8B3;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px #888888;
+}
+
+
+
+div#content p {
+    line-height: 1.4;
+    padding: 10px;
+}
+
+div#navigation {
+    float: left;
+    width: 130px;
+    background: #F6F0E0;
+    padding-top: 10px;
+    margin-top: 10px;
+    border: 1px solid #CCC8B3;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px #888888;
+
+}
+
+div#navigation ul {
+    margin: 15px 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+div#navigation li {
+    margin-bottom: 3px;
+    font-size: 14px;
+}
+
+div#navigation li  :hover {
+    background: whitesmoke;
+
+}
+
+
+div#extra {
+    background: #CCC8B3;
+    padding-left: 10px;
+}
+
+div#footer {
+    background: #BFBD93;
+    clear: left;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+div#footer p {
+    margin: 0;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+div#wrapper {
+    float: left;
+    width: 100%;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
+
+div#content {
+    margin: 0 150px;
+    padding-left: 20px;
+}
+
+
+
+div#extra {
+    float: left;
+    width: 150px;
+    margin-left: -150px;
+    padding-top: 10px;
+    margin-top: 10px;
+    border: 1px solid #CCC8B3;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px #888888;
+}
+
+
+
+/* Media Queries for Responsive Design */
+
+/* CSS for responsiveness */
+@media only screen and (max-width: 768px) {
+    div#container {
+        padding: 0 10px;
+    }
+
+    div#content {
+        margin: 0;
+        padding-left: 10px;
+    }
+
+    div#navigation {
+        width: 100%;
+        float: none;
+    }
+
+    div#extra {
+        width: 100%;
+        float: none;
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    div#container {
+        padding: 0 10px;
+    }
+
+    div#content {
+        margin: 0;
+        padding-left: 10px;
+    }
+
+    div#extra {
+        width: 100%;
+        float: none;
+        margin-left: 0;
+    }
+}
+
