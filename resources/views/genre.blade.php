@@ -28,7 +28,7 @@
       <li class="playlist-number"><a href="#" onclick="changeContent('asian')">ASIAN POP</a></li>
       <li class="playlist-number"><a href="#" onclick="changeContent('folk')">FOCK ROCK</a></li>
       <li class="playlist-number"><a href="#" onclick="changeContent('prog-rock')">PROGRESSIVE ROCK</a></li>
-      <button type="button" class="btn btn-primary">Play Qui</button>
+      <button type="button" class="btn btn-primary">Play Quiz</button>
     </ul>
   </div>
     <div id="content">
