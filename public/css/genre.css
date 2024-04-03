@@ -33,6 +33,7 @@ a {
     color: #000000;
 }
 
+
 div#header {
     
     width: auto;
@@ -44,6 +45,14 @@ div#header h1 {
     line-height: 80px;
     margin: 0;
     padding-left: 10px;
+}
+
+div#header h1 {
+    height: 80px;
+    line-height: 80px;
+    margin: 0;
+    padding-left: 10px;
+    font-size: large;
 }
 
 .btn{
@@ -107,12 +116,16 @@ div#navigation ul {
 div#navigation li {
     margin-bottom: 3px;
     font-size: 14px;
+    padding-left: 10px;
 }
 
-div#navigation li  :hover {
-    background: whitesmoke;
-
+div#navigation li :hover{
+    background-color: #f7da7b;
 }
+
+
+
+
 
 
 div#extra {

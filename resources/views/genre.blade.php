@@ -3,32 +3,111 @@
 <head>
 <title>Genre</title>
 <meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<link href="{{ asset('css/style.css') }}" rel="stylesheet">	
 <link href="{{ asset('css/genre.css') }}" rel="stylesheet">	
 <link href="{{ asset('css/style-color.css') }}" rel="stylesheet">
 <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
-<link href="{{ asset('css/animate.css') }}" rel="stylesheet">
-<link href="{{ asset('css/owl.carousel.css') }}" rel="stylesheet">
 <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">		
 </head>
 <body>
 
+<header>
+				<!-- secondary menu -->
+				<nav class="secondary-menu">
+					<div class="container">
+						<!-- secondary menu left link area -->
+						<div class="sm-left">
+							<strong>Phone</strong>:&nbsp; <a href="#">555 555 555</a>&nbsp;&nbsp;&nbsp;&nbsp;
+							<strong>E-mail</strong>:&nbsp; <a href="#">music.site@melodi.com</a>
+						</div>
+					</div>
+				</nav>
+
+			</header>
+
+<div class="banner">
+				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner" role="listbox">
+						<div class="item active">
+                      <img src="{{ asset('media/Nu-Metal.jpeg') }}" />
+							<div class="container">
+								<!-- banner caption -->
+								<div class="carousel-caption slide-one">
+									<!-- heading -->
+									<h2 class="animated fadeInLeftBig"> Rhythmic Pulse - <strong class="theme-color"> The Art </strong> of Music</h2>
+									<!-- paragraph -->
+									<h3 class="animated fadeInRightBig">Welcome to the <strong class="theme-color"> Genre Introduction </strong> Page.</h3>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="item">
+              <img src="{{ asset('media/lamb-of-god.jpeg') }}" />
+							<div class="container">
+								<!-- banner caption -->
+								<div class="carousel-caption slide-two">
+									<!-- heading -->
+									<h2 class="animated fadeInLeftBig"> Know Your <strong class="theme-color"> Genre... </strong> </h2>
+									<!-- paragraph -->
+									<h3 class="animated fadeInRightBig"> Learn about different <strong class="theme-color"> music genres </strong>.</h3>
+								</div>
+							</div>
+						</div>
+
+
+            <div class="item">
+              <img src="{{ asset('media/genre.jpeg') }}" />
+							<div class="container">
+								<!-- banner caption -->
+								<div class="carousel-caption slide-two">
+									<!-- heading -->
+									<h2 class="animated fadeInLeftBig"> <strong class="theme-color"> Listen </strong> It...</h2>
+									<!-- paragraph -->
+									<h3 class="animated fadeInRightBig"> Find different <strong class="theme-color"> music bands </strong> of different genres.</h3>
+								</div>
+							</div>
+						</div>
+
+
+
+
+
+
+					</div>
+
+					<!-- Controls -->
+					<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+						<span class="fa fa-arrow-left" aria-hidden="true"></span>
+					</a>
+					<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+						<span class="fa fa-arrow-right" aria-hidden="true"></span>
+					</a>
+				</div>
+			</div>
+			<!--/ banner end -->
+			
+			<!-- block for animate navigation menu -->
+			<div class="nav-animate"></div>
+
 
 <div id="container">
-<div id="header">
-    <h1>Rhythmic Pulse - The Art of Music</h1>
-</div>
+
   <div id="wrapper">
   <div id="navigation">
     <ul class="nav navbar-nav navbar-right">
-      <li class="playlist-number"><a href="#" onclick="changeContent('metalcore')">METALCORE</a></li>
-      <li class="playlist-number"><a href="#" onclick="changeContent('progressive')">PROGRESSIVE METAL</a></li>
-      <li class="playlist-number"><a href="#" onclick="changeContent('power')">POWER METAL</a></li>
-      <li class="playlist-number"><a href="#" onclick="changeContent('death')">DEATH METAL</a></li>
-      <li class="playlist-number"><a href="#" onclick="changeContent('alter')">ALTERNATIVE ROCK</a></li>
-      <li class="playlist-number"><a href="#" onclick="changeContent('asian')">ASIAN POP</a></li>
-      <li class="playlist-number"><a href="#" onclick="changeContent('folk')">FOCK ROCK</a></li>
-      <li class="playlist-number"><a href="#" onclick="changeContent('prog-rock')">PROGRESSIVE ROCK</a></li>
-      <button type="button" class="btn btn-primary">Play Quiz</button>
+      <li class="playlist-number"><a href="#content" onclick="changeContent('metalcore')">METALCORE</a></li>
+      <li class="playlist-number"><a href="#content" onclick="changeContent('progressive')">PROGRESSIVE METAL</a></li>
+      <li class="playlist-number"><a href="#content" onclick="changeContent('power')">POWER METAL</a></li>
+      <li class="playlist-number"><a href="#content" onclick="changeContent('death')">DEATH METAL</a></li>
+      <li class="playlist-number"><a href="#content" onclick="changeContent('black')">BLACK METAL</a></li>
+      <li class="playlist-number"><a href="#content" onclick="changeContent('alter')">ALTERNATIVE ROCK</a></li>
+      <li class="playlist-number"><a href="#content" onclick="changeContent('asian')">ASIAN POP</a></li>
+      <li class="playlist-number"><a href="#content" onclick="changeContent('folk')">FOLK ROCK</a></li>
+      <li class="playlist-number"><a href="#content" onclick="changeContent('prog-rock')">PROGRESSIVE ROCK</a></li>
+      <li class="playlist-number"><a href="#content" onclick="changeContent('punk-rock')">PUNK ROCK</a></li>
+      <a href="{{url('/home')}}"> <button class="btn btn-primary"> Back To Home </button>  </a>
     </ul>
   </div>
     <div id="content">
@@ -97,6 +176,20 @@
               </p>
     </div>
 
+
+
+    <div id="black" class="content-section" style="display: none;">
+    <h3> <strong class="theme-color">DEATH METAL</strong> </h3>
+					<h4> <strong class="theme-color"> Active :  </strong> 1991 </h4>
+              <p>
+              The genre outlined here is actually the <strong class="theme-color"> second wave </strong> of Black Metal. The first wave was very obscure and rapidly vanished. <strong class="theme-color"> Norway </strong>, a country of cold, harsh, and unforgiving landscapes, became the perfect breeding ground for Black Metal - arguably the <strong class="theme-color"> most extreme </strong> and <strong class="theme-color"> least accessible </strong> form of metal. Although Black Metal is a less percussion and bass oriented than its contemporary counterparts, its <strong class="theme-color"> chaotic, screaming avalanche of macabre noise </strong> sounds like it was made by the Devil himself. Hi-pitched vocals, symphonic/Gothic elements, and shrill, hyperfast guitar riffs make such a statement almost believable. Black Metal has always been more about the content than
+              the music itself, trying to be as <strong class="theme-color"> satanic and anti-Christian </strong> as possible (and so are many of its practicers). The exact opposite however, is also true, in the form of Christian Black Metal, indicating that probably any genre imaginable already exists.
+              <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/UA_j_72psoo?si=MOB3smnQBnVrocUU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              Black Metal bands are recognizable by their <strong class="theme-color"> bombastic music, satanic names, elaborate artwork </strong> (usually with a chaotic web of sharp forms) and heavy black & white make-up (reminiscent of Glam Metal but much more grim and serious). Themes of <strong class="theme-color"> torture, pain, blood, and sacrifice </strong> occur more than in other Metal genres.
+              Some Black Metal bands became frontpage news by committing <strong class="theme-color"> acts of murder, violence and desecration </strong> , leading to a large amount of indepth Black Metal documentaries about this most evil of music genres.
+              </p>
+    </div>
+
     <div id="alter" class="content-section" style="display: none;">
     <h3> <strong class="theme-color">ALTERNATIVE ROCK</strong> </h3>
 					<h4> <strong class="theme-color"> Active :  </strong> 1991 </h4>
@@ -123,7 +216,7 @@
     </div>
 
     <div id="folk" class="content-section" style="display: none;">
-    <h3> <strong class="theme-color">FOCK ROCK</strong> </h3>
+    <h3> <strong class="theme-color">FOLK ROCK</strong> </h3>
 					<h4> <strong class="theme-color"> Active :  </strong> 1965 </h4>
               <p>
               The British Invasion casted a shockwave throughout music industry and was practically impossible to ignore in the UK. Even the secluded folk communities took an <strong class="theme-color"> interest in the strong backbeat and catchy guitar hooks </strong>. Pioneering band the Byrds initiated this evolution, starting out as a pure Folk band but dragging along many others in a real Folk Rock hype. By signing up with <strong class="theme-color"> record labels </strong> (and thus going the “commercial” path) the <strong class="theme-color"> (protest) messages and reflective stories </strong> of Folk Rock artists could reach a much larger audience than before. An appealing thought for artists who believed in the importance of <strong class="theme-color"> story over sound </strong>. This came at the expense 
@@ -145,6 +238,20 @@
                  It remains most popular in Europe, but there are several notable American and Canadian progressive rock bands. 
               This genre was influenced by <strong class="theme-color"> classical music and jazz </strong> fusion. Over the years, different sub-genres of progressive rock have been created, such as <strong class="theme-color"> symphonic rock, art rock, math rock, and progressive metal </strong>.
               </p>
+    </div>
+
+
+    <div id="punk-rock" class="content-section" style="display: none;">
+    <h3> <strong class="theme-color">PUNK ROCK</strong> </h3>
+					<h4> <strong class="theme-color"> Active :  </strong> 1960 </h4>
+              <p>
+              Punk Rock probably was the biggest <strong class="theme-color"> revolution </strong> in Rock history, 
+              although the build-up was already tangible in the British bars in the form of Pub Rock. The economic and political situation in Britain during the early seventies made
+              a few <strong class="theme-color"> young up-to-no-good kids </strong> (“punks”) really angry. In the US, they rediscovered the similar forgotten Garage Rock mentality, but the most important contributor of Punk was
+              a strong <strong class="theme-color"> backlash against “Stadium Rock” </strong> of the early seventies. Popular Prog Rock and A.O.R. bands started to reach massive (and more mature) audiences and Rock had become an eclectic spectacle for the elite masses.
+              <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/NU9JoFKlaZ0?si=RwfxEoWPBD5jGGy1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              It was time for a <strong class="theme-color"> return to the primordial roots </strong> of Rock - to give the youth back its stolen and deformed middle finger.
+              The music was Hard / Garage Rock, but much <strong class="theme-color"> shorter, faster, energetic, raw and stripped </strong> to the base chords which blended in with the rapidly growing out of control Punk subculture. Many early amateur Punk Rock band names were gross and sleazy: Punk liked to indulge in a provocative culture of extreme haircuts (flashy colors, moehawks, sharp peaks), rebellious fashion (disorderly, rough, torn) and disgusting behavior, such as snorting very foul amphetamine sulphate crystals as they were the cheapest drug around. The difference with Industrial was that you could really go wild and dance to it, thus explaining its unfathomable magnetism. A lot of UK Punk was witnessed in the <strong class="theme-color"> Roxy club </strong> , London, whereas US Punk evolved mainly out of the legendary club <strong class="theme-color"> CBGB's </strong>, New York (which also propelled Post-Punk and New Wave).
     </div>
 
 
@@ -233,6 +340,26 @@
       10. Morbid Angel <br>
     </p>
 
+
+    <p id="more-black" class="more-stuff-section" style="display: none;">
+      <strong>Music Bands : </strong>
+      <br>
+      1. Mayhem <br>
+      2. Behemoth <br>
+      3. Cradle of Filth <br>
+      4. Obituary <br>
+      5. Napalm Death <br>
+      6. Shining <br>
+      7. Dark Funeral <br>
+      8. Profanatica <br>
+      9. Immortal <br>
+      10. Darkthrone <br>
+    </p>
+
+
+
+
+
     <p id="more-alter" class="more-stuff-section" style="display: none;">
       <strong>Music Bands : </strong>
       <br>
@@ -288,12 +415,33 @@
     </p>
 
 
+    <p id="more-punk-rock" class="more-stuff-section" style="display: none;">
+      <strong>Music Bands : </strong>
+      <br>
+      1. Green Day <br>
+      2. Dead Kennedys <br>
+      3. Green Day <br>
+      4. The Sex Pistols <br>
+      5. The Clash <br>
+      6. Black Flag <br>
+    </p>
+
+
 
   </div>
   <div id="footer">
     <p>All right reserved by Rhythmic Pulse - The Art of Music</p>
   </div>
 </div>
+
+<link href="{{ asset('js/jquery.js') }}" rel="stylesheet">
+        <script src="{{ asset('js/jquery.js') }}"></script> 
+
+		<!-- Bootstrap JS -->
+        <link href="{{ asset('js/bootstrap.min.js') }}" rel="stylesheet">
+        <script src="{{ asset('js/bootstrap.min.js') }}"></script> 
+
+		
 
 <script>
   function changeContent(section) {

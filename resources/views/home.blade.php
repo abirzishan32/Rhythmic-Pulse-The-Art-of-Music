@@ -13,6 +13,7 @@
 		<!-- Styles -->
 		<!-- Bootstrap CSS -->
 		<link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
+		<link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
 		<!-- Animate CSS -->
 		<link href="{{ asset('css/animate.css') }}" rel="stylesheet">
 		<!-- Basic stylesheet -->
@@ -22,6 +23,8 @@
 		<!-- Custom CSS -->
         <link href="{{ asset('css/style.css') }}" rel="stylesheet">	
         <link href="{{ asset('css/style-color.css') }}" rel="stylesheet">	
+		<link href="{{ asset('fonts/fonticons.css') }}" rel="stylesheet">	
+		<link href="{{ asset('fonts/plugins.css') }}" rel="stylesheet">	
 
 		
 		<!-- Favicon -->
@@ -31,12 +34,12 @@
 	<body>
 		
 		<!-- modal for booking ticket form -->
-		<div class="modal fade" id="bookTicket" tabindex="-1" role="dialog" aria-labelledby="BookTicket">
+		<div class="modal fade" id="bookTicket" tabindex="-1" role="dialog" aria-labelledby="bookTicket">
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title" id="myModalLabel">Name of The Event &nbsp; <small><span class="label label-success">Available</span> &nbsp; <span class="label label-danger">Not Available</span></small></h4>
+						<h4 class="modal-title" id="myModalLabel">Buy Ticket &nbsp; <small><span class="label label-success">Available</span> &nbsp; <span class="label label-danger">Not Available</span></small></h4>
 					</div>
 					<!-- form for events ticket booking -->
 					<form>
@@ -115,7 +118,7 @@
 							<!-- logo area -->
 							<a class="navbar-brand" href="#home">
 								<!-- logo image -->
-								<img class="img-responsive" src="img/logo/logo.png" alt="" />
+								<img class="img-responsive" src="img/logo.png" alt="" />
 							</a>
 						</div>
 
@@ -131,6 +134,7 @@
                                 <li><a href="#joinus">Join Us</a></li>
 								<li><a href="#team">Team</a></li>
 								<li><a href="#contact">Contact</a></li>
+								<li><a href="#contact">Hi, Admin</a></li>
 							</ul>
 						</div><!-- /.navbar-collapse -->
 					</div><!-- /.container-fluid -->
@@ -144,15 +148,12 @@
 					<!-- Wrapper for slides -->
 					<div class="carousel-inner" role="listbox">
 						<div class="item active">
-
-
-
                             <img src="{{ asset('media/banner.jpg') }}" />
 							<div class="container">
 								<!-- banner caption -->
 								<div class="carousel-caption slide-one">
 									<!-- heading -->
-									<h2 class="animated fadeInLeftBig"><i class="fa fa-music"></i> Rhythmic Pulse - The Art of Music!</h2>
+									<h2 class="animated fadeInLeftBig"><i class="fa fa-music"></i> Rhythmic Pulse - The Art of Music</h2>
 									<!-- paragraph -->
 									<h3 class="animated fadeInRightBig">Find More Innovative &amp; Creative Music Albums.</h3>
 								</div>
@@ -225,7 +226,7 @@
                     </p>
 
                 </div>
-				<a class="genre-page" href="{{url('/genre')}}"> <button class="btn-outline-primary mb-3 btn-lg"> Go To Genre Page </button>  </a>
+				<a class="genre-page" href="{{url('/genre')}}"> <button class="btn-outline-primary mb-3 btn-lg"> Go To Genre</button>  </a>
 
 
 				
@@ -796,6 +797,157 @@
 				</div>
 			</div>
 			<!-- events end -->
+
+
+
+			<!-- Our Courses start -->
+			<div class="hero pad" id="course">
+
+					<!-- default heading -->
+					<div class="default-heading">
+						<h2>Our Courses</h2>
+						<hr>
+						<p> Rhythmic Pulse offers <strong class="theme-color"> vocal, guitar, piano, drumming and flute </strong> learning courses with our well trained instructors. </p>
+						<p> Browse and <strong class="theme-color"> enroll now! </strong> </p>
+					</div>
+
+					
+					<div id="lessons" class="lessons">
+            			<div class="container">
+                <div class="row">
+                    <div class="main_lessons">
+                        <div class="col-sm-8 col-sm-offset-1">
+                            <div class="main_lessons_area sections">
+                                <div class="lesson_title">
+                                    <h1> <strong class="theme-color"> OUR LESSONS</strong> </h1>
+                                    <p>ARE EASY</p>
+                                </div>
+                                <div class="lesson_content">
+                                    <ul class="lessonsborder">
+                                        <li> <i class="fa fa-clone"></i> <p>Get lessons from our <strong class="theme-color"> well trained </strong> instructors.</p></li>
+                                        <li> <i class="fa fa-globe"></i> <p> <strong class="theme-color"> Recorded class, questions </strong> and personal sessions.</p></li>
+                                        <li> <i class="lnr lnr-rocket"></i> <p>Weekly assignment and <strong class="theme-color"> progress update </strong> .</p></li>
+                                        <li> <i class="lnr lnr-volume-high"> </i> <p> Get <strong class="theme-color"> lifetime membership </strong> of any course if you buy once.</p></li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+						
+
+                </div>
+				
+            </div>
+			
+		</div>
+				</div>
+
+
+				<div class="course">
+					<div class="course-container">
+						<div class="course-box">
+						<img class="img-course" src="{{ asset('media/guitar2.jpg') }}" />
+						<div class="course-text">
+							<h4 class="course-head"> Guitar Lesson </h2>
+							<p>  Utilizing the patented Rhythmic Pulse Method, our highly-trained professional instructors 
+								teach guitar lessons to beginners starting with the fundamentals, including scales, chords, 
+								tuning, arpeggios and rhythm. They then use famous rock songs to help guide guitar students 
+								through the early stages of musical development. Our beginner guitar lessons inspire creativity
+								 and help develop new students into world-class players with weekly private guitar lessons and 
+								 group rehearsals. School of Rock's core philosophy is that the best way for students to gain musical proficiency is through performance-based music education.
+								 All of our lessons for guitar students include a performance aspect. </p>
+								 
+						</div>
+						</div>
+
+
+						<div class="course-box">
+						<img class="img-course" src="{{ asset('media/drums.jpg') }}" />
+						<div class="course-text">
+							<h4 class="course-head"> Drums Lesson </h2>
+							<p>  We offer simple yet effective drum lessons for beginners that bypass entry-level pad training. Students get behind a drum kit during their 
+								first lesson to start learning how to play the drums. Through private drum lessons, group rehearsals, and live performances, students will learn introductory rudiments to drum 
+								fills and solos. We have been teaching drum lessons to kids and adults for decades and we have given more drummers a start in the business than any other music program in the world. Our core
+								 philosophy is that the best way for students to gain musical proficiency is through the
+								 patented method and performance-based music education. All of our programs include a performance aspect.
+
+						</div>
+						</div>
+
+						
+
+
+						<div class="course-box">
+						<img class="img-course" src="{{ asset('media/piano.jpg') }}" />
+						<div class="course-text">
+							<h4 class="course-head"> Keyboard & Piano Lesson </h2>
+							<p>Our keyboard lessons are vastly different from traditional one-on-one beginner piano lessons that most students end up dreading. Our keyboard teachers get
+								 students to love the keyboard (and piano) by teaching them to play popular rock songs while implementing basic concepts and skills like finger placement,
+								 scales, pedaling, key differentiation and rhythm. We start with private keyboard lessons paired with band rehearsals to prepare our piano students to play a live gig 
+								 with a full band. The patented School of Rock Method builds musical proficiency through our proprietary Method App, Method Book collection, SongFirst approach, and performance-based music curriculum. All of our lessons programs include a performance aspect.</p>
+							
+						</div>
+						</div>
+						</div>
+
+
+						<div id="testimonial" class="testimonial">
+            <div class="container">
+                <div class="row">
+                    <div class="main_testimonial_area sections text-center">
+                        <div class="head_title">
+                            <h2>TESTIMONIALS</h2>
+                            <div class="separator"></div>
+                        </div>
+                        <div class="main_testimonial_content">
+                            <div class="single_testimonial">
+                                <div class="single_test_thumbnail">
+								<img class="img-responsive" src="{{ asset('media/man.png') }}" />
+                                </div>
+                                <div class="single_test_content">
+								<p>Hey there!</p> <br>
+                                    <p> I have been teaching music lesson for more than 5 years. Music is not just a subject to me; it's a lifelong passion that I am eager to share with others.
+                                         I believe that music education goes beyond learning notes and chords; it fosters creativity, discipline, and confidence in individuals.
+                                          Whether it's teaching the fundamentals of rhythm and melody to beginners or guiding advanced students in their musical journeys,
+                                           I am committed to providing a nurturing and enriching learning environment. <br>
+
+                                        Throughout my career, I have had the privilege of witnessing the transformative power of music in the lives of my students.
+										 From helping a shy beginner find their voice to preparing talented musicians for prestigious performances, every moment in the classroom is a reminder of the impact 
+										 music can have. </p>
+
+                                    <div class="single_author_content">
+                                        <h2>Abir Rahman</h2>
+                                        <p>Music Teacher</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+						
+
+
+						<div class="head_title">
+                            <h2>FAQ</h2>
+                            <div class="separator"></div>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+</div>
+
+				</div>
+			</div>
+
+
+
+
+
 			
 			<!-- about -->
 			<div class="about" id="team">
@@ -993,6 +1145,22 @@
 							</div>
 						</div>
 					</div>
+
+
+					<section  class="contact">
+            <div class="ourmaps">
+                <div class="container">
+
+                    <div class="row">
+                        <div class="main_maps">
+                            <div class="maps"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
 					<!-- form content -->
 					<div class="form-content ">
 						<!-- paragraph -->
@@ -1031,26 +1199,71 @@
 			</div>
 			<!-- contact end -->
 			
-			<!-- footer -->
-			<footer>
-				<div class="container">
-					<!-- social media links -->
-					<div class="social">
-						<a class="h-facebook" href="#"><i class="fa fa-facebook"></i></a>
-						<a class="h-google" href="#"><i class="fa fa-google-plus"></i></a>
-						<a class="h-linkedin" href="#"><i class="fa fa-linkedin"></i></a>
-						<a class="h-twitter" href="#"><i class="fa fa-twitter"></i></a>
-					</div>
-					<!-- copy right -->
-					<p class="copy-right">&copy; copyright 2018, All rights are reserved.</p>
-				</div>
-			</footer>
-			<!-- footer end -->
+		
 			
 			<!-- Scroll to top -->
 			<span class="totop"><a href="#"><i class="fa fa-chevron-up"></i></a></span> 
 			
 		</div>
+
+		<section id="footer_widget" class="footer_widget">
+            <div class="container">
+                <div class="row">
+                    <div class="main_widget">
+
+
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="single_widget wow fadeIn" data-wow-duration="800ms">
+                                    <div class="footer_logo">
+                                        <img src="assets/images/logo2.png" alt="" />
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in egestas lectus. 
+                                        Etiam tempor odio tellus, at bibendum neque faucibus quis. Sed vel facilisis elit. </p>
+                                    <p>Nullam fringilla pharetra diam non accumsan. Morbi eget aliquam mauris. 
+                                        Etiam vehicula efficitur mi.</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="single_widget wow fadeIn" data-wow-duration="800ms">
+                                    <h4 class="footer_title">CONTACT</h4>
+                                    <div class="separator3"></div>
+                                    <ul>
+                                        <li><a href=""><i class="fa fa-envelope"></i> info@guitarlessons.com</a></li>
+                                        <li><a href=""><i class="fa fa-phone"></i> 0123 456 789 0112</a></li>
+                                        <li><a href=""><i class="fa fa-map-marker"></i> Greenplatz Ben 29, Germany 60435</a></li>
+                                        <li><a href=""><i class="fa fa-fax"></i> (0012) 654 356 445</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="single_widget wow fadeIn" data-wow-duration="800ms">
+                                    <h4 class="footer_title">LATEST NEWS</h4>
+                                    <div class="separator3"></div>
+                                    <ul>
+                                        <li class="single_latest_news">
+                                            <p class="latest_date">02.08.2015</p>
+                                            <p class="subtitle">Etiam tempor odio tellus.</p>
+                                            <p class="details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in egestas lectus. Etiam tempor odio tellus.</p>
+                                        </li>
+
+                                        <li class="single_latest_news">
+                                            <p class="latest_date">02.08.2015</p>
+                                            <p class="subtitle">Etiam tempor odio tellus.</p>
+                                            <p class="details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in egestas lectus. Etiam tempor odio tellus.</p>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
 		
 		<!-- Javascript files -->
 		<!-- jQuery -->
@@ -1083,6 +1296,23 @@
 
 		<!-- Custom JS -->
         <link href="{{ asset('js/custom.js') }}" rel="stylesheet">
-        <script src="{{ asset('js/custom.js') }}"></script>
+        <script src="{{ asset('js/custom.js') }}"></script><link href="{{ asset('http://maps.google.com/maps/api/js') }}" rel="stylesheet">
+        <script src="{{ asset('http://maps.google.com/maps/api/js') }}"></script>
+
+        <link href="{{ asset('js/gmaps.min.js') }}" rel="stylesheet">
+        <script src="{{ asset('js/gmaps.min.js') }}"></script>
+
+        <script>
+            var map = new GMaps({
+                el: '.ourmaps',
+                scrollwheel: false,
+                lat: 23.8041,
+                lng: 90.4152
+            });
+		</script>
+
+
+
+
 	</body>	
 </html>

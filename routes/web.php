@@ -21,3 +21,7 @@ Route::get('/genre', function () {
     return view('genre');
 });
 
+
+Route::get('/courses', function () {
+    return view('courses');
+});
