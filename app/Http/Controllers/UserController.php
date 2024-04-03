@@ -24,7 +24,9 @@ class UserController extends Controller
         }
 
         else{
-            return "Baal diso amar";
+            return back()->withErrors([
+                'loginusername' => 'The provided credentials do not match our records.',
+            ]);
         }
             
         

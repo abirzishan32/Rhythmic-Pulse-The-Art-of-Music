@@ -86,6 +86,10 @@ abstract class Kernel implements KernelInterface, RebootableInterface, Terminabl
     public const END_OF_MAINTENANCE = '07/2024';
     public const END_OF_LIFE = '07/2024';
 
+    protected $routeMiddleware = [
+        'MustBeLoggedIn' => \App\Http\Middleware\MustBeLoggedIn::class,
+    ];
+
     public function __construct(string $environment, bool $debug)
     {
         if (!$this->environment = $environment) {
