@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Providers;
+namespace App\Policies;
 
 use Illuminate\Support\ServiceProvider;
+use App\Models\Post;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -21,4 +22,7 @@ class AppServiceProvider extends ServiceProvider
     {
         //
     }
+    protected $policies = [
+        Post::class => PostPolicy::class
+    ];
 }

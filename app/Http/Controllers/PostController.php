@@ -9,6 +9,32 @@ use Illuminate\Support\Facades\View;
 
 class PostController extends Controller
 {
+    public function updatedPost(Post $post, Request $request){
+        $incomingFields = $request->validate(
+            [
+                'title' => 'required',
+                'body' => 'required'
+            ]
+        );
+
+        $incomingFields['title'] = strip_tags($incomingFields['title']);
+        $incomingFields['body'] = strip_tags($incomingFields['body']);
+
+        $post->update($incomingFields);
+        return redirect("/post/{$post->id}")->with('success', 'Post was updated successfully!');
+
+    } 
+
+    public function showEditForm(Post $post){
+        return view('edit-post', ['post' => $post]);
+    } 
+
+
+    public function delete(Post $post){
+        $post->delete();
+        return redirect('/home')->with('success', 'Post was deleted successfully!');
+
+    }
 
     public function viewSinglePost(Post $post){
         $post['body'] = Str::markdown($post->body); //Converting the body to markdown

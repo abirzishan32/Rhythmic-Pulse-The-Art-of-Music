@@ -70,12 +70,16 @@
     <div class="post-card mx-auto">
         <div class="d-flex justify-content-between align-items-center">
             <h2 class="post-title">{{$post->title}}</h2>
+            @can('update', $post)
             <span class="pt-2">
-              <a href="#" class="text-primary mr-2" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fas fa-edit"></i> Edit </a>
-              <form class="delete-post-form d-inline" action="#" method="POST">
+              <a href="/post/{{$post->id}}/edit" class="text-primary mr-2" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fas fa-edit"></i> Edit </a>
+              <form class="delete-post-form d-inline" action="/post/{{$post->id}}" method="POST">
+              @csrf
+              @method('DELETE')
                 <button class="delete-post-button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fas fa-trash-alt"></i> Delete</button>
               </form>
             </span>
+            @endcan
         </div>
 
         <p class="post-meta mb-4">

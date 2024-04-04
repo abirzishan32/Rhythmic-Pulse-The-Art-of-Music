@@ -77,11 +77,12 @@
 
 <body>
 <div class="container py-md-5 container--narrow">
-    <form action="/create-post" method="POST">
+    <form action="/post/{{$post->id}}" method="POST">
         @csrf
+        @method('PUT')
         <div class="form-group">
             <label for="post-title" class="text-muted mb-1"><small>Title</small></label>
-            <input value="{{ old('title') }}" required name="title" id="post-title" class="form-control form-control-lg form-control-title" type="text" placeholder="Enter the title..." autocomplete="off" />
+            <input value="{{ old('title', $post->title)}}" required name="title" id="post-title" class="form-control form-control-lg form-control-title" type="text" placeholder="Enter the title..." autocomplete="off" />
             @error('title')
             <div class="m-0 small alert alert-danger shadow-sm">{{ $message }}</div>
             @enderror
@@ -89,13 +90,13 @@
 
         <div class="form-group">
             <label for="post-body" class="text-muted mb-1"><small>Description</small></label>
-            <textarea required name="body" id="post-body" class="body-content tall-textarea form-control" placeholder="Write your post here...">{{ old('body') }}</textarea>
+            <textarea required name="body" id="post-body" class="body-content tall-textarea form-control" placeholder="Write your post here...">{{ old('body', $post->body) }}</textarea>
             @error('body')
             <div class="m-0 small alert alert-danger shadow-sm">{{ $message }}</div>
             @enderror
         </div>
 
-        <button class="btn btn-primary">Save New Post</button>
+        <button class="btn btn-primary">Save Changes</button>
     </form>
 </div>
 
