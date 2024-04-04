@@ -70,7 +70,7 @@ hr{
 .parallax-two { background: url('../media/overlay.png'), url('../media/background.jpg')  fixed 50%;}
 .parallax-three { background: url('../media/overlay.png'), url('..media/background.jpg')  fixed 50%;}
 .parallax-four { background: url('../media/overlay.png'), url('../media/background.jpg')  fixed 50%;}
-
+.parallax-five { background: url('../media/overlay.png'), url('../media/person-singing.jpg')  fixed 50%;}
 /* 
  * Basic CSS ends 
  */
@@ -94,7 +94,7 @@ hr{
 .navbar.comeup {margin-top: 0;background: rgba(0,0,0,0.9);}
 .navbar-default .navbar-nav>li>a {
 	padding: 25px 20px;
-	font-size: 15px;
+	font-size: 13px;
 	font-weight: 700;
 }
 
@@ -435,10 +435,20 @@ hr{
 	text-align: center;
 }
 
+.avatar-tiny {
+	width: 24px;
+	height: 24px;
+	border-radius: 12px;
+	margin-right: 4px;
+	position: relative;
+	top: -1px;
+  }
+
 
 /* Genre */
 
 .genre-page{
+	
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -454,6 +464,7 @@ hr{
 }
 
 .genre {
+	
     background-color: whitesmoke;
     padding: 20px;
 	margin-top: 30px;

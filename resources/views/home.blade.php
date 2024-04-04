@@ -129,13 +129,16 @@
 								<li><a href="#latestalbum">Latest Album</a></li>
 								<li><a href="#featuredalbum">Featured Album</a></li>
 								<li><a href="#events">Upcoming Events</a></li>
+								<li><a href="#blog">Blog</a></li>
                                 <li><a href="#course">Our Courses</a></li>
                                 <li><a href="#merch">Merchandise</a></li>
                                 <li><a href="#joinus">Join Us</a></li>
-								<li><a href="#team">Team</a></li>
 								<li><a href="#contact">Contact</a></li>
 								<li><a href="#contact">Hi, Admin</a></li>
+								<li> <a href="/profile/{{auth()->user()->username}}"><img class="avatar-tiny" src="https://gravatar.com/avatar/f64fc44c03a8a7eb1d52502950879659?s=128" /></a> </li>
+								
 							</ul>
+							
 						</div><!-- /.navbar-collapse -->
 					</div><!-- /.container-fluid -->
 				</nav>
@@ -799,7 +802,6 @@
 			<!-- events end -->
 
 
-
 			<!-- Our Courses start -->
 			<div class="hero pad" id="course">
 
@@ -945,167 +947,32 @@
 			</div>
 
 
+						<!-- Blog Start -->
+						<div class="blog parallax-five pad" id="blog">
+				<!-- default heading -->
+				<div class="default-heading-shadow">
+						<h2>Blog </h2>
+						<hr>
+						<p> Welcome to the blog section. You can write about your <strong class="theme-color"> thoughts and opinion </strong> related to music. 
+							You can also share your experience of any <strong class="theme-color"> concert </strong>
+							you enjoyed, your <strong class="theme-color"> favourite </strong> music band or any <strong class="theme-color"> music album </strong> you loved. </p>
+							 
+				</div>
+				<a class="genre-page" href="{{url('/create-post')}}"> <button class="btn-outline-primary mb-3 btn-lg"> Go To Blog</button>  </a>
 
+
+			</div>
+
+
+
+
+
+	
+				
 
 
 			
-			<!-- about -->
-			<div class="about" id="team">
-				<div class="container">
-					<!-- default heading -->
-					<div class="default-heading">
-						<!-- heading -->
-						<h2>Who We Are?</h2>
-                        <hr>
-					</div>
-					<!-- about what we are like content -->
-					<div class="about-what-we">
-						<div class="row">
-							<div class="col-md-4 col-sm-4">
-								<div class="what-we-item ">
-									<!-- heading with icon -->
-									<h3><i class="fa fa-heartbeat"></i> What we do?</h3>
-									<!-- paragraph -->
-									<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit occaecat cupidatat non id est laborum.</p>
-								</div>
-							</div>
-							<div class="col-md-4 col-sm-4">
-								<div class="what-we-item ">
-									<!-- heading with icon -->
-									<h3><i class="fa fa-hand-o-up"></i> Why choose us?</h3>
-									<!-- paragraph -->
-									<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit occaecat cupidatat non id est laborum.</p>
-								</div>
-							</div>
-							<div class="col-md-4 col-sm-4">
-								<div class="what-we-item ">
-									<!-- heading with icon -->
-									<h3><i class="fa fa-map-marker"></i> Where we are?</h3>
-									<!-- paragraph -->
-									<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit occaecat cupidatat non id est laborum.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- our team -->
-				<div class="team">
-					<div class="container">	
-						<!-- Team Member's Details -->
-						<div class="team-content">
-							<div class="row">
-								<div class="col-md-3 col-sm-6">
-									<!-- Team Member -->
-									<div class="team-member  delay-one">
-										<!-- Image Hover Block -->
-										<div class="member-img">
-											<!-- Image  -->
-                                            <img class="img-responsive" src="{{ asset('media/user.jpg') }}" />
-											
-											<!-- Hover block -->
-											<div class="social text-center">
-												<a href="#"><i class="fa fa-facebook"></i></a>
-												<a href="#"><i class="fa fa-google-plus"></i></a>
-												<a href="#"><i class="fa fa-linkedin"></i></a>
-												<a href="#"><i class="fa fa-twitter"></i></a>
-											</div>
-										</div>
-										<!-- Member Details -->
-										<h3>Stacey Kowalski</h3>
-										<span class="designation">Guitarist</span>
-									</div>
-								</div>
-								<div class="col-md-3 col-sm-6">
-									<!-- Team Member -->
-									<div class="team-member  delay-two">
-										<!-- Image Hover Block -->
-										<div class="member-img">
-											<!-- Image  -->
-											<img class="img-responsive" src="img/user/2.jpg" alt="" />
-											<!-- Hover block -->
-											<div class="social text-center">
-												<a href="#"><i class="fa fa-facebook"></i></a>
-												<a href="#"><i class="fa fa-google-plus"></i></a>
-												<a href="#"><i class="fa fa-linkedin"></i></a>
-												<a href="#"><i class="fa fa-twitter"></i></a>
-											</div>
-										</div>
-										<!-- Member Details -->
-										<h3>Joanna Koo</h3>
-										<span class="designation">Clarinetist</span>
-									</div>
-								</div>
-								<div class="col-md-3 col-sm-6">
-									<!-- Team Member -->
-									<div class="team-member  delay-three">
-										<!-- Image Hover Block -->
-										<div class="member-img">
-											<!-- Image  -->
-											<img class="img-responsive" src="img/user/3.jpg" alt="" />
-											<!-- Hover block -->
-											<div class="social text-center">
-												<a href="#"><i class="fa fa-facebook"></i></a>
-												<a href="#"><i class="fa fa-google-plus"></i></a>
-												<a href="#"><i class="fa fa-linkedin"></i></a>
-												<a href="#"><i class="fa fa-twitter"></i></a>
-											</div>
-										</div>
-										<!-- Member Details -->
-										<h3>Mark Laredo</h3>
-										<span class="designation">Accordionist</span>
-									</div>
-								</div>
-								<div class="col-md-3 col-sm-6">
-									<!-- Team Member -->
-									<div class="team-member  delay-four">
-										<!-- Image Hover Block -->
-										<div class="member-img">
-											<!-- Image  -->
-											<img class="img-responsive" src="img/user/4.jpg" alt="" />
-											<!-- Hover block -->
-											<div class="social text-center">
-												<a href="#"><i class="fa fa-facebook"></i></a>
-												<a href="#"><i class="fa fa-google-plus"></i></a>
-												<a href="#"><i class="fa fa-linkedin"></i></a>
-												<a href="#"><i class="fa fa-twitter"></i></a>
-											</div>
-										</div>
-										<!-- Member Details -->
-										<h3>Belie Costa</h3>
-										<span class="designation">Keyboardist</span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- about end -->
 			
-			<!-- meet -->
-			<div class="meet parallax-first pad" id="meet">
-				<div class="container">
-					<!-- default heading -->
-					<div class="default-heading-shadow">
-						<h2>Upcoming Meets</h2>
-					</div>
-					<!-- meet location image -->
-					<div class="meet-map">
-						<img class="img-responsive img-map" src="{{ asset('media/map.jpg') }}" alt="" />
-						<!-- map marker for India  -->
-						<a href="#" class="map-marker india " data-toggle="tooltip" data-placement="top" title="India"><img class="img-responsive" src="{{ asset('media/map-marker.jpg') }}" alt="" /></a>
-						<!-- map marker for United States  -->
-						<a href="#" class="map-marker usa " data-toggle="tooltip" data-placement="top" title="United States"><img class="img-responsive" src="{{ asset('media/map-marker.jpg') }}" alt="" /></a>
-						<!-- map marker for South Africa  -->
-						<a href="#" class="map-marker sa " data-toggle="tooltip" data-placement="top" title="South Africa"><img class="img-responsive" src="{{ asset('media/map-marker.jpg') }}" alt="" /></a>
-						<!-- map marker for Russia  -->
-						<a href="#" class="map-marker russia " data-toggle="tooltip" data-placement="top" title="Russia"><img class="img-responsive" src="{{ asset('media/map-marker.jpg') }}" alt="" /></a>
-						<!-- map marker for Brazil  -->
-						<a href="#" class="map-marker brazil " data-toggle="tooltip" data-placement="top" title="Brazil"><img class="img-responsive" src="{{ asset('media/map-marker.jpg') }}" alt="" /></a>
-					</div>
-				</div>
-			</div>
-			<!-- meet end -->
 			
 			<!-- contact -->
 			<div class="contact pad" id="contact">
