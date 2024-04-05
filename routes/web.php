@@ -30,6 +30,8 @@ Route:: get('/post/{post}', [PostController::class, 'viewSinglePost']);
 Route:: delete('/post/{post}', [PostController::class, 'delete'])->middleware('can:delete,post');
 Route:: get('/post/{post}/edit', [PostController::class, 'showEditForm'])->middleware('can:update,post');
 Route:: put('/post/{post}', [PostController::class, 'updatedPost'])->middleware('can:update,post');
+Route:: get('/edit-profile', [UserController::class, 'showAvatarForm']);
+Route:: post('/edit-profile', [UserController::class, 'storeAvatar']);
 
 
 Route:: get('/profile/{user:username}', [UserController::class, 'profile']);

@@ -135,7 +135,7 @@
                                 <li><a href="#joinus">Join Us</a></li>
 								<li><a href="#contact">Contact</a></li>
 								<li><a href="#contact">Hi, Admin</a></li>
-								<li> <a href="/profile/{{auth()->user()->username}}"><img class="avatar-tiny" src="https://gravatar.com/avatar/f64fc44c03a8a7eb1d52502950879659?s=128" /></a> </li>
+								<li> <a href="/profile/{{auth()->user()->username}}"><img class="avatar-tiny" src="{{auth()->user()->avatar}}" /></a> </li>
 								
 							</ul>
 							
@@ -958,7 +958,8 @@
 							you enjoyed, your <strong class="theme-color"> favourite </strong> music band or any <strong class="theme-color"> music album </strong> you loved. </p>
 							 
 				</div>
-				<a class="genre-page" href="{{url('/create-post')}}"> <button class="btn-outline-primary mb-3 btn-lg"> Go To Blog</button>  </a>
+				<li> <a href="/profile/{{auth()->user()->username}}"><img class="avatar-tiny" src="https://gravatar.com/avatar/f64fc44c03a8a7eb1d52502950879659?s=128" /></a> </li>
+				<a class="genre-page" href="/profile/{{auth()->user()->username}}"> <button class="btn-outline-primary mb-3 btn-lg"> Go To Blog</button>  </a>
 
 
 			</div>

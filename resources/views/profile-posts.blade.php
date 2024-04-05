@@ -11,10 +11,6 @@
             font-family: 'Arial', sans-serif;
         }
 
-        .container--narrow {
-            max-width: 800px;
-            margin: 0 auto;
-        }
 
         .avatar-small {
             width: 40px;
@@ -44,6 +40,7 @@
             color: #007bff;
         }
 
+
         .list-group-item {
             border-radius: 10px;
             margin-bottom: 10px;
@@ -71,14 +68,41 @@
             font-size: 14px;
             color: #888;
         }
+        
+     
+
+
+    
+
+        .btn{
+            background-color: #007bff;
+            border: none;
+            margin-bottom: 8px;
+            padding: 8px 12px;
+            border-radius: 10px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease;
+            color: white;            
+        }
+
+        .btn:hover{
+            background-color: #0056b3;
+            color: white;
+        }
+
     </style>
 </head>
 <body>
-<div class="container py-md-5 container--narrow">
+<div class="container py-md-5">
     <h2 class="mb-4">
-        <img class="avatar-small" src="https://gravatar.com/avatar/b9408a09298632b5151200f3449434ef?s=128" alt="Avatar" /> {{$username}}
+        <img class="avatar-small" src="{{$avatar}}" alt="Avatar" /> {{$username}}
         <form class="ml-2 d-inline" action="#" method="POST">
-            <button class="btn btn-primary btn-sm">Follow <i class="fas fa-user-plus"></i></button>
+            <button class="btn">Follow <i class="fas fa-user-plus"></i></button>
+            @if (auth()->user()->username == $username)
+                <a href="/edit-profile" class="btn">Your Profile</a>
+
+            @endif
         </form>
     </h2>
 
@@ -88,11 +112,15 @@
         <a href="#" class="profile-nav-link nav-item nav-link">Following: 2</a>
     </div>
 
-    <div class="list-group">
+   
+    
+
+    <a href="/create-post" > <button class="btn" >  Create Post </button></a>
+
         @foreach($posts as $post)
             <a href="/post/{{$post->id}}" class="list-group-item list-group-item-action">
                 <div class="d-flex align-items-center">
-                    <img class="avatar-tiny" src="https://gravatar.com/avatar/b9408a09298632b5151200f3449434ef?s=128" alt="Avatar">
+                    <img class="avatar-tiny" src="{{$avatar}}" alt="Avatar">
                     <div class="flex-grow-1 ml-3">
                         <h5 class="post-title mb-1">{{$post->title}}</h5>
                         <p class="post-date mb-0"><small>{{$post->created_at->format('M j, Y')}}</small></p>
@@ -100,10 +128,12 @@
                 </div>
             </a>
         @endforeach
-    </div>
+
+        <a href="/home" > <button class="btn" >  Go To Home </button></a>
+        
 </div>
 
-<!-- Bootstrap JS and jQuery (for Bootstrap features like tooltips, popovers, etc.) -->
+
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>

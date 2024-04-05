@@ -11,13 +11,10 @@
         body {
             background-color: lavenderblush;
             font-family: 'Arial', sans-serif;
+            
+            
         }
 
-        .container--narrow {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
 
         .post-card {
             background-color: #fff;
@@ -63,34 +60,54 @@
         .delete-post-button:focus {
             outline: none;
         }
+
+        .back-button{
+            background-color: #007bff;
+            border: none;
+            padding: 8px 10px;
+            border-radius: 10px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease;
+            color: white;
+        }
+
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+
+      
     </style>
 </head>
 <body>
-<div class="container py-md-5 container--narrow">
+<div class="container py-md-5 ">
     <div class="post-card mx-auto">
         <div class="d-flex justify-content-between align-items-center">
             <h2 class="post-title">{{$post->title}}</h2>
             @can('update', $post)
             <span class="pt-2">
-              <a href="/post/{{$post->id}}/edit" class="text-primary mr-2" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fas fa-edit"></i> Edit </a>
+              <a href="/post/{{$post->id}}/edit" class="text-primary mr-2" data-toggle="tooltip" data-placement="top" ><i class="fas fa-edit"></i> Edit </a>
               <form class="delete-post-form d-inline" action="/post/{{$post->id}}" method="POST">
               @csrf
               @method('DELETE')
-                <button class="delete-post-button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fas fa-trash-alt"></i> Delete</button>
+                <button class="delete-post-button" data-toggle="tooltip" data-placement="top"><i class="fas fa-trash-alt"></i> Delete</button>
               </form>
             </span>
             @endcan
         </div>
 
         <p class="post-meta mb-4">
-            <a href="#"><img class="avatar-tiny" src="https://gravatar.com/avatar/f64fc44c03a8a7eb1d52502950879659?s=128" alt="Avatar"></a>
+            <a href="#"><img class="avatar-tiny" src="{{$post->user->avatar}}" alt="Avatar"></a>
             Posted by <a href="#" class="text-dark">{{$post->user->username}}</a> on {{$post->created_at->format('F j, Y')}}
         </p>
 
         <div class="body-content">
             {!! $post->body !!}
         </div>
+
+        
     </div>
+    <a href="/profile/{{auth()->user()->username}}" > <button class="back-button" >  Back </button></a>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

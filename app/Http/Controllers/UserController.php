@@ -5,17 +5,48 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Validation\Rule;
 
 class UserController extends Controller
 {
+
+    public function showAvatarForm(){
+        return view('edit-profile');
+    }
+
+    public function storeAvatar(Request $request){
+        $request->validate(
+            [
+                'avatar' => 'required|image|max:3000'
+            ]
+        );
+        $user = auth()->user();
+        $originalFileName = $request->file('avatar')->getClientOriginalName();
+        $file_name = time() . '_' . $user->id . '_' . $originalFileName;
+
+        $oldAvatar = $user->avatar;
+
+        $request->file('avatar')->storeAs('public/avatars', $file_name);
+
+        $user->avatar = $file_name;
+        $user->save();
+
+
+        if($oldAvatar != 'user.jpeg'){
+            Storage::delete(str_replace('/storage/', 'public/', $oldAvatar));
+        }
+
+        return redirect('/home');
+    
+    }
 
 
    
 
 
     public function profile(User $user){
-        return view('profile-posts', ['username' => $user->username, 'posts' => $user->posts()->latest()->get(), 'postCount' => $user->posts()->count()]);
+        return view('profile-posts', ['avatar' => $user->avatar, 'username' => $user->username, 'posts' => $user->posts()->latest()->get(), 'postCount' => $user->posts()->count()]);
     }
 
 
