@@ -12,6 +12,10 @@ Route::get('/', function () {
 });
 
 
+Route::get('/admin-only', function () {
+    return view('admin-panel');
+})->middleware('can:visitAdminPages');
+
 Route::post('/register', [UserController::class, 'register'])->name('register');
 
 Route::post('/register', [UserController::class, 'login']);

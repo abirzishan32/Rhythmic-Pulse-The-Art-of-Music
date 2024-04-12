@@ -831,8 +831,12 @@
                                         <li> <i class="lnr lnr-rocket"></i> <p>Weekly assignment and <strong class="theme-color"> progress update </strong> .</p></li>
                                         <li> <i class="lnr lnr-volume-high"> </i> <p> Get <strong class="theme-color"> lifetime membership </strong> of any course if you buy once.</p></li>
 
+
                                     </ul>
                                 </div>
+
+								
+
                             </div>
                         </div>
 
@@ -892,6 +896,8 @@
 						</div>
 						</div>
 						</div>
+
+						
 
 
 						<div id="testimonial" class="testimonial">
@@ -958,7 +964,7 @@
 							you enjoyed, your <strong class="theme-color"> favourite </strong> music band or any <strong class="theme-color"> music album </strong> you loved. </p>
 							 
 				</div>
-				<li> <a href="/profile/{{auth()->user()->username}}"><img class="avatar-tiny" src="https://gravatar.com/avatar/f64fc44c03a8a7eb1d52502950879659?s=128" /></a> </li>
+
 				<a class="genre-page" href="/profile/{{auth()->user()->username}}"> <button class="btn-outline-primary mb-3 btn-lg"> Go To Blog</button>  </a>
 
 
