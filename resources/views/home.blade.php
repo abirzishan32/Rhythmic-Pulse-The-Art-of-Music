@@ -3,45 +3,31 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Rhythmic Pulse</title>
-		<!-- Description, Keywords and Author -->
-		<meta name="description" content="Your description">
-		<meta name="keywords" content="Your,Keywords">
-		<meta name="author" content="HimanshuGupta">
 		
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		
 		<!-- Styles -->
-		<!-- Bootstrap CSS -->
 		<link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
 		<link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
-		<!-- Animate CSS -->
 		<link href="{{ asset('css/animate.css') }}" rel="stylesheet">
-		<!-- Basic stylesheet -->
         <link href="{{ asset('css/owl.carousel.css') }}" rel="stylesheet">
-		<!-- Font awesome CSS -->
         <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">	
-		<!-- Custom CSS -->
         <link href="{{ asset('css/style.css') }}" rel="stylesheet">	
         <link href="{{ asset('css/style-color.css') }}" rel="stylesheet">	
 		<link href="{{ asset('fonts/fonticons.css') }}" rel="stylesheet">	
 		<link href="{{ asset('fonts/plugins.css') }}" rel="stylesheet">	
-
-		
-		<!-- Favicon -->
-		<link rel="shortcut icon" href="img/logo/favicon.ico">
 	</head>
 	
 	<body>
-		
-		<!-- modal for booking ticket form -->
+		<!-- modal for events ticket booking -->
 		<div class="modal fade" id="bookTicket" tabindex="-1" role="dialog" aria-labelledby="bookTicket">
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title" id="myModalLabel">Buy Ticket &nbsp; <small><span class="label label-success">Available</span> &nbsp; <span class="label label-danger">Not Available</span></small></h4>
+						<h4 class="modal-title" id="myModalLabel">Buy Ticket &nbsp; </h4>
 					</div>
-					<!-- form for events ticket booking -->
+
 					<form>
 						<div class="modal-body">
 							<div class="form-group">
@@ -70,7 +56,6 @@
 						</div>
 						<div class="modal-footer">
 							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-							<!-- link to payment gatway here -->
 							<button type="button" class="btn btn-primary">Book Now</button>
 						</div>
 					</form>
@@ -83,17 +68,13 @@
 		
 			<!-- header area -->
 			<header>
-				<!-- secondary menu -->
 				<nav class="secondary-menu">
 					<div class="container">
-						<!-- secondary menu left link area -->
 						<div class="sm-left">
 							<strong>Phone</strong>:&nbsp; <a href="#">555 555 555</a>&nbsp;&nbsp;&nbsp;&nbsp;
 							<strong>E-mail</strong>:&nbsp; <a href="#">music.site@melodi.com</a>
 						</div>
-						<!-- secondary menu right link area -->
 						<div class="sm-right">
-							<!-- social link -->
 							<div class="sm-social-link">
 								<a class="h-facebook" href="#"><i class="fa fa-facebook"></i></a>
 								<a class="h-twitter" href="#"><i class="fa fa-twitter"></i></a>
@@ -107,7 +88,6 @@
 				<!-- primary menu -->
 				<nav class="navbar navbar-fixed-top navbar-default">
 					<div class="container">
-						<!-- Brand and toggle get grouped for better mobile display -->
 						<div class="navbar-header">
 							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 								<span class="sr-only">Toggle navigation</span>
@@ -115,19 +95,15 @@
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 							</button>
-							<!-- logo area -->
 							<a class="navbar-brand" href="#home">
-								<!-- logo image -->
 								<img class="img-responsive" src="img/logo.png" alt="" />
 							</a>
 						</div>
 
-						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 							<ul class="nav navbar-nav navbar-right">
                                 <li><a href="#genre">Genre</a></li>
 								<li><a href="#latestalbum">Latest Album</a></li>
-								<li><a href="#featuredalbum">Featured Album</a></li>
 								<li><a href="#events">Upcoming Events</a></li>
 								<li><a href="#blog">Blog</a></li>
                                 <li><a href="#course">Our Courses</a></li>
@@ -139,8 +115,8 @@
 								
 							</ul>
 							
-						</div><!-- /.navbar-collapse -->
-					</div><!-- /.container-fluid -->
+						</div>
+					</div>
 				</nav>
 			</header>
 			<!--/ header end -->
@@ -148,16 +124,13 @@
 			<!-- banner area -->
 			<div class="banner">
 				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-					<!-- Wrapper for slides -->
+
 					<div class="carousel-inner" role="listbox">
 						<div class="item active">
                             <img src="{{ asset('media/banner.jpg') }}" />
 							<div class="container">
-								<!-- banner caption -->
 								<div class="carousel-caption slide-one">
-									<!-- heading -->
 									<h2 class="animated fadeInLeftBig"><i class="fa fa-music"></i> Rhythmic Pulse - The Art of Music</h2>
-									<!-- paragraph -->
 									<h3 class="animated fadeInRightBig">Find More Innovative &amp; Creative Music Albums.</h3>
 								</div>
 							</div>
@@ -165,13 +138,9 @@
 						<div class="item">
                         <img src="{{ asset('media/person-singing.jpg') }}" />
 							<div class="container">
-								<!-- banner caption -->
 								<div class="carousel-caption slide-two">
-									<!-- heading -->
 									<h2 class="animated fadeInLeftBig"><i class="fa fa-headphones"></i> Listen It...</h2>
-									<!-- paragraph -->
 									<h3 class="animated fadeInRightBig">Lorem ipsum dolor sit amet, consectetur elit.</h3>
-									<!-- button -->
 									<a href="#" class="animated fadeIn btn btn-theme">Listen Now</a>
 								</div>
 							</div>
@@ -245,155 +214,49 @@
 			<!-- Hero block area -->
 			<div id="latestalbum" class="hero pad">
 				<div class="container">
-					<!-- hero content -->
 					<div class="default-heading">
-						<!-- heading -->
 						<h2>Latest Album</h2>
 						<hr>
-						<!-- paragraph -->
 						<p>We sing the best <strong class="theme-color">Songs</strong> and now we control the world best <strong class="theme-color">Music</strong>.</p>
 					</div>
                 </div>
-					<!-- hero play list -->
+
 					<div class="hero-playlist">
 						<div class="row">
 							<div class="col-md-6 col-sm-6">
-								<!-- music album image -->
 								<div class="figure">
-									<!-- image -->
-									<img class="img-responsive"  src="{{ asset('media/1.jpg') }}" />
-									<!-- disk image -->
-                                    <img class="img-responsive"  src="{{ asset('media/disk.jpg') }}" />
+									<img class="img-responsive"  src="{{ asset('media/one-more-light.jpeg') }}" />
 									
 								</div>
-								<!-- album details -->
 								<div class="album-details">
-									<!-- title -->
-									<h4>Perfect Melodi</h4>
-									<!-- composed by -->
-									<h5>By Himanshu</h5>
-									<!-- paragraph -->
-									<p>Lorem Ipsum has been the industry's standard dummy text ever since 1500.</p>
-									<!-- button -->
-									<a href="#" class="btn btn-lg btn-theme" id="playNowBtn"><i class="fa fa-play"></i>&nbsp; Play Now</a>
+									<h4> One More Light </h4>
+									<h5>By Linkin Park</h5>
+									<p>One More Light is the seventh studio album by American rock band Linkin Park. It was released on May 19, 2017, through Warner Bros. Records and Machine Shop. It is the last Linkin Park album to feature lead vocalist
+										 Chester Bennington before his death on July 20, 2017.</p>
 								</div>
 							</div>
 							<div class="col-md-6 col-sm-6">
-								<!-- play list -->
 								<div class="playlist-content">
 									<ul class="list-unstyled">
 										<li class="playlist-number">
-											<!-- song information -->
 											<div class="song-info">
-												<!-- song title -->
-												<h4>Melodi Song Track One</h4>
-												<p><strong>Album</strong>: Title &nbsp;|&nbsp; <strong>Type</strong>: Rock &nbsp;|&nbsp; <strong>Singer</strong>: Dawn</p>
-											</div>
-											<!-- music icon -->
-											<div class="music-icon">
-												<a href="#"><i class="fa fa-play"></i></a>
-												<a href="#"><i class="fa fa-pause"></i></a>
+												<h4>Nobody Can Save Me </h4>
+												<p><strong>Written by</strong>: Jonathan Green &nbsp;|&nbsp; <strong>Produced by</strong>: Bradford Philip Delson &nbsp;|&nbsp; <strong>Length</strong>: 3:45</p>
 											</div>
 											<div class="clearfix"></div>
 										</li>
+
+
 										<li class="playlist-number">
-											<!-- song information -->
 											<div class="song-info">
-												<!-- song title -->
-												<h4>Melodi Song Track Two</h4>
-												<p><strong>Album</strong>: Title &nbsp;|&nbsp; <strong>Type</strong>: Rock &nbsp;|&nbsp; <strong>Singer</strong>: Dawn</p>
-											</div>
-											<!-- music icon -->
-											<div class="music-icon">
-												<a href="#"><i class="fa fa-play"></i></a>
-												<a href="#"><i class="fa fa-pause"></i></a>
+												<h4> Good Goodbye </h4>
+												<p><strong>Written by</strong>: Jonathan Green &nbsp;|&nbsp; <strong>Produced by</strong>: Bradford Philip Delson &nbsp;|&nbsp; <strong>Length</strong>: 3:31</p>
 											</div>
 											<div class="clearfix"></div>
 										</li>
-										<li class="playlist-number">
-											<!-- song information -->
-											<div class="song-info">
-												<!-- song title -->
-												<h4>Melodi Song Track Three</h4>
-												<p><strong>Album</strong>: Title &nbsp;|&nbsp; <strong>Type</strong>: Rock &nbsp;|&nbsp; <strong>Singer</strong>: Dawn</p>
-											</div>
-											<!-- music icon -->
-											<div class="music-icon">
-												<a href="#"><i class="fa fa-play"></i></a>
-												<a href="#"><i class="fa fa-pause"></i></a>
-											</div>
-											<div class="clearfix"></div>
-										</li>
-										<li class="playlist-number">
-											<!-- song information -->
-											<div class="song-info">
-												<!-- song title -->
-												<h4>Melodi Song Track Four</h4>
-												<p><strong>Album</strong>: Title &nbsp;|&nbsp; <strong>Type</strong>: Rock &nbsp;|&nbsp; <strong>Singer</strong>: Dawn</p>
-											</div>
-											<!-- music icon -->
-											<div class="music-icon">
-												<a href="#"><i class="fa fa-play"></i></a>
-												<a href="#"><i class="fa fa-pause"></i></a>
-											</div>
-											<div class="clearfix"></div>
-										</li>
-										<li class="playlist-number">
-											<!-- song information -->
-											<div class="song-info">
-												<!-- song title -->
-												<h4>Melodi Song Track Five</h4>
-												<p><strong>Album</strong>: Title &nbsp;|&nbsp; <strong>Type</strong>: Rock &nbsp;|&nbsp; <strong>Singer</strong>: Dawn</p>
-											</div>
-											<!-- music icon -->
-											<div class="music-icon">
-												<a href="#"><i class="fa fa-play"></i></a>
-												<a href="#"><i class="fa fa-pause"></i></a>
-											</div>
-											<div class="clearfix"></div>
-										</li>
-										<li class="playlist-number">
-											<!-- song information -->
-											<div class="song-info">
-												<!-- song title -->
-												<h4>Melodi Song Track Six</h4>
-												<p><strong>Album</strong>: Title &nbsp;|&nbsp; <strong>Type</strong>: Rock &nbsp;|&nbsp; <strong>Singer</strong>: Dawn</p>
-											</div>
-											<!-- music icon -->
-											<div class="music-icon">
-												<a href="#"><i class="fa fa-play"></i></a>
-												<a href="#"><i class="fa fa-pause"></i></a>
-											</div>
-											<div class="clearfix"></div>
-										</li>
-										<li class="playlist-number">
-											<!-- song information -->
-											<div class="song-info">
-												<!-- song title -->
-												<h4>Melodi Song Track Seven</h4>
-												<p><strong>Album</strong>: Title &nbsp;|&nbsp; <strong>Type</strong>: Rock &nbsp;|&nbsp; <strong>Singer</strong>: Dawn</p>
-											</div>
-											<!-- music icon -->
-											<div class="music-icon">
-												<a href="#"><i class="fa fa-play"></i></a>
-												<a href="#"><i class="fa fa-pause"></i></a>
-											</div>
-											<div class="clearfix"></div>
-										</li>
-										<li class="playlist-number">
-											<!-- song information -->
-											<div class="song-info">
-												<!-- song title -->
-												<h4>Melodi Song Track Eight</h4>
-												<p><strong>Album</strong>: Title &nbsp;|&nbsp; <strong>Type</strong>: Rock &nbsp;|&nbsp; <strong>Singer</strong>: Dawn</p>
-											</div>
-											<!-- music icon -->
-											<div class="music-icon">
-												<a href="#"><i class="fa fa-play"></i></a>
-												<a href="#"><i class="fa fa-pause"></i></a>
-											</div>
-											<div class="clearfix"></div>
-										</li>
+
+
+										
 									</ul>
 								</div>
 							</div>
@@ -406,163 +269,24 @@
 			<!-- promo -->
 			<div class="promo parallax-one pad">
 				<div class="container">
-					<!-- promo element -->
 					<div class="promo-element ">
-						<!-- heading -->
 						<h3>Music An Art...</h3>
-						<!-- paragraph -->
 						<p>Music is an art form and cultural activity whose medium is sound organized in time. The common elements of music are <strong>pitch</strong>, <strong>rhythm</strong>, <strong>dynamics</strong> and the sonic qualities of <strong>timbre</strong> and <strong>texture</strong>.</p>
-						<!-- link -->
 
 					</div>
 				</div>
 			</div>
 			<!--/ promo end -->
 			
-			<!-- featured abbum -->
-			<div class="featured pad" id="featuredalbum">
-				<div class="container">
-					<!-- default heading -->
-					<div class="default-heading">
-						<!-- heading -->
-						<h2>Featured Album</h2>
-                        <hr>
-					</div>
-					<!-- featured album elements -->
-					<div class="featured-element">
-						<div class="row">
-							<div class="col-md-4 col-sm-6">
-								<!-- featured item -->
-								<div class="featured-item ">
-									<!-- image container -->
-									<div class="figure">
-										<!-- image -->
-                                        <img class="img-responsive" src="{{ asset('media/featured.jpg') }}" />
-										<!-- paragraph -->
-										<p>There are many variations of passages available, but the majority have suffered Lorem alteration in some form, by injected look even slightly believable.</p>
-									</div>
-									<!-- featured information -->
-									<div class="featured-item-info">
-										<!-- featured title -->
-										<h4>Power Pop</h4>
-										<!-- horizontal line -->
-										<hr />
-										<!-- some responce from social medial or web likes -->
-										<p>1024+ <span class="label label-theme">Like</span> &nbsp;&nbsp; 825+ <span class="label label-theme">Love</span></p>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-4 col-sm-6">
-								<!-- featured item -->
-								<div class="featured-item ">
-									<!-- image container -->
-									<div class="figure">
-										<!-- image -->
-										<img class="img-responsive" src="{{ asset('media/featured.jpg') }}" />
-										<!-- paragraph -->
-										<p>There are many variations of passages available, but the majority have suffered Lorem alteration in some form, by injected look even slightly believable.</p>
-									</div>
-									<!-- featured information -->
-									<div class="featured-item-info">
-										<!-- featured title -->
-										<h4>Bad Brains</h4>
-										<!-- horizontal line -->
-										<hr />
-										<!-- some responce from social medial or web likes -->
-										<p>1024+ <span class="label label-theme">Like</span> &nbsp;&nbsp; 825+ <span class="label label-theme">Love</span></p>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-4 col-sm-6">
-								<!-- featured item -->
-								<div class="featured-item ">
-									<!-- image container -->
-									<div class="figure">
-										<!-- image -->
-										<img class="img-responsive" src="{{ asset('media/featured.jpg') }}" />
-										<!-- paragraph -->
-										<p>There are many variations of passages available, but the majority have suffered Lorem alteration in some form, by injected look even slightly believable.</p>
-									</div>
-									<!-- featured information -->
-									<div class="featured-item-info">
-										<!-- featured title -->
-										<h4>The Mars Volta</h4>
-										<!-- horizontal line -->
-										<hr />
-										<!-- some responce from social medial or web likes -->
-										<p>1024+ <span class="label label-theme">Like</span> &nbsp;&nbsp; 825+ <span class="label label-theme">Love</span></p>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-4 col-sm-6">
-								<!-- featured item -->
-								<div class="featured-item ">
-									<!-- image container -->
-									<div class="figure">
-										<!-- image -->
-										<img class="img-responsive" src="{{ asset('media/featured.jpg') }}" />
-										<!-- paragraph -->
-										<p>There are many variations of passages available, but the majority have suffered Lorem alteration in some form, by injected look even slightly believable.</p>
-									</div>
-									<!-- featured information -->
-									<div class="featured-item-info">
-										<!-- featured title -->
-										<h4>Dirty Dancing</h4>
-										<!-- horizontal line -->
-										<hr />
-										<!-- some responce from social medial or web likes -->
-										<p>1024+ <span class="label label-theme">Like</span> &nbsp;&nbsp; 825+ <span class="label label-theme">Love</span></p>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-4 col-sm-6">
-								<!-- featured item -->
-								<div class="featured-item ">
-									<!-- image container -->
-									<div class="figure">
-										<!-- image -->
-										<img class="img-responsive" src="{{ asset('media/featured.jpg') }}" />
-										<!-- paragraph -->
-										<p>There are many variations of passages available, but the majority have suffered Lorem alteration in some form, by injected look even slightly believable.</p>
-									</div>
-									<!-- featured information -->
-									<div class="featured-item-info">
-										<!-- featured title -->
-										<h4>Hotel California</h4>
-										<!-- horizontal line -->
-										<hr />
-										<!-- some responce from social medial or web likes -->
-										<p>1024+ <span class="label label-theme">Like</span> &nbsp;&nbsp; 825+ <span class="label label-theme">Love</span></p>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-4 col-sm-6">
-								<!-- featured item -->
-								<div class="featured-item ">
-									<!-- image container -->
-									<div class="figure">
-										<!-- image -->
-										<img class="img-responsive" src="{{ asset('media/featured.jpg') }}" />
-										<!-- paragraph -->
-										<p>There are many variations of passages available, but the majority have suffered Lorem alteration in some form, by injected look even slightly believable.</p>
-									</div>
-									<!-- featured information -->
-									<div class="featured-item-info">
-										<!-- featured title -->
-										<h4>Punk Compilation</h4>
-										<!-- horizontal line -->
-										<hr />
-										<!-- some responce from social medial or web likes -->
-										<p>1024+ <span class="label label-theme">Like</span> &nbsp;&nbsp; 825+ <span class="label label-theme">Love</span></p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- features end -->
 			
+			
+
+			<div class="hero pad" id="merch">
+			<div class="default-heading">
+						<h2>Merchandise</h2>
+						<hr>
+					</div>
+
 			<!-- call to action -->
 			<div class="cta parallax-one pad">
 				<div class="container">
@@ -570,73 +294,41 @@
 					<div class="cta-element ">
 						<div class="row">
 							<div class="col-md-9 col-sm-8">
-								<!-- heading -->
-								<h3>Melodi, A Fully Rock Album Pro</h3>
-								<!-- paragraph -->
+								<h3>Visit Our Merchandise</h3>
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim sectetur adipiscing elit, sed do eiusmod tempoad minim veniam consequat.</p>
 							</div>
 							<div class="col-md-3 col-sm-4">
 								<div class="cta-btn text-center">
-									<!-- purchase now button -->
-									<a href="#" class="btn btn-default btn-lg">Download Now</a>
+									<a class="genre-page" href="{{url('/merch')}}"> <button class="btn-outline-primary mb-3 btn-lg"> Go To Merch</button>  </a>
+									
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<!--/ cta end -->
 			
 			<!-- work with us -->
 			<div class="work-with-us pad" id="joinus">
 				<div class="container">
-					<!-- default heading -->
 					<div class="default-heading">
-						<!-- heading -->
 						<h2>Work With Us</h2>
                         <hr>
 					</div>
-					<!-- why work with us content -->
 					<div class="why-content">
-						<!-- paragraph -->
 						<p class="why-message">It would be a great pleasure to have you in our team, follow these steps to join us.</p>
 						<div class="row">
 							<div class="col-md-3 col-sm-6">
-								<!-- why work with us item -->
 								<div class="why-item  delay-one">
 									<span class="why-number">1</span>
-									<!-- paragraph -->
 									<p>Sed ut perspi ciatis unde omnis iste natus error sit vol uptatem accus antium totam rem aperiam, eaque ipsa quae ab illo inventore veritatisnatus.</p>
 								</div>
 							</div>
-							<div class="col-md-3 col-sm-6">
-								<!-- why work with us item -->
-								<div class="why-item  delay-two">
-									<span class="why-number">2</span>
-									<!-- paragraph -->
-									<p>Sed ut perspi ciatis unde omnis iste natus error sit vol uptatem accu santium totam rem aperiam, eaque ipsa quae ab illo inventore veritatisnatus.</p>
-								</div>
-							</div>
-							<div class="col-md-3 col-sm-6">
-								<!-- why work with us item -->
-								<div class="why-item  delay-three">
-									<span class="why-number">3</span>
-									<!-- paragraph -->
-									<p>Sed ut perspi ciatis unde omnis iste natus error sit vol uptatem accus antium totam rem aperiam, eaque ipsa quae ab illo inventore veritatisnatus.</p>
-								</div>
-							</div>
-							<div class="col-md-3 col-sm-6">
-								<!-- why work with us item -->
-								<div class="why-item  delay-four">
-									<span class="why-number">4</span>
-									<!-- paragraph -->
-									<p>Sed ut perspi ciatis unde omnis iste natus error sit vol uptatem accus antium totam rem aperiam, eaque ipsa quae ab illo inventore veritatisnatus.</p>
-								</div>
-							</div>
+							
+							
+							
 						</div>
-						<!-- apply button -->
 						<div class="apply-btn">
-							<!-- button line -->
 							<a class="btn btn-lg btn-theme" href="#">Join Now</a>
 						</div>
 					</div>
@@ -650,147 +342,91 @@
 			<!-- events -->
 			<div class="events parallax-one pad" id="events">
 				<div class="container">
-					<!-- default heading -->
 					<div class="default-heading-shadow">
-						<!-- heading -->
 						<h2>Coming Events</h2>
                         <hr>
 					</div>
-					<!-- events element -->
 					<div class="events-element">
 						<div class="row">
 							<div class="col-md-6 col-sm-6">
-								<!-- event item -->
 								<div class="events-item ">
-									<!-- image container -->
 									<div class="figure">
-										<!-- event date -->
 										<div class="event-date">
-											24 <span class="emonth">Jan</span>
+											7 <span class="emonth">Mar</span>
 											<div class="clearfix"></div>
-											<!-- time -->
 											<span class="etime">06:30 pm</span>
 										</div>
-										<!-- event location -->
-										<span class="event-location"><i class="fa fa-map-marker"></i> New York</span>
-										<!-- image -->
-                                        <img class="img-responsive" src="{{ asset('media/event.jpg') }}" />
-										<!-- image hover -->
-										<div class="img-hover">
-											<!-- hover icon -->
-											<a href="#"><i class="fa fa-play-circle"></i></a>
-										</div>
+										<span class="event-location">Location : Dhaka </span>
+                                        <img class="img-responsive" src="{{ asset('media/joy-bangla-concert.png') }}" />
 									</div>
-									<!-- event information -->
 									<div class="event-info">
-										<!-- event title -->
-										<h3>Sound Of melodi In Instrumesnts</h3>
-										<!-- horizontal line --><hr />
-										<!-- paragraph -->
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, sed doconsect etur eiusmod teme et dolore magna aliqua... <a href="#">more</a></p>
-										<!-- buy ticket button link -->
+										<h3>Joy Bangla Concert</h3>
+										<hr/>
+										<p>The "Joy Bangla Concert" is a musical event held annually in Bangladesh. It's a celebration of the country's independence, particularly commemorating the historic speech by Sheikh Mujibur Rahman on March 7, 1971, which played a pivotal role in the struggle for independence from Pakistan. </p>
 										<button href="#bookTicket" class="btn btn-lg btn-theme" data-toggle="modal" >Book Ticket</button>
 									</div>
 								</div>
 							</div>
 							<div class="col-md-6 col-sm-6">
-								<!-- event item -->
 								<div class="events-item ">
-									<!-- image container -->
 									<div class="figure">
-										<!-- event date -->
 										<div class="event-date">
-											31 <span class="emonth">Jan</span>
+											11 <span class="emonth">Mar</span>
 											<div class="clearfix"></div>
-											<!-- time -->
 											<span class="etime">09:45 pm</span>
 										</div>
-										<!-- event location -->
-										<span class="event-location"><i class="fa fa-map-marker"></i> Romania</span>
-										<!-- image -->
-										<img class="img-responsive" src="{{ asset('media/event.jpg') }}" />
-										<!-- image hover -->
-										<div class="img-hover">
-											<!-- hover icon -->
-											<a href="#"><i class="fa fa-play-circle"></i></a>
-										</div>
+										<span class="event-location">Location : Dhaka </span>
+										<img class="img-responsive" src="{{ asset('media/anjan-dutt.png') }}" />
+									
 									</div>
-									<!-- event information -->
 									<div class="event-info">
-										<!-- event title -->
-										<h3>Rock Music Festival at City Life Mall</h3>
-										<!-- horizontal line --><hr />
-										<!-- paragraph -->
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, sed doconsect etur eiusmod teme et dolore magna aliqua... <a href="#">more</a></p>
-										<!-- buy ticket button link -->
+										<h3>Anjan Dutt in Metropolis</h3>
+										<hr />
+										<p>In his last musical performance back in March, the renowned actor, singer, and director Anjan Dutt managed to leave an enduring mark on the hearts of Jahanginagar University students. Now, this versatile artiste is set to grace the stage once again in the capital city with his upcoming concert titled "Anjan Dutt in Metropolis".
+										Anjan Dutt's latest concert is being organised by Karkhana and Arclight Events. </p>
 										<button href="#bookTicket" class="btn btn-lg btn-theme" data-toggle="modal" >Book Ticket</button>
 									</div>
 								</div>
 							</div>
 							<div class="col-md-6 col-sm-6">
-								<!-- event item -->
 								<div class="events-item ">
-									<!-- image container -->
 									<div class="figure">
-										<!-- event date -->
 										<div class="event-date">
-											14 <span class="emonth">Feb</span>
+											19 <span class="emonth">Apr</span>
 											<div class="clearfix"></div>
-											<!-- time -->
 											<span class="etime">10:30 am</span>
 										</div>
-										<!-- event location -->
-										<span class="event-location"><i class="fa fa-map-marker"></i> New Delhi</span>
-										<!-- image -->
-										<img class="img-responsive" src="{{ asset('media/event.jpg') }}" />
-										<!-- image hover -->
-										<div class="img-hover">
-											<!-- hover icon -->
-											<a href="#"><i class="fa fa-play-circle"></i></a>
-										</div>
+										<span class="event-location">Location : Khulna </span>
+										<img class="img-responsive" src="{{ asset('media/hymn-of-insurgency.png') }}" />
+										
 									</div>
-									<!-- event information -->
 									<div class="event-info">
-										<!-- event title -->
-										<h3>Fashion Show Light At Hollywood</h3>
-										<!-- horizontal line --><hr />
-										<!-- paragraph -->
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, sed doconsect etur eiusmod teme et dolore magna aliqua... <a href="#">more</a></p>
-										<!-- buy ticket button link -->
+										<h3>Hymn of Insurgency</h3><hr />
+										<p>In the heart of the Bangladesh metal scene, where the flames of rebellion burn eternal, a new chapter unfolds with the relentless fury of "Hymn of Insurgency"!
+										Behold, as the underground metal community unites once more to celebrate the spirit of defiance and the power of unbridled creativity!
+										Event Partners : Hellfire & Brimstones & Bengal Legions. Merchandise Partners : Heavy Metal T-Shirts.
+										Promotional Partners : Heavy Metal Lyrics N Meme Hub & Bangladesh Underground Extreme Metal Community.
+										</p>
 										<button href="#bookTicket" class="btn btn-lg btn-theme" data-toggle="modal" >Book Ticket</button>
 									</div>
 								</div>
 							</div>
 							<div class="col-md-6 col-sm-6">
-								<!-- event item -->
 								<div class="events-item ">
-									<!-- image container -->
 									<div class="figure">
-										<!-- event date -->
 										<div class="event-date">
 											31 <span class="emonth">Mar</span>
 											<div class="clearfix"></div>
-											<!-- time -->
 											<span class="etime">10:00 pm</span>
 										</div>
-										<!-- event location -->
-										<span class="event-location"><i class="fa fa-map-marker"></i> New Delhi</span>
-										<!-- image -->
-										<img class="img-responsive" src="{{ asset('media/event.jpg') }}" />
-										<!-- image hover -->
-										<div class="img-hover">
-											<!-- hover icon -->
-											<a href="#"><i class="fa fa-play-circle"></i></a>
-										</div>
+										<span class="event-location">Location : Chittagong </span>
+										<img class="img-responsive" src="{{ asset('media/urban-night.png') }}" />
+								
 									</div>
-									<!-- event information -->
 									<div class="event-info">
-										<!-- event title -->
-										<h3>Fashion Show Light At Hollywood</h3>
-										<!-- horizontal line --><hr />
-										<!-- paragraph -->
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, sed doconsect etur eiusmod teme et dolore magna aliqua... <a href="#">more</a></p>
-										<!-- buy ticket button link -->
+										<h3> Urban Night with 3 Nations </h3><hr />
+										<p>We're thrilled to announce the arrival of Bollywood mega star singer Javed Ali & Pakistani pop sensation Abdul Hannan to Bangladesh for the 'Urban Night with 3 Nation' concert where they will be joining with Bangladeshi young & talented Ishaan Mozumder!
+											 </p>
 										<button href="#bookTicket" class="btn btn-lg btn-theme" data-toggle="modal" >Book Ticket</button>
 									</div>
 								</div>
@@ -805,7 +441,6 @@
 			<!-- Our Courses start -->
 			<div class="hero pad" id="course">
 
-					<!-- default heading -->
 					<div class="default-heading">
 						<h2>Our Courses</h2>
 						<hr>
@@ -925,7 +560,7 @@
 										 music can have. </p>
 
                                     <div class="single_author_content">
-                                        <h2>Abir Rahman</h2>
+                                        <h2>John Doe</h2>
                                         <p>Music Teacher</p>
                                     </div>
                                 </div>
@@ -952,10 +587,13 @@
 				</div>
 			</div>
 
+			<!-- Our Courses end -->
+
+			
+
 
 						<!-- Blog Start -->
 						<div class="blog parallax-five pad" id="blog">
-				<!-- default heading -->
 				<div class="default-heading-shadow">
 						<h2>Blog </h2>
 						<hr>
@@ -984,37 +622,28 @@
 			<!-- contact -->
 			<div class="contact pad" id="contact">
 				<div class="container">
-					<!-- default heading -->
 					<div class="default-heading">
-						<!-- heading -->
 						<h2>Contact Us</h2>
                         <hr>
 					</div>
 					<div class="row">	
 						<div class="col-md-4 col-sm-4">
-							<!-- contact item -->
 							<div class="contact-item ">
-								<!-- big icon -->
-								<i class="fa fa-street-view"></i>
-								<!-- contact details  -->
-								<span class="contact-details">#30/67, 5th Street, Mega Market Circle, New Delhi - 625001</span>
+								<span class="contact-details"> 6th Floor, House No:13, Road No:5, Gulshan-2, Dhaka, Bangladesh </span>
 							</div>
 						</div>
 						<div class="col-md-4 col-sm-4">
-							<!-- contact item -->
 							<div class="contact-item ">
-								<!-- big icon -->
-								<i class="fa fa-wifi"></i>
-								<!-- contact details  -->
-								<span class="contact-details">music.site@melodi.com</span>
+
+								<span class="contact-details">music.site@rhythmic-pulse.com</span>
 							</div>
 						</div>
 						<div class="col-md-4 col-sm-4">
-							<!-- contact item -->
+
 							<div class="contact-item ">
-								<!-- big icon -->
-								<i class="fa fa-phone"></i>
-								<!-- contact details  -->
+
+
+
 								<span class="contact-details">555 555 5555</span>
 							</div>
 						</div>
@@ -1140,35 +769,27 @@
         </section>
 		
 		<!-- Javascript files -->
-		<!-- jQuery -->
         <link href="{{ asset('js/jquery.js') }}" rel="stylesheet">
         <script src="{{ asset('js/jquery.js') }}"></script> 
 
-		<!-- Bootstrap JS -->
         <link href="{{ asset('js/bootstrap.min.js') }}" rel="stylesheet">
         <script src="{{ asset('js/bootstrap.min.js') }}"></script> 
 
-		<!-- WayPoints JS -->
         <link href="{{ asset('js/waypoints.min.js') }}" rel="stylesheet">
         <script src="{{ asset('js/waypoints.min.js') }}"></script> 
 
-		<!-- Include js plugin -->
         <link href="{{ asset('js/owl.carousel.min.js') }}" rel="stylesheet">
         <script src="{{ asset('js/owl.carousel.min.js') }}"></script> 
 
-		<!-- One Page Nav -->
         <link href="{{ asset('js/jquery.nav.js') }}" rel="stylesheet">
         <script src="{{ asset('js/jquery.nav.js') }}"></script> 
 
-		<!-- Respond JS for IE8 -->
         <link href="{{ asset('js/respond.min.js') }}" rel="stylesheet">
         <script src="{{ asset('js/respond.min.js') }}"></script> 
 
-		<!-- HTML5 Support for IE -->
         <link href="{{ asset('js/html5shiv.js') }}" rel="stylesheet">
         <script src="{{ asset('js/html5shiv.js') }}"></script> 
 
-		<!-- Custom JS -->
         <link href="{{ asset('js/custom.js') }}" rel="stylesheet">
         <script src="{{ asset('js/custom.js') }}"></script><link href="{{ asset('http://maps.google.com/maps/api/js') }}" rel="stylesheet">
         <script src="{{ asset('http://maps.google.com/maps/api/js') }}"></script>

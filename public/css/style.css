@@ -412,6 +412,7 @@ hr{
 	padding: 10px 15px;
 	background: #fafafa;
 	border: 1px solid #ddd;
+	border-radius: 5px;
 }
 
 .playlist-content .playlist-number .song-info {

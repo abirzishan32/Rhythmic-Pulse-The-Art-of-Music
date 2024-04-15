@@ -16,6 +16,10 @@ Route::get('/admin-only', function () {
     return view('admin-panel');
 })->middleware('can:visitAdminPages');
 
+Route::get('/merch' , function () {
+    return view('merch');
+});
+
 Route::post('/register', [UserController::class, 'register'])->name('register');
 
 Route::post('/register', [UserController::class, 'login']);
