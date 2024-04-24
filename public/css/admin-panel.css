@@ -17,6 +17,15 @@ body {
 
 }
 
+.horizontal-menu{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #34495e;
+  color: wheat;
+}
+
 .horizontal-menu .bottom-navbar {
   display: flex;
   flex-direction: row;
@@ -29,10 +38,18 @@ body {
 
 .horizontal-menu .nav {
   list-style: none;
-  padding-left: 5px;
   margin: 0;
   display: flex;
   justify-content: start;
+}
+
+.nav-item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px;
+
 }
 
 .horizontal-menu .nav-item {
@@ -65,6 +82,8 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
+
+
 .horizontal-menu .submenu {
   display: none;
   position: absolute;
@@ -75,8 +94,8 @@ body {
 }
 
 .horizontal-menu .nav-item:hover .submenu {
- 
- display: block;
+  
+  display: block;
 }
 
 .horizontal-menu .submenu ul {

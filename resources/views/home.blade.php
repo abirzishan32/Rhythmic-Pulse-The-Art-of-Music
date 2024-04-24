@@ -48,6 +48,17 @@
 									<option>5</option>
 								</select>
 							</div>
+
+							<div class="form-group">
+								<label for="exampleInputSeats">Select Concert</label>
+								<select class="form-control" id="exampleInputSeats">
+									<option>Joy Bangla Concert</option>
+									<option>Anjan Dutt in Metropolis</option>
+									<option>Hymn of Insurgency</option>
+									<option>Urban Night with 3 Nations </option>
+								</select>
+							</div>
+
 							<div class="checkbox">
 								<label>
 									<input type="checkbox"> I accept the Terms of Service
@@ -704,7 +715,7 @@
 		
 			
 			<!-- Scroll to top -->
-			<span class="totop"><a href="#"><i class="fa fa-chevron-up"></i></a></span> 
+			<!-- <span class="totop"><a href="#"><i class="fa fa-chevron-up"></i></a></span>  -->
 			
 		</div>
 
@@ -768,6 +779,20 @@
         </section>
 		
 		<!-- Javascript files -->
+
+		<script>
+window.embeddedChatbotConfig = {
+chatbotId: "zsfgSLfrUa_fiNT5tGByU",
+domain: "www.chatbase.co"
+}
+</script>
+<script
+src="https://www.chatbase.co/embed.min.js"
+chatbotId="zsfgSLfrUa_fiNT5tGByU"
+domain="www.chatbase.co"
+defer>
+</script>
+
         <link href="{{ asset('js/jquery.js') }}" rel="stylesheet">
         <script src="{{ asset('js/jquery.js') }}"></script> 
 
