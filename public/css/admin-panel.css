@@ -7,7 +7,7 @@ body {
   color: #333;
 }
 
-.admin-panel{
+.admin-panel, .ticket-list{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -116,8 +116,126 @@ body {
 }
 
 
+#video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.add-events{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: whitesmoke;
+}
+
+form {
+  background-color: #ffffff; 
+  max-width: 600px;
+  margin: 50px auto; 
+  padding: 20px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+
+input[type="text"],
+input[type="date"],
+input[type="time"],
+input[type="file"],
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px; 
+}
+
+
+textarea {
+  height: 120px;
+  resize: vertical; 
+}
+
+
+button {
+  background-color: #0056b3;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  text-shadow: #004494;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+button:hover {
+  background-color: #004494;
+}
+
+.event-show{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: whitesmoke;
+
+}
+
+
+.show-events {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.event {
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: #fff;
+  margin: 5px;
+  padding: 20px;
+  width: 300px;
+  transition: transform 0.3s ease;
+}
+
+.event:hover {
+  transform: translateY(-5px);
+}
+
+.event h3 {
+  color: #333;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.event p {
+  color: #666;
+  font-size: 16px;
+  margin: 4px 0;
+}
+
+.event img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+
 @media (max-width: 768px) {
   .horizontal-menu .nav {
       flex-direction: column;
   }
 }
+

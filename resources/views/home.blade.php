@@ -20,7 +20,9 @@
 	
 	<body>
 		<!-- modal for events ticket booking -->
-		<div class="modal fade" id="bookTicket" tabindex="-1" role="dialog" aria-labelledby="bookTicket">
+		<form action="/home" method="POST">
+    @csrf
+	<div class="modal fade" id="bookTicket" tabindex="-1" role="dialog" aria-labelledby="bookTicket">
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
@@ -73,6 +75,9 @@
 				</div>
 			</div>
 		</div>
+</form>
+
+		
 		
 		<!-- wrapper -->
 		<div class="wrapper" id="home">

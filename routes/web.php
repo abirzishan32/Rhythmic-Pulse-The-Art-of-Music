@@ -4,7 +4,7 @@ use App\Http\Controllers\PostController;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
-
+use App\Http\Controllers\EventController;
 
 
 Route::get('/', function () {
@@ -16,9 +16,16 @@ Route::get('/admin-only', function () {
     return view('admin/admin-panel');
 })->middleware('can:visitAdminPages');
 
-Route::get('/admin/static', function () {
-    return view('admin/static');
+Route::get('/admin/upcoming-events', function () {
+    return view('admin/upcoming-events');
 });
+
+
+Route::get('/admin/latest-album', function () {
+    return view('admin/latest-album');
+});
+
+
 
 
 
@@ -27,6 +34,9 @@ Route::get('/merch' , function () {
     return view('merch');
 });
 
+
+Route::post('/admin/upcoming-events', [EventController::class, 'store'])->name('admin.upcoming-events.store');
+Route::get('/admin/upcoming-events', [EventController::class, 'index']);
 Route::post('/register', [UserController::class, 'register'])->name('register');
 
 Route::post('/register', [UserController::class, 'login']);
@@ -34,6 +44,7 @@ Route::post('/register', [UserController::class, 'login']);
 Route::get('/home', function () {
     return view('home');
 }) -> middleware('App\Http\Middleware\MustBeLoggedIn');
+
 
 Route::get('/genre', function () {
     return view('genre');

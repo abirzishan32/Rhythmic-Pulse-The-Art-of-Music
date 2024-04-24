@@ -13,9 +13,6 @@
     <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">	
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">	
     <link href="{{ asset('css/style-color.css') }}" rel="stylesheet">	
-    <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="vendors/base/vendor.bundle.base.css">
-    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
 
@@ -36,6 +33,12 @@
       <nav class="bottom-navbar">
         <div class="container">
             <ul class="nav page-navigation">
+            <li class="nav-item">
+                  <a href="/admin/upcoming-events" class="nav-link">
+                    <span class="menu-title">Upcoming Events</span>
+                    <i class="menu-arrow"></i>
+                  </a>
+              </li>
               <li class="nav-item">
                 <a class="nav-link" href="/admin-only">
                   <span class="menu-title">Bands</span>
@@ -54,7 +57,7 @@
                   </div>
               </li>
               <li class="nav-item">
-                  <a href="/admin/static" class="nav-link">
+                  <a href="/admin/latest-album" class="nav-link">
                     <span class="menu-title">Latest Album</span>
                     <i class="menu-arrow"></i>
                   </a>
@@ -101,8 +104,15 @@
       </nav>
     </div>
 
+    <div>
 
-		<!-- page-body-wrapper ends -->
+        <video autoplay muted loop id="video">
+            <source src="{{ asset('Media/admin-welcome.mp4') }}" type="video/mp4">
+          </video>
+
+    </div>
+
+
     </div>
 		<!-- container-scroller -->
     
