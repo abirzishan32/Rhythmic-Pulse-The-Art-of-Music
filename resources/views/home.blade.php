@@ -130,8 +130,8 @@
                             <img src="{{ asset('media/banner.jpg') }}" />
 							<div class="container">
 								<div class="carousel-caption slide-one">
-									<h2 class="animated fadeInLeftBig"><i class="fa fa-music"></i> Rhythmic Pulse - The Art of Music</h2>
-									<h3 class="animated fadeInRightBig">Find More Innovative &amp; Creative Music Albums.</h3>
+									<h2 class="animated fadeInLeftBig"> Rhythmic Pulse - The Art of Music</h2>
+									<h3 class="animated fadeInRightBig">Find More Innovative & Creative Music Albums...</h3>
 								</div>
 							</div>
 						</div>
@@ -139,9 +139,8 @@
                         <img src="{{ asset('media/person-singing.jpg') }}" />
 							<div class="container">
 								<div class="carousel-caption slide-two">
-									<h2 class="animated fadeInLeftBig"><i class="fa fa-headphones"></i> Listen It...</h2>
-									<h3 class="animated fadeInRightBig">Lorem ipsum dolor sit amet, consectetur elit.</h3>
-									<a href="#" class="animated fadeIn btn btn-theme">Listen Now</a>
+									<h2 class="animated fadeInLeftBig"><i class="fa fa-headphones"></i> Explore It</h2>
+									<h3 class="animated fadeInRightBig">Explore the art of music...</h3>
 								</div>
 							</div>
 						</div>
@@ -791,7 +790,8 @@
         <script src="{{ asset('js/html5shiv.js') }}"></script> 
 
         <link href="{{ asset('js/custom.js') }}" rel="stylesheet">
-        <script src="{{ asset('js/custom.js') }}"></script><link href="{{ asset('http://maps.google.com/maps/api/js') }}" rel="stylesheet">
+        <script src="{{ asset('js/custom.js') }}"></script>
+		<link href="{{ asset('http://maps.google.com/maps/api/js') }}" rel="stylesheet">
         <script src="{{ asset('http://maps.google.com/maps/api/js') }}"></script>
 
         <link href="{{ asset('js/gmaps.min.js') }}" rel="stylesheet">

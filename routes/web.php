@@ -13,8 +13,15 @@ Route::get('/', function () {
 
 
 Route::get('/admin-only', function () {
-    return view('admin-panel');
+    return view('admin/admin-panel');
 })->middleware('can:visitAdminPages');
+
+Route::get('/admin/static', function () {
+    return view('admin/static');
+});
+
+
+
 
 Route::get('/merch' , function () {
     return view('merch');
@@ -40,6 +47,8 @@ Route:: get('/post/{post}/edit', [PostController::class, 'showEditForm'])->middl
 Route:: put('/post/{post}', [PostController::class, 'updatedPost'])->middleware('can:update,post');
 Route:: get('/edit-profile', [UserController::class, 'showAvatarForm']);
 Route:: post('/edit-profile', [UserController::class, 'storeAvatar']);
+
+
 
 
 Route:: get('/profile/{user:username}', [UserController::class, 'profile']);

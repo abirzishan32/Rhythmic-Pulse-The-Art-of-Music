@@ -460,19 +460,8 @@ input::-ms-input-placeholder {
     color: #3bd3ba;
 }
 
-/*for image bg*/
 
 
-/*.img-bg{
-  background: url(../images/home-msg.jpg) no-repeat center top fixed;
-  background-size
-  -moz-background-size: cover;
-  -webkit-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  width: 100%;
-  overflow: hidden;
-}*/
 /* navbar section */
 .header_top_menu{
     transition: .6s;
