@@ -27,16 +27,15 @@ Route::get('/admin/latest-album', function () {
 
 
 
-
-
-
 Route::get('/merch' , function () {
     return view('merch');
 });
 
 
 Route::post('/admin/upcoming-events', [EventController::class, 'store'])->name('admin.upcoming-events.store');
-Route::get('/admin/upcoming-events', [EventController::class, 'index']);
+Route::get('/admin/upcoming-events', [EventController::class, 'index1']);
+
+
 Route::post('/register', [UserController::class, 'register'])->name('register');
 
 Route::post('/register', [UserController::class, 'login']);
@@ -45,6 +44,9 @@ Route::get('/home', function () {
     return view('home');
 }) -> middleware('App\Http\Middleware\MustBeLoggedIn');
 
+
+
+Route::get('/home', [EventController::class, 'index2']);
 
 Route::get('/genre', function () {
     return view('genre');

@@ -17,7 +17,7 @@
 </head>
 
 <body>
-<div class="ticket-list">
+<div class="upcoming-events">
     <div>
         <h3 >
           UPCOMING EVENTS
@@ -116,17 +116,19 @@
     <button type="submit">Create Event</button>
 </form>
 
+<a href="/home"></a><button class="goto-home">Go To Home</button>
+
   
 <div class="event-show">
 <h3> Event List </h3>
 <div class="show-events">
     @foreach($events as $event)
         <div class="event">
-            <h3>{{ $event->name }}</h3>
-            <p>{{ $event->location }}</p>
-            <p>{{ $event->event_date }}</p>
-            <p>{{ $event->event_time }}</p>
-            <p>{{ $event->description }}</p>
+            <h3> Event Name : {{ $event->name }}</h3>
+            <p> Location : {{ $event->location }}</p>
+            <p> Date : {{ $event->event_date }}</p>
+            <p> Time : {{ $event->event_time }}</p>
+            <p> Description : {{ $event->description }}</p>
         </div>
     @endforeach
 </div> 

@@ -32,11 +32,16 @@ class EventController extends Controller
         return redirect('/admin/upcoming-events')->with('success', 'Event created successfully!');
     }
 
-    public function index()
+    public function index1()
 {
-    $events = Event::all(); // Retrieve all events from the database
-    return view('/admin/upcoming-events', compact('events')); // Pass events to the view
+    $events = Event::all(); 
+    return view('/admin/upcoming-events', compact('events'));
 }
 
+public function index2()
+{
+    $events = Event::all(); 
+    return view('/home', compact('events')); 
+}
 
 }

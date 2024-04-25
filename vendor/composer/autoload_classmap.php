@@ -7,8 +7,15 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
+    'App\\Http\\Controllers\\EventController' => $baseDir . '/app/Http/Controllers/EventController.php',
+    'App\\Http\\Controllers\\PostController' => $baseDir . '/app/Http/Controllers/PostController.php',
+    'App\\Http\\Controllers\\UserController' => $baseDir . '/app/Http/Controllers/UserController.php',
+    'App\\Http\\Middleware\\MustBeLoggedIn' => $baseDir . '/app/Http/Middleware/MustBeLoggedIn.php',
+    'App\\Models\\Event' => $baseDir . '/app/Models/Event.php',
+    'App\\Models\\Post' => $baseDir . '/app/Models/Post.php',
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',
-    'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
+    'App\\Policies\\PostPolicy' => $baseDir . '/app/Policies/PostPolicy.php',
+    'App\\Providers\\AuthServiceProvider' => $baseDir . '/app/Providers/AuthServiceProvider.php',
     'Attribute' => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
     'Brick\\Math\\BigDecimal' => $vendorDir . '/brick/math/src/BigDecimal.php',
     'Brick\\Math\\BigInteger' => $vendorDir . '/brick/math/src/BigInteger.php',
