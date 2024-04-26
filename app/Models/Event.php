@@ -12,4 +12,5 @@ class Event extends Model
     protected function events(){
         return $this->hasMany(Event::class);
     }
+    
 }

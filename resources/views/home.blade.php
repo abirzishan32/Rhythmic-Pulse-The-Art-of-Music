@@ -127,7 +127,7 @@
 							<li><a href="#merch">Merchandise</a></li>
 							<li><a href="#joinus">Join Us</a></li>
 							<li><a href="#contact">Contact</a></li>
-							<li><a href="#contact">Hi, Admin</a></li>
+							<li><a href="">Hi, Admin</a></li>
 							<li> <a href="/profile/{{auth()->user()->username}}"><img class="avatar-tiny" src="{{auth()->user()->avatar}}" /></a> </li>
 
 						</ul>
@@ -376,8 +376,8 @@
 									</div>
 									<span class="event-location">Location : {{$event->location}} </span>
 
-									<!-- Chobi display krte parinai :() -->
-									<img class="img-responsive" src="{{$event->image}}" />
+									<img class="img-responsive" src="{{ asset('storage/events/' . basename($event->image)) }}" />
+
 								</div>
 								<div class="event-info">
 									<h3>{{$event->name}}</h3>

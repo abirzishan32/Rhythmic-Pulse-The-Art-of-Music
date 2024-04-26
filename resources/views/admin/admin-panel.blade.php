@@ -64,6 +64,14 @@
                 <i class="menu-arrow"></i>
               </a>
             </li>
+
+            <li class="nav-item">
+              <a href="/admin/merch-product" class="nav-link">
+                <span class="menu-title">Merchandise Product</span>
+                <i class="menu-arrow"></i>
+              </a>
+            </li>
+
             <li class="nav-item">
               <a href="pages/charts/chartjs.html" class="nav-link">
                 <span class="menu-title">Merchandise Order</span>

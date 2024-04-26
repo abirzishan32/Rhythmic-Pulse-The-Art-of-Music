@@ -35,6 +35,10 @@ Route::get('/merch' , function () {
 Route::post('/admin/upcoming-events', [EventController::class, 'store'])->name('admin.upcoming-events.store');
 Route::get('/admin/upcoming-events', [EventController::class, 'index1']);
 
+Route::get('/admin/merch-product', function () {
+    return view('admin/merch-product');
+});
+
 
 Route::post('/register', [UserController::class, 'register'])->name('register');
 

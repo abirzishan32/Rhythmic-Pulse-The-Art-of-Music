@@ -1,12 +1,6 @@
 ﻿
-/*************************
-*******Typography******
-**************************/
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,400italic,500,700,100);
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,800,300,600,700);
-@import url(http://fonts.googleapis.com/css?family=Abel);
-
 body {
+  margin-top: 10px;
   font-family: 'Roboto', sans-serif;
   position: relative;
   font-weight:400px;
@@ -86,54 +80,9 @@ a#scrollUp i{
 }
 
 
-.social-icons ul li a {
-  border: 0 none;
-  border-radius: 0;
-  color: #696763;
-  padding:0px;
-}
 
 
-.social-icons ul li{
-	display:inline-block;
-}
 
-.social-icons ul li a i {
-  padding: 11px 15px;
-   transition: all 0.9s ease 0s;
-  -moz-transition: all 0.9s ease 0s;
-  -webkit-transition: all 0.9s ease 0s;
-  -o-transition: all 0.9s ease 0s;
-}
-
-.social-icons ul li a i:hover{
-  color: #fff;
-   transition: all 0.9s ease 0s;
-  -moz-transition: all 0.9s ease 0s;
-  -webkit-transition: all 0.9s ease 0s;
-  -o-transition: all 0.9s ease 0s;
-}
-
-
-.fa-facebook:hover {
-  background: #0083C9;
-}
-
-.fa-twitter:hover  {
-	background:#5BBCEC;
-}
-
-.fa-linkedin:hover  {
-	background:#FF4518;
-}
-
-.fa-dribbble:hover  {
-	background:#90C9DC;
-}
-
-.fa-google-plus:hover  {
-	background:#CE3C2D;
-}
 
 .header-middle .container .row {
   border-bottom: 1px solid #f5f5f5;
@@ -728,8 +677,11 @@ h2.title:before{
   text-transform: uppercase;
 }
 
+
+
 .panel-group .panel-heading + .panel-collapse .panel-body {
   border-top: 0 none;
+
 }
 
 .category-products .badge {
@@ -1138,9 +1090,9 @@ h2.title {
 
 
 
-/*************************
-*******Product Details CSS******
-**************************/
+
+/*Product Details CS*/
+
 
 .product-details{
 	overflow:hidden;

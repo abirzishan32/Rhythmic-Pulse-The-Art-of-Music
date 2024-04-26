@@ -60,6 +60,14 @@
                     <i class="menu-arrow"></i>
                   </a>
               </li>
+
+              <li class="nav-item">
+                  <a href="/admin/merch-product" class="nav-link">
+                    <span class="menu-title">Merchandise Product</span>
+                    <i class="menu-arrow"></i>
+                  </a>
+              </li>
+
               <li class="nav-item">
                   <a href="pages/charts/chartjs.html" class="nav-link">
                     <span class="menu-title">Merchandise Order</span>
@@ -107,16 +115,20 @@
   <form class="add-events" action="/admin/upcoming-events" method="POST" enctype="multipart/form-data">
     @csrf
     <h3> Add Events </h1>
-    <input type="text" name="name" placeholder="Event Name" required>
-    <input type="text" name="location" placeholder="Location" required>
+    <label>Event Name</label>
+    <input type="text" name="name" placeholder="Enter Event Name" required>
+    <label>Location</label>
+    <input type="text" name="location" placeholder="Enter Location" required>
+    <label>Date</label>
     <input type="date" name="event_date" required>
+    <label>Time</label>
     <input type="time" name="event_time" required>
-    <textarea name="description" placeholder="Description" required></textarea>
+    <label>Description</label>
+    <textarea name="description" placeholder="Write about the event..." required></textarea>
+    <label>Upload Photo</label>
     <input type="file" name="image" required>
     <button type="submit">Create Event</button>
 </form>
-
-<a href="/home"></a><button class="goto-home">Go To Home</button>
 
   
 <div class="event-show">

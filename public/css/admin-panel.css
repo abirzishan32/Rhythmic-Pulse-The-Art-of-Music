@@ -129,7 +129,7 @@ body {
   object-fit: cover;
 }
 
-.add-events {
+.add-events, .add-product {
   background: #f4f4f4; 
   padding: 20px;
   border-radius: 8px;
@@ -235,7 +235,7 @@ button:hover {
 .event {
   box-shadow: 0 15px 0 #ffb0b0;
   border-radius: 20px;
-  height: 270px;
+  height: 400px;
   width: 320px;
   border-bottom-left-radius: 160px;
   border-bottom-right-radius: 160px;
