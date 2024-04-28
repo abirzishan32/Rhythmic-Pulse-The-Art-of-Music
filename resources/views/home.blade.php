@@ -21,8 +21,7 @@
 
 <body>
 	<!-- modal for events ticket booking -->
-	<form action="/home" method="POST">
-		@csrf
+
 		<div class="modal fade" id="bookTicket" tabindex="-1" role="dialog" aria-labelledby="bookTicket">
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
@@ -31,52 +30,47 @@
 						<h4 class="modal-title" id="myModalLabel">Buy Ticket &nbsp; </h4>
 					</div>
 
-					<form>
+					<form action="/home" method="POST" enctype="multipart/form-data">
+						@csrf
 						<div class="modal-body">
-							<div class="form-group">
-								<label for="exampleInputEmail1">Email</label>
-								<input type="email" class="form-control" id="exampleInputEmail1" placeholder="example@mail.com">
-							</div>
-							<div class="form-group">
-								<label for="exampleInputContact">Contact</label>
-								<input type="text" class="form-control" id="exampleInputContact" placeholder="+91 55 5555 5555">
-							</div>
-							<div class="form-group">
-								<label for="exampleInputSeats">Number of Tickets</label>
-								<select class="form-control" id="exampleInputSeats">
-									<option>1</option>
-									<option>2</option>
-									<option>3</option>
-									<option>4</option>
-									<option>5</option>
-								</select>
-							</div>
 
-							<div class="form-group">
-								<label for="exampleInputSeats">Select Concert</label>
-								<select class="form-control" id="exampleInputSeats">
-									<option>Joy Bangla Concert</option>
-									<option>Anjan Dutt in Metropolis</option>
-									<option>Hymn of Insurgency</option>
-									<option>Urban Night with 3 Nations </option>
-								</select>
-							</div>
+							<label>Email</label>
+							<input name="email" type="email" class="form-control" id="exampleInputEmail1" placeholder="example@mail.com">
 
-							<div class="checkbox">
-								<label>
-									<input type="checkbox"> I accept the Terms of Service
-								</label>
-							</div>
+
+							<label >Contact</label>
+							<input name="contact" type="text" class="form-control" id="exampleInputContact" placeholder="+91 55 5555 5555">
+
+
+							<label>Number of Tickets</label>
+							<select name="number" class="form-control" id="exampleInputSeats">
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+							</select>
+
+
+
+							<label>Select Concert</label>
+							<select name="event_name" class="form-control" id="exampleInputSeats">
+								@foreach($events as $event)
+								<option>{{$event->name}}</option>
+								@endforeach
+							</select>
+
+
+
 						</div>
 						<div class="modal-footer">
-							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-							<button type="button" class="btn btn-primary">Book Now</button>
+							<button type="submit" class="btn btn-primary">Book Now</button>
 						</div>
 					</form>
 				</div>
 			</div>
 		</div>
-	</form>
+
 
 
 
@@ -364,13 +358,13 @@
 				</div>
 				<div class="events-element">
 					<div class="row">
-						
-					@foreach($events as $event)
+
+						@foreach($events as $event)
 						<div class="col-md-6 col-sm-6">
 							<div class="events-item ">
 								<div class="figure">
 									<div class="event-date">
-										 DATE : {{$event->event_date}}
+										DATE : {{$event->event_date}}
 										<div class="clearfix"></div>
 										<span class="etime"> TIME : {{$event->event_time}} </span>
 									</div>
@@ -503,7 +497,7 @@
 					<p class="enroll-text">Enroll soon and get the access of the best music lessons</p>
 					<hr class="my-4">
 					<p class="lead">
-					<a class="genre-page" href="{{url('/course')}}"> <button class="btn-outline-primary mb-3 btn-lg"> Go To Course</button> </a>
+						<a class="genre-page" href="{{url('/course')}}"> <button class="btn-outline-primary mb-3 btn-lg"> Go To Course</button> </a>
 					</p>
 				</div>
 

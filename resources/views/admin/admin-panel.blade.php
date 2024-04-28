@@ -42,6 +42,12 @@
               </a>
             </li>
             <li class="nav-item">
+              <a href="/admin/events-tickets" class="nav-link">
+                <span class="menu-title">Events Ticket</span>
+                <i class="menu-arrow"></i>
+              </a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="/admin-only">
                 <span class="menu-title">Bands</span>
               </a>

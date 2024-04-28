@@ -9,7 +9,7 @@ body {
 
 
 
-.admin-panel, .upcoming-events{
+.admin-panel{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -212,66 +212,13 @@ button:hover {
   background-color: #004494;
 }
 
-.event-show{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #f23030;
-
-}
-
-
-.show-events {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 20px;
-}
 
 
 
-.event {
-  box-shadow: 0 15px 0 #ffb0b0;
-  border-radius: 20px;
-  height: 400px;
-  width: 320px;
-  border-bottom-left-radius: 160px;
-  border-bottom-right-radius: 160px;
-  background-color: wheat;
-  margin: 5px;
-  padding: 20px;
-  transition: transform 0.3s;
-}
-
-.event:hover {
-  transform: translateY(-5px);
-}
-
-.event h3 {
-  color: #333;
-  font-size: 20px;
-  margin-bottom: 5px;
-}
-
-.event p {
-  color: #666;
-  font-size: 16px;
-  margin: 4px 0;
-}
-
-.event img {
-  width: 100%;
-  height: auto;
-  border-radius: 4px;
-  margin-top: 10px;
-}
 
 
-@media (max-width: 768px) {
-  .horizontal-menu .nav {
-      flex-direction: column;
-  }
-}
+
+
+
+
 

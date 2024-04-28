@@ -1,30 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Merch</title>
-        <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
-		<link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
-		<link href="{{ asset('css/animate.css') }}" rel="stylesheet">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>Merch</title>
+	<link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
+	<link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+	<link href="{{ asset('css/animate.css') }}" rel="stylesheet">
 
-        <link href="{{ asset('css/owl.carousel.css') }}" rel="stylesheet">
+	<link href="{{ asset('css/owl.carousel.css') }}" rel="stylesheet">
 
-        <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">	
+	<link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">
 
-        <link href="{{ asset('css/merch.css') }}" rel="stylesheet">
-        <link href="{{ asset('css/prettyPhoto.css') }}" rel="stylesheet">
-        <link href="{{ asset('css/price-range.css') }}" rel="stylesheet">
-      
-    
+	<link href="{{ asset('css/merch.css') }}" rel="stylesheet">
+	<link href="{{ asset('css/prettyPhoto.css') }}" rel="stylesheet">
+	<link href="{{ asset('css/price-range.css') }}" rel="stylesheet">
+
+
 </head>
 
 <body>
-	
 
-	
+
+
 	<section>
 		<div class="container">
 			<div class="row">
@@ -47,40 +48,40 @@
 											<li><a href="#">Artcell </a></li>
 											<li><a href="#">Aurthohin </a></li>
 											<li><a href="#">Shironamhin </a></li>
-                                            <li><a href="#">Arbovirus</a></li>
+											<li><a href="#">Arbovirus</a></li>
 											<li><a href="#"> Black </a></li>
 											<li><a href="#"> Indalo </a></li>
-                                            <li><a href="#"> Warfaze </a></li>
+											<li><a href="#"> Warfaze </a></li>
 											<li><a href="#">Nemesis</a></li>
 											<li><a href="#">Miles</a></li>
-                                            <li><a href="#">Aftermath</a></li>
-                                            <li><a href="#">Stoic Bliss</a></li>
-                                            <li><a href="#">Avoid Rafa</a></li>
-                                            <li><a href="#">Cryptic Fate</a></li>
-                                            <li><a href="#">Shunno</a></li>
-                                            <li><a href="#"> Meghdol </a></li>
+											<li><a href="#">Aftermath</a></li>
+											<li><a href="#">Stoic Bliss</a></li>
+											<li><a href="#">Avoid Rafa</a></li>
+											<li><a href="#">Cryptic Fate</a></li>
+											<li><a href="#">Shunno</a></li>
+											<li><a href="#"> Meghdol </a></li>
 											<li><a href="#">Ark</a></li>
 											<li><a href="#">Trainwreck</a></li>
-                                            <li><a href="#">Karnival</a></li>
-                                            <li><a href="#">Ionic Bond</a></li>
-                                            <li><a href="#">Minerva</a></li>
-                                            <li><a href="#">Lalon Band</a></li>
-                                            <li><a href="#">Dalchut</a></li>
-                                            <li><a href="#">Level Five</a></li>
-                                            <li><a href="#">Dads in the Park</a></li>
-                                            <li><a href="#">Bagdhara</a></li>
-                                            <li><a href="#">Nonta Biscuit</a></li>
-                                            <li><a href="#">Highway</a></li>
-                                            <li><a href="#">Bay of Bengal</a></li>
-                                            <li><a href="#">Arekta Rock Band</a></li>
-                                            <li><a href="#">Owned</a></li>
+											<li><a href="#">Karnival</a></li>
+											<li><a href="#">Ionic Bond</a></li>
+											<li><a href="#">Minerva</a></li>
+											<li><a href="#">Lalon Band</a></li>
+											<li><a href="#">Dalchut</a></li>
+											<li><a href="#">Level Five</a></li>
+											<li><a href="#">Dads in the Park</a></li>
+											<li><a href="#">Bagdhara</a></li>
+											<li><a href="#">Nonta Biscuit</a></li>
+											<li><a href="#">Highway</a></li>
+											<li><a href="#">Bay of Bengal</a></li>
+											<li><a href="#">Arekta Rock Band</a></li>
+											<li><a href="#">Owned</a></li>
 										</ul>
 									</div>
 								</div>
 							</div>
 
 
-                            <div class="panel panel-default">
+							<div class="panel panel-default">
 								<div class="panel-heading">
 									<h4 class="panel-title">
 										<a data-toggle="collapse" data-parent="#accordian" href="#foreign">
@@ -101,29 +102,29 @@
 											<li><a href="#"> The Beatles</a></li>
 											<li><a href="#"> Queen </a></li>
 											<li><a href="#">Led Zeppelin</a></li>
-                                            <li><a href="#"> Guns N' Roses </a></li>
+											<li><a href="#"> Guns N' Roses </a></li>
 											<li><a href="#"> Pink Floyd </a></li>
-                                            <li><a href="#"> Radiohead </a></li>
-                                            <li><a href="#"> Nirvana </a></li>
-                                            <li><a href="#"> Arch Enemy </a></li>
-                                            <li><a href="#"> System of A Down </a></li>
-                                            <li><a href="#"> Bon Jovi </a></li>
-                                            <li><a href="#"> Behemoth </a></li>
-                                            <li><a href="#"> Panthera </a></li>
-                                            <li><a href="#"> Maroon V </a></li>
-                                            <li><a href="#"> One Direction </a></li>
-                                            <li><a href="#"> Dream Theater </a></li>
-                                            <li><a href="#"> Iron Maiden </a></li>
-                                            <li><a href="#"> Metallica </a></li>
-                                            <li><a href="#"> Green Day </a></li>
-                                            <li><a href="#"> The Smiths </a></li>
-                                            <li><a href="#"> Aerosmith </a></li>
-                                            <li><a href="#"> The Rolling Stones </a></li>
-                                            <li><a href="#"> Black Sabbath </a></li>
-                                            <li><a href="#"> Red Hot Chilli Peper </a></li>
+											<li><a href="#"> Radiohead </a></li>
+											<li><a href="#"> Nirvana </a></li>
+											<li><a href="#"> Arch Enemy </a></li>
+											<li><a href="#"> System of A Down </a></li>
+											<li><a href="#"> Bon Jovi </a></li>
+											<li><a href="#"> Behemoth </a></li>
+											<li><a href="#"> Panthera </a></li>
+											<li><a href="#"> Maroon V </a></li>
+											<li><a href="#"> One Direction </a></li>
+											<li><a href="#"> Dream Theater </a></li>
+											<li><a href="#"> Iron Maiden </a></li>
+											<li><a href="#"> Metallica </a></li>
+											<li><a href="#"> Green Day </a></li>
+											<li><a href="#"> The Smiths </a></li>
+											<li><a href="#"> Aerosmith </a></li>
+											<li><a href="#"> The Rolling Stones </a></li>
+											<li><a href="#"> Black Sabbath </a></li>
+											<li><a href="#"> Red Hot Chilli Peper </a></li>
 
-                                            
-                                            
+
+
 										</ul>
 									</div>
 								</div>
@@ -156,7 +157,7 @@
 									</div>
 								</div>
 							</div>
-							
+
 							<div class="panel panel-default">
 								<div class="panel-heading">
 									<h4 class="panel-title">
@@ -168,36 +169,36 @@
 								<div id="hoodie" class="panel-collapse collapse">
 									<div class="panel-body">
 										<ul>
-                                        <li><a href="#">Artcell </a></li>
+											<li><a href="#">Artcell </a></li>
 											<li><a href="#">Aurthohin </a></li>
 											<li><a href="#">Shironamhin </a></li>
-                                            <li><a href="#">Arbovirus</a></li>
+											<li><a href="#">Arbovirus</a></li>
 											<li><a href="#"> Black </a></li>
 											<li><a href="#"> Indalo </a></li>
-                                            <li><a href="#"> Warfaze </a></li>
+											<li><a href="#"> Warfaze </a></li>
 											<li><a href="#">Nemesis</a></li>
 											<li><a href="#">Miles</a></li>
-                                            <li><a href="#">Aftermath</a></li>
-                                            <li><a href="#">Stoic Bliss</a></li>
-                                            <li><a href="#">Avoid Rafa</a></li>
-                                            <li><a href="#">Cryptic Fate</a></li>
-                                            <li><a href="#">Shunno</a></li>
-                                            <li><a href="#"> Meghdol </a></li>
+											<li><a href="#">Aftermath</a></li>
+											<li><a href="#">Stoic Bliss</a></li>
+											<li><a href="#">Avoid Rafa</a></li>
+											<li><a href="#">Cryptic Fate</a></li>
+											<li><a href="#">Shunno</a></li>
+											<li><a href="#"> Meghdol </a></li>
 											<li><a href="#">Ark</a></li>
 											<li><a href="#">Trainwreck</a></li>
-                                            <li><a href="#">Karnival</a></li>
-                                            <li><a href="#">Ionic Bond</a></li>
-                                            <li><a href="#">Minerva</a></li>
-                                            <li><a href="#">Lalon Band</a></li>
-                                            <li><a href="#">Dalchut</a></li>
-                                            <li><a href="#">Level Five</a></li>
-                                            <li><a href="#">Dads in the Park</a></li>
-                                            <li><a href="#">Bagdhara</a></li>
-                                            <li><a href="#">Nonta Biscuit</a></li>
-                                            <li><a href="#">Highway</a></li>
-                                            <li><a href="#">Bay of Bengal</a></li>
-                                            <li><a href="#">Arekta Rock Band</a></li>
-                                            <li><a href="#">Owned</a></li>
+											<li><a href="#">Karnival</a></li>
+											<li><a href="#">Ionic Bond</a></li>
+											<li><a href="#">Minerva</a></li>
+											<li><a href="#">Lalon Band</a></li>
+											<li><a href="#">Dalchut</a></li>
+											<li><a href="#">Level Five</a></li>
+											<li><a href="#">Dads in the Park</a></li>
+											<li><a href="#">Bagdhara</a></li>
+											<li><a href="#">Nonta Biscuit</a></li>
+											<li><a href="#">Highway</a></li>
+											<li><a href="#">Bay of Bengal</a></li>
+											<li><a href="#">Arekta Rock Band</a></li>
+											<li><a href="#">Owned</a></li>
 										</ul>
 									</div>
 								</div>
@@ -215,26 +216,26 @@
 								<div id="wrist-bands" class="panel-collapse collapse">
 									<div class="panel-body">
 										<ul>
-                                        <li><a href="#">Artcell </a></li>
+											<li><a href="#">Artcell </a></li>
 											<li><a href="#">Aurthohin </a></li>
 											<li><a href="#">Shironamhin </a></li>
-                                            <li><a href="#">Arbovirus</a></li>
-                                            <li><a href="#">Dalchut</a></li>
-                                            <li><a href="#">Level Five</a></li>
-                                            <li><a href="#">Dads in the Park</a></li>
-                                            <li><a href="#">Bagdhara</a></li>
-                                            <li><a href="#">Nonta Biscuit</a></li>
-                                            <li><a href="#">Highway</a></li>
-                                            <li><a href="#">Bay of Bengal</a></li>
-                                            <li><a href="#">Arekta Rock Band</a></li>
-                                            <li><a href="#">Owned</a></li>
+											<li><a href="#">Arbovirus</a></li>
+											<li><a href="#">Dalchut</a></li>
+											<li><a href="#">Level Five</a></li>
+											<li><a href="#">Dads in the Park</a></li>
+											<li><a href="#">Bagdhara</a></li>
+											<li><a href="#">Nonta Biscuit</a></li>
+											<li><a href="#">Highway</a></li>
+											<li><a href="#">Bay of Bengal</a></li>
+											<li><a href="#">Arekta Rock Band</a></li>
+											<li><a href="#">Owned</a></li>
 										</ul>
 									</div>
 								</div>
 							</div>
 
 
-                            <div class="panel panel-default">
+							<div class="panel panel-default">
 								<div class="panel-heading">
 									<h4 class="panel-title">
 										<a data-toggle="collapse" data-parent="#accordian" href="#cap">
@@ -245,27 +246,27 @@
 								<div id="cap" class="panel-collapse collapse">
 									<div class="panel-body">
 										<ul>
-                                        <li><a href="#">Artcell </a></li>
+											<li><a href="#">Artcell </a></li>
 											<li><a href="#">Aurthohin </a></li>
 											<li><a href="#">Shironamhin </a></li>
-                                            <li><a href="#">Arbovirus</a></li>
-                                            <li><a href="#">Dalchut</a></li>
-                                            <li><a href="#">Level Five</a></li>
-                                            <li><a href="#">Dads in the Park</a></li>
-                                            <li><a href="#">Bagdhara</a></li>
-                                            <li><a href="#">Nonta Biscuit</a></li>
-                                            <li><a href="#">Highway</a></li>
-                                            <li><a href="#">Bay of Bengal</a></li>
-                                            <li><a href="#">Arekta Rock Band</a></li>
-                                            <li><a href="#">Owned</a></li>
+											<li><a href="#">Arbovirus</a></li>
+											<li><a href="#">Dalchut</a></li>
+											<li><a href="#">Level Five</a></li>
+											<li><a href="#">Dads in the Park</a></li>
+											<li><a href="#">Bagdhara</a></li>
+											<li><a href="#">Nonta Biscuit</a></li>
+											<li><a href="#">Highway</a></li>
+											<li><a href="#">Bay of Bengal</a></li>
+											<li><a href="#">Arekta Rock Band</a></li>
+											<li><a href="#">Owned</a></li>
 										</ul>
 									</div>
 								</div>
 							</div>
-							
 
 
-                            <div class="panel panel-default">
+
+							<div class="panel panel-default">
 								<div class="panel-heading">
 									<h4 class="panel-title">
 										<a data-toggle="collapse" data-parent="#accordian" href="#bag">
@@ -276,39 +277,40 @@
 								<div id="bag" class="panel-collapse collapse">
 									<div class="panel-body">
 										<ul>
-                                        <li><a href="#">Artcell </a></li>
+											<li><a href="#">Artcell </a></li>
 											<li><a href="#">Aurthohin </a></li>
 											<li><a href="#">Shironamhin </a></li>
-                                            <li><a href="#">Arbovirus</a></li>
-                                            <li><a href="#">Dalchut</a></li>
-                                            <li><a href="#">Level Five</a></li>
-                                            <li><a href="#">Dads in the Park</a></li>
-                                            <li><a href="#">Bagdhara</a></li>
-                                            <li><a href="#">Nonta Biscuit</a></li>
-                                            <li><a href="#">Highway</a></li>
-                                            <li><a href="#">Bay of Bengal</a></li>
-                                            <li><a href="#">Arekta Rock Band</a></li>
-                                            <li><a href="#">Owned</a></li>
+											<li><a href="#">Arbovirus</a></li>
+											<li><a href="#">Dalchut</a></li>
+											<li><a href="#">Level Five</a></li>
+											<li><a href="#">Dads in the Park</a></li>
+											<li><a href="#">Bagdhara</a></li>
+											<li><a href="#">Nonta Biscuit</a></li>
+											<li><a href="#">Highway</a></li>
+											<li><a href="#">Bay of Bengal</a></li>
+											<li><a href="#">Arekta Rock Band</a></li>
+											<li><a href="#">Owned</a></li>
 										</ul>
 									</div>
 								</div>
 							</div>
-							
 
 
-							
+
+
 						</div>
-					
-						
-		
-						
-						
-					
+
+
+
+
+
+
 					</div>
 				</div>
 
 
-				
+
+
 				<div class="col-sm-9 padding-right">
 					<div class="features_items">
 						<h2 class="title text-center">Features Items</h2>
@@ -316,20 +318,19 @@
 						<div class="col-sm-4">
 							<div class="product-image-wrapper">
 								<div class="single-products">
-										<div class="productinfo text-center">
+									<div class="productinfo text-center">
 										<img class="img-responsive" src="{{ asset('storage/products/' . basename($product->image)) }}" />
-											<!-- <img src="images/home/product1.jpg" alt="" /> -->
+										<h2>৳{{$product->price}}</h2>
+										<p>{{$product->band_name}}</p>
+										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+									</div>
+									<div class="product-overlay">
+										<div class="overlay-content">
 											<h2>৳{{$product->price}}</h2>
 											<p>{{$product->band_name}}</p>
 											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 										</div>
-										<div class="product-overlay">
-											<div class="overlay-content">
-												<h2>৳{{$product->price}}</h2>
-												<p>{{$product->band_name}}</p>
-												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-											</div>
-										</div>
+									</div>
 								</div>
 								<div class="choose">
 									<ul class="nav nav-pills nav-justified">
@@ -342,56 +343,57 @@
 						@endforeach
 
 					</div>
-					
-					
-					
+
+
+
 					<div class="recommended_items"><!--recommended_items-->
 						<h2 class="title text-center">recommended items</h2>
-						
+
 						<div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
 							<div class="carousel-inner">
-							@foreach ($recommended_products as $index => $product)
-								<div class="item active">	
+								@foreach ($recommended_products as $index => $product)
+								<div class="item active">
 									<div class="col-sm-4">
 										<div class="product-image-wrapper">
 											<div class="single-products">
 												<div class="productinfo text-center">
-												<img class="img-responsive" src="{{ asset('storage/products/' . basename($product->image)) }}" />
+													<img class="img-responsive" src="{{ asset('storage/products/' . basename($product->image)) }}" />
 													<h2>৳ {{$product->price}}</h2>
 													<p>{{$product->band_name}}</p>
 													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 												</div>
-												
+
 											</div>
 										</div>
 									</div>
-									
+
 								</div>
-							@endforeach
+								@endforeach
 							</div>
-							 <a class="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev">
+							<a class="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev">
 								<i class="fa fa-angle-left"></i>
-							  </a>
-							  <a class="right recommended-item-control" href="#recommended-item-carousel" data-slide="next">
+							</a>
+							<a class="right recommended-item-control" href="#recommended-item-carousel" data-slide="next">
 								<i class="fa fa-angle-right"></i>
-							  </a>			
+							</a>
 						</div>
 					</div><!--/recommended_items-->
-					
+
 				</div>
 			</div>
 		</div>
 	</section>
-	
-	
-	
 
-  
-    <script src="js/jquery.js"></script>
+
+
+
+
+	<script src="js/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.scrollUp.min.js"></script>
 	<script src="js/price-range.js"></script>
-    <script src="js/jquery.prettyPhoto.js"></script>
-    <script src="js/main.js"></script>
+	<script src="js/jquery.prettyPhoto.js"></script>
+	<script src="js/main.js"></script>
 </body>
+
 </html>

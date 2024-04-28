@@ -43,4 +43,16 @@ class ProductUploadController extends Controller
         return view('/merch', compact('merch_product', 'recommended_products'));
     }
 
+
+  
+
+    public function delete($id)
+    {
+        $product = Product::findOrFail($id);
+        $product->delete();
+
+        return redirect('/admin/merch-product')->with('success', 'Product deleted successfully');
+    }
+
+
 }

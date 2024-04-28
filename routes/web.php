@@ -7,6 +7,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\MerchShowController;
 use App\Http\Controllers\ProductUploadController;
+use App\Http\Controllers\TicketController;
 
 Route::get('/', function () {
     return view('authentication');
@@ -37,9 +38,12 @@ Route::post('/admin/upcoming-events', [EventController::class, 'store'])->name('
 Route::get('/admin/upcoming-events', [EventController::class, 'index1']);
 
 
+Route::get('/admin/events-tickets', [TicketController::class, 'index']);
 
 Route::post('/admin/merch-product', [ProductUploadController::class, 'storeProduct'])->name('admin.merch-product.storeProduct');
 Route::get('/admin/merch-product', [ProductUploadController::class, 'index1']);
+Route::delete('/admin/merch-product/{id}', [ProductUploadController::class, 'delete'])->name('delete_product');
+
 Route::get('/merch', [ProductUploadController::class, 'index2']);
 
 
@@ -54,6 +58,8 @@ Route::get('/home', function () {
 
 
 Route::get('/home', [EventController::class, 'index2']);
+Route::post('/home', [TicketController::class, 'storeTicket'])->name('storeTicket');
+
 
 Route::get('/genre', function () {
     return view('genre');
