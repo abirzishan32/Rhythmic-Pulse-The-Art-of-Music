@@ -9,10 +9,6 @@ use App\Library\SslCommerz\SslCommerzNotification;
 class SslCommerzPaymentController extends Controller
 {
 
-    public function exampleEasyCheckout()
-    {
-        return view('exampleEasycheckout');
-    }
 
     public function exampleHostedCheckout()
     {

@@ -82,8 +82,8 @@ Route:: post('/edit-profile', [UserController::class, 'storeAvatar']);
 
 Route:: get('/profile/{user:username}', [UserController::class, 'profile']);
 
-Route::get('/example1', [SslCommerzPaymentController::class, 'exampleEasyCheckout']);
-Route::get('/example2', [SslCommerzPaymentController::class, 'exampleHostedCheckout']);
+
+Route::get('/checkout', [SslCommerzPaymentController::class, 'exampleHostedCheckout']);
 
 Route::post('/pay', [SslCommerzPaymentController::class, 'index']);
 Route::post('/pay-via-ajax', [SslCommerzPaymentController::class, 'payViaAjax']);
