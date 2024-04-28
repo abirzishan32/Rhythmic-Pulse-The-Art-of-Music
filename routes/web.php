@@ -5,6 +5,7 @@ use App\Models\User;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\MerchShowController;
 use App\Http\Controllers\ProductUploadController;
 
 Route::get('/', function () {
@@ -29,9 +30,7 @@ Route::get('/admin/latest-album', function () {
 
 
 
-Route::get('/merch' , function () {
-    return view('merch');
-});
+
 
 
 Route::post('/admin/upcoming-events', [EventController::class, 'store'])->name('admin.upcoming-events.store');
@@ -40,7 +39,8 @@ Route::get('/admin/upcoming-events', [EventController::class, 'index1']);
 
 
 Route::post('/admin/merch-product', [ProductUploadController::class, 'storeProduct'])->name('admin.merch-product.storeProduct');
-Route::get('/admin/merch-product', [ProductUploadController::class, 'index']);
+Route::get('/admin/merch-product', [ProductUploadController::class, 'index1']);
+Route::get('/merch', [ProductUploadController::class, 'index2']);
 
 
 Route::post('/register', [UserController::class, 'register'])->name('register');

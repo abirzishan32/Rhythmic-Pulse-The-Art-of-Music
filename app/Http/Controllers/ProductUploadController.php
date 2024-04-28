@@ -26,11 +26,17 @@ class ProductUploadController extends Controller
         $imagePath = $request->file('image')->store('public/products');
         $incomingFields['image'] = $imagePath;
         $merch_product->create($incomingFields);
-        return view('/admin/merch-product');
-        
+        return redirect('/admin/merch-product')->with('success', 'Event created successfully!');
     }
 
-    public function index()
+    public function index1()
+    {
+        $merch_product = Product::all();
+        $recommended_products = Product::where('recommended', 'yes')->get();
+        return view('/admin/merch-product', compact('merch_product', 'recommended_products'));
+    }
+
+    public function index2()
     {
         $merch_product = Product::all();
         $recommended_products = Product::where('recommended', 'yes')->get();
