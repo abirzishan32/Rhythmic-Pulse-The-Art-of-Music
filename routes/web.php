@@ -8,6 +8,7 @@ use App\Http\Controllers\EventController;
 use App\Http\Controllers\MerchShowController;
 use App\Http\Controllers\ProductUploadController;
 use App\Http\Controllers\TicketController;
+use App\Http\Controllers\SslCommerzPaymentController;
 
 Route::get('/', function () {
     return view('authentication');
@@ -66,9 +67,6 @@ Route::get('/genre', function () {
 }) -> middleware('App\Http\Middleware\MustBeLoggedIn');
 
 
-Route::get('/course', function () {
-    return view('course');
-}) -> middleware('App\Http\Middleware\MustBeLoggedIn');
 
 Route:: get('/create-post', [PostController::class, 'showCreateForm']);
 Route:: post('/create-post', [PostController::class, 'storeNewPost']);
@@ -83,3 +81,15 @@ Route:: post('/edit-profile', [UserController::class, 'storeAvatar']);
 
 
 Route:: get('/profile/{user:username}', [UserController::class, 'profile']);
+
+Route::get('/example1', [SslCommerzPaymentController::class, 'exampleEasyCheckout']);
+Route::get('/example2', [SslCommerzPaymentController::class, 'exampleHostedCheckout']);
+
+Route::post('/pay', [SslCommerzPaymentController::class, 'index']);
+Route::post('/pay-via-ajax', [SslCommerzPaymentController::class, 'payViaAjax']);
+
+Route::post('/success', [SslCommerzPaymentController::class, 'success']);
+Route::post('/fail', [SslCommerzPaymentController::class, 'fail']);
+Route::post('/cancel', [SslCommerzPaymentController::class, 'cancel']);
+
+Route::post('/ipn', [SslCommerzPaymentController::class, 'ipn']);
