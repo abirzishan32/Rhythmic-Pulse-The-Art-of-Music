@@ -503,7 +503,7 @@
 					<p class="enroll-text">Enroll soon and get the access of the best music lessons</p>
 					<hr class="my-4">
 					<p class="lead">
-						<a class="btn btn-primary btn-lg" href="#" role="button">Enroll Now</a>
+					<a class="genre-page" href="{{url('/course')}}"> <button class="btn-outline-primary mb-3 btn-lg"> Go To Course</button> </a>
 					</p>
 				</div>
 

@@ -1,0 +1,40 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Models\Product;
+
+
+class ProductUploadController extends Controller
+{
+    public function storeProduct(Product $merch_product, Request $request)
+    {
+        $incomingFields = $request->validate([
+            'band_name' => 'required|string|max:255',
+            'type' => 'required|string|max:255',
+            'price' => 'required',
+            'image' => 'required|image',
+            'recommended' => 'required|string|max:255',
+        ]);
+
+        $incomingFields['band_name'] = strip_tags($incomingFields['band_name']);
+        $incomingFields['type'] = strip_tags($incomingFields['type']);
+        $incomingFields['recommended'] = strip_tags($incomingFields['recommended']);
+
+
+        $imagePath = $request->file('image')->store('public/products');
+        $incomingFields['image'] = $imagePath;
+        $merch_product->create($incomingFields);
+        return view('/admin/merch-product');
+        
+    }
+
+    public function index()
+    {
+        $merch_product = Product::all();
+        $recommended_products = Product::where('recommended', 'yes')->get();
+        return view('/merch', compact('merch_product', 'recommended_products'));
+    }
+
+}

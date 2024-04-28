@@ -14,9 +14,15 @@ return new class extends Migration
         Schema::create('merch_product', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            
+            $table->string('band_name');
+            $table->string('type');
+            $table->string('price');
+            $table->string('image');
+            $table->string('recommended');
+
         });
     }
+
 
     /**
      * Reverse the migrations.

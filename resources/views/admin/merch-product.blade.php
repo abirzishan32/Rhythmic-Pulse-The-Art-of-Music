@@ -2,18 +2,73 @@
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Latest Album</title>
+    <title>Merchandise Upload</title>
     <link href="{{ asset('css/admin-panel.css') }}" rel="stylesheet">
     <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/animate.css') }}" rel="stylesheet">
     <link href="{{ asset('css/owl.carousel.css') }}" rel="stylesheet">
     <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style-color.css') }}" rel="stylesheet">
+    <style>
+        .body, .html {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .add-merch{
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .input-val {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        .add-product {
+            width: 50%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-radius: 8px;
+        }
+
+        .add-product label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .add-product input[type="text"],
+        .add-product input[type="number"] {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        .add-product input[type="file"] {
+            margin-bottom: 10px;
+        }
+
+        .add-product button {
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .add-product button:hover {
+            background-color: #555;
+        }
+
+    </style>
 </head>
 
 <body>
@@ -111,34 +166,50 @@
         </div>
     </div>
 
-    <form class="add-product" method="POST">
+    <div class="add-merch">
+        <h3>Add Merchandise Product</h3>
+    </div>
+
+    <form action="/admin/merch-product" class="add-product" method="POST" enctype="multipart/form-data">
         @csrf
-        <div class="form-group">
-            <label>Band Name</label>
-            <input type="text" class="form-control" placeholder="Enter Band Name">
-        </div>
-        <div class="form-group">
-            <label>Type</label>
-            <input type="text" class="form-control" placeholder="Enter Product Type">
-        </div>
 
-        <div class="form-group">
-            <label>Price</label>
-            <input type="number" class="form-control" placeholder="Enter Price">
-        </div>
+        <label>Band Name</label>
+        <input class="input-val" type="text" name="band_name" placeholder="Enter Band Name">
 
-        <div class="form-group">
-            <label>Upload Photo</label>
-            <input type="file" name="image" required>
-        </div>
 
-        <div class="form-group">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Recommended Item</label>
-        </div>
+       
+        <label>Type</label>
+        <select class="input-val" name="type">
+            <option value="T-shirt">T-Shirt</option>
+            <option value="Shorts">Shorts</option>
+            <option value="Hoodie">Hoodie</option>
+            <option value="Wrist band">Wrist Band</option>
+            <option value="Cap">Cap</option>
+            <option value="Bag">Bag</option>
+            <option value="Poster">Poster</option>
+            <option value="Mug">Mug</option>
+            <option value="Key Ring">Key Ring</option>
+        </select>
+
+
+
+        <label>Price</label>
+        <input class="input-val" type="number" name="price" placeholder="Enter Price">
+
+
+
+        <label>Upload Photo</label>
+        <input class="input-val" type="file" name="image" required>
+
 
         
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <label>Recommended Item</label>
+        <input type="radio" name="recommended" value="yes" id="rec"> Yes
+        <input type="radio" name="recommended" value="no" id="not-rec"> No
+
+
+
+        <button type="submit">Submit</button>
     </form>
 
 </body>

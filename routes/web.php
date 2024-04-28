@@ -5,7 +5,7 @@ use App\Models\User;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\EventController;
-
+use App\Http\Controllers\ProductUploadController;
 
 Route::get('/', function () {
     return view('authentication');
@@ -16,9 +16,11 @@ Route::get('/admin-only', function () {
     return view('admin/admin-panel');
 })->middleware('can:visitAdminPages');
 
-Route::get('/admin/upcoming-events', function () {
-    return view('admin/upcoming-events');
-});
+// Route::get('/admin/upcoming-events', function () {
+//     return view('admin/upcoming-events');
+// });
+
+
 
 
 Route::get('/admin/latest-album', function () {
@@ -35,9 +37,10 @@ Route::get('/merch' , function () {
 Route::post('/admin/upcoming-events', [EventController::class, 'store'])->name('admin.upcoming-events.store');
 Route::get('/admin/upcoming-events', [EventController::class, 'index1']);
 
-Route::get('/admin/merch-product', function () {
-    return view('admin/merch-product');
-});
+
+
+Route::post('/admin/merch-product', [ProductUploadController::class, 'storeProduct'])->name('admin.merch-product.storeProduct');
+Route::get('/admin/merch-product', [ProductUploadController::class, 'index']);
 
 
 Route::post('/register', [UserController::class, 'register'])->name('register');
@@ -54,6 +57,11 @@ Route::get('/home', [EventController::class, 'index2']);
 
 Route::get('/genre', function () {
     return view('genre');
+}) -> middleware('App\Http\Middleware\MustBeLoggedIn');
+
+
+Route::get('/course', function () {
+    return view('course');
 }) -> middleware('App\Http\Middleware\MustBeLoggedIn');
 
 Route:: get('/create-post', [PostController::class, 'showCreateForm']);
