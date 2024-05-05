@@ -11,6 +11,4 @@ class Product extends Model
     protected $fillable = ['band_name', 'type', 'price', 'image', 'recommended'];
 
 
-    use HasFactory;
-
 }

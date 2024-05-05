@@ -457,8 +457,10 @@
 									and help develop new students into world-class players with weekly private guitar lessons and
 									group rehearsals. School of Rock's core philosophy is that the best way for students to gain musical proficiency is through performance-based music education.
 									All of our lessons for guitar students include a performance aspect. </p>
-
+									<h3 class="course-head"> Price : 3000 BTD / month </h3>
+									<a class="enroll-btn" href="/exampleHosted"> <button class="btn-outline-primary mb-3 btn-lg"> Enroll Now </button> </a>
 						</div>
+
 					</div>
 
 
@@ -471,7 +473,8 @@
 									fills and solos. We have been teaching drum lessons to kids and adults for decades and we have given more drummers a start in the business than any other music program in the world. Our core
 									philosophy is that the best way for students to gain musical proficiency is through the
 									patented method and performance-based music education. All of our programs include a performance aspect.
-
+									<h3 class="course-head"> Price : 3500 BTD / month </h3>
+									<a class="enroll-btn" href="/exampleHosted"> <button class="btn-outline-primary mb-3 btn-lg"> Enroll Now </button> </a>
 						</div>
 					</div>
 
@@ -487,19 +490,13 @@
 									students to love the keyboard (and piano) by teaching them to play popular rock songs while implementing basic concepts and skills like finger placement,
 									scales, pedaling, key differentiation and rhythm. We start with private keyboard lessons paired with band rehearsals to prepare our piano students to play a live gig
 									with a full band. The patented School of Rock Method builds musical proficiency through our proprietary Method App, Method Book collection, SongFirst approach, and performance-based music curriculum. All of our lessons programs include a performance aspect.</p>
-
+									<h3 class="course-head"> Price : 3000 BTD / month </h3>
+									<a class="enroll-btn" href="/exampleHosted"> <button class="btn-outline-primary mb-3 btn-lg"> Enroll Now </button> </a>
 						</div>
 					</div>
 				</div>
 
-				<div class="enroll-now">
-					<h1>Don't be Late!</h1>
-					<p class="enroll-text">Enroll soon and get the access of the best music lessons</p>
-					<hr class="my-4">
-					<p class="lead">
-						<a class="genre-page" href="{{url('/course')}}"> <button class="btn-outline-primary mb-3 btn-lg"> Go To Course</button> </a>
-					</p>
-				</div>
+				
 
 
 
@@ -778,6 +775,8 @@
 			lng: 90.4152
 		});
 	</script>
+
+	
 
 
 

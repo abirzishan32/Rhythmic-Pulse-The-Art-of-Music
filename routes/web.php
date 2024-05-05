@@ -32,7 +32,9 @@ Route::get('/admin/latest-album', function () {
 
 
 
-
+Route::get('/spotify', function () {
+    return view('spotify');
+});
 
 
 Route::post('/admin/upcoming-events', [EventController::class, 'store'])->name('admin.upcoming-events.store');

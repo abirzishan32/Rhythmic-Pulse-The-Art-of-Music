@@ -401,8 +401,13 @@
         <button type="submit">Submit</button>
     </form>
 
+
+
     <div class="merch-show">
         <h3>Merchandise List</h3>
+
+       
+
         <table class="table table-striped">
             <thead>
                 <tr>
