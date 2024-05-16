@@ -397,8 +397,8 @@
         <label>Recommended Item</label>
         <input type="radio" name="recommended" value="yes" id="rec"> Yes
         <input type="radio" name="recommended" value="no" id="not-rec"> No
-
-        <button type="submit">Submit</button>
+        <br>
+        <button  type="submit">Submit</button>
     </form>
 
 

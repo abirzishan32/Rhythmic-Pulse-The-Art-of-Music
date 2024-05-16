@@ -5,10 +5,13 @@ use App\Models\User;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\GroupController;
 use App\Http\Controllers\MerchShowController;
 use App\Http\Controllers\ProductUploadController;
+use App\Http\Controllers\PusherController;
 use App\Http\Controllers\TicketController;
 use App\Http\Controllers\SslCommerzPaymentController;
+use App\Http\Controllers\HomeController;
 
 Route::get('/', function () {
     return view('authentication');
@@ -19,9 +22,6 @@ Route::get('/admin-only', function () {
     return view('admin/admin-panel');
 })->middleware('can:visitAdminPages');
 
-// Route::get('/admin/upcoming-events', function () {
-//     return view('admin/upcoming-events');
-// });
 
 
 
@@ -35,6 +35,7 @@ Route::get('/admin/latest-album', function () {
 Route::get('/spotify', function () {
     return view('spotify');
 });
+
 
 
 Route::post('/admin/upcoming-events', [EventController::class, 'store'])->name('admin.upcoming-events.store');
@@ -69,6 +70,10 @@ Route::get('/genre', function () {
 }) -> middleware('App\Http\Middleware\MustBeLoggedIn');
 
 
+Route::get('/music-lyrics', function () {
+    return view('music-lyrics');
+}) -> middleware('App\Http\Middleware\MustBeLoggedIn');
+
 
 Route:: get('/create-post', [PostController::class, 'showCreateForm']);
 Route:: post('/create-post', [PostController::class, 'storeNewPost']);
@@ -95,3 +100,22 @@ Route::post('/fail', [SslCommerzPaymentController::class, 'fail']);
 Route::post('/cancel', [SslCommerzPaymentController::class, 'cancel']);
 
 Route::post('/ipn', [SslCommerzPaymentController::class, 'ipn']);
+
+
+
+Route::get('/chat-home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::post('/message', [HomeController::class, 'sendMessage']);  
+Route::get('/message/{id}', [HomeController::class, 'getMessage'])->name('message');
+Route::get('/ShowMassage/{id}', [HomeController::class, 'ShowMassage']);
+Route::get('/subscribe', [HomeController::class, 'subscribe']);
+Route::get('/unFollow/{id}', [HomeController::class, 'remove_user']);
+Route::get('/group/create', [GroupController::class, 'create_form']);
+Route::get('/group/create', [GroupController::class, 'create']);
+Route::get('/group/join', [GroupController::class, 'join_form']);
+Route::get('/group/create', [GroupController::class, 'join']);
+Route::get('/group/edit/{id}', [GroupController::class, 'edit']);
+Route::get('/group/update/{id}', [GroupController::class, 'update']);
+Route::get('/group/delete/{id}', [GroupController::class, 'deleteGroup']);
+Route::get('/group/members_list/{id}', [GroupController::class, 'members_list']);
+Route::get('/remove_user/{id}/{user_id}', [GroupController::class, 'remove_user']);
+

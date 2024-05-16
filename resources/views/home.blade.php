@@ -64,7 +64,7 @@
 
 						</div>
 						<div class="modal-footer">
-							<button type="submit" class="btn btn-primary">Book Now</button>
+							<button  type="submit" class="btn btn-primary">Book Now</button>
 						</div>
 					</form>
 				</div>
@@ -346,6 +346,23 @@
 		</div>
 		<!--/ end work with us -->
 
+
+
+		<!-- Search Music -->
+		<div id="searchmusic" class="hero pad">
+			<div class="container">
+				<div class="default-heading">
+					<h2>Search Music</h2>
+					<hr>
+					<p>Yes, you can search for your <strong class="theme-color"> favourite songs</strong> and get your own <strong class="theme-color"> favourite playlist</strong> according to your choice.</p>
+				</div>
+			</div>
+			<a class="genre-page" href="/spotify"> <button class="btn-outline-primary mb-3 btn-lg"> Go To Music Search</button> </a>
+			
+		</div>
+
+
+		<!--End Search Music -->
 
 
 

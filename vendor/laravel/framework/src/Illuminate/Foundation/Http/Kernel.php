@@ -53,7 +53,9 @@ class Kernel implements KernelContract
      *
      * @var array<int, class-string|string>
      */
-    protected $middleware = [];
+    protected $middleware = [
+        
+    ];
 
     /**
      * The application's route middleware groups.
@@ -69,7 +71,11 @@ class Kernel implements KernelContract
      *
      * @deprecated
      */
-    protected $routeMiddleware = [];
+    protected $routeMiddleware = [
+        'owner' => \App\Http\Middleware\GroupOwner::class,
+        'member' => \App\Http\Middleware\GroupMember::class,
+    
+    ];
 
     /**
      * The application's middleware aliases.
