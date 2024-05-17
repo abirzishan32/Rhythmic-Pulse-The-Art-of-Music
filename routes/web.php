@@ -8,6 +8,7 @@ use App\Http\Controllers\EventController;
 use App\Http\Controllers\GroupController;
 use App\Http\Controllers\MerchShowController;
 use App\Http\Controllers\ProductUploadController;
+use App\Http\Controllers\NewsController;
 use App\Http\Controllers\PusherController;
 use App\Http\Controllers\TicketController;
 use App\Http\Controllers\SslCommerzPaymentController;
@@ -36,10 +37,16 @@ Route::get('/spotify', function () {
     return view('spotify');
 });
 
-
+Route::get('/music-news', function () {
+    return view('music-news');
+});
 
 Route::post('/admin/upcoming-events', [EventController::class, 'store'])->name('admin.upcoming-events.store');
 Route::get('/admin/upcoming-events', [EventController::class, 'index1']);
+
+Route::get('/admin/create-news', [NewsController::class, 'create']);
+Route::post('/admin/create-news', [NewsController::class, 'store']);
+
 
 
 Route::get('/admin/events-tickets', [TicketController::class, 'index']);
@@ -118,4 +125,6 @@ Route::get('/group/update/{id}', [GroupController::class, 'update']);
 Route::get('/group/delete/{id}', [GroupController::class, 'deleteGroup']);
 Route::get('/group/members_list/{id}', [GroupController::class, 'members_list']);
 Route::get('/remove_user/{id}/{user_id}', [GroupController::class, 'remove_user']);
+
+
 

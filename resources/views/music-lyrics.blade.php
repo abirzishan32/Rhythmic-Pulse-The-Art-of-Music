@@ -16,15 +16,16 @@
                 <input type="text" id="search"  placeholder="Enter artist name or song title...">
                 <button>Search</button>
             </form>
+            
+            
         </div>
-       
     </header>
     <section id="video"></section>
     <section class="result" id="result">
         <h1>Results will be displayed here... </h1>
         
     </section>
-    
+
 <script src="https://apis.google.com/js/api.js"></script>  
 <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.js"></script> 

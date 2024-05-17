@@ -115,11 +115,12 @@
 						<ul class="nav navbar-nav navbar-right">
 							<li><a href="#genre">Genre</a></li>
 							<li><a href="#latestalbum">Latest Album</a></li>
+							<li><a href="#searchmusic"> Search Playlist</a></li>
+							<li><a href="#searchlyrics"> Search Lyrics</a></li>
 							<li><a href="#events">Upcoming Events</a></li>
 							<li><a href="#blog">Blog</a></li>
 							<li><a href="#course">Our Courses</a></li>
 							<li><a href="#merch">Merchandise</a></li>
-							<li><a href="#joinus">Join Us</a></li>
 							<li><a href="#contact">Contact</a></li>
 							<li><a href="">Hi, Admin</a></li>
 							<li> <a href="/profile/{{auth()->user()->username}}"><img class="avatar-tiny" src="{{auth()->user()->avatar}}" /></a> </li>
@@ -352,16 +353,28 @@
 		<div id="searchmusic" class="hero pad">
 			<div class="container">
 				<div class="default-heading">
-					<h2>Search Music</h2>
+					<h2>Search Playlist</h2>
 					<hr>
 					<p>Yes, you can search for your <strong class="theme-color"> favourite songs</strong> and get your own <strong class="theme-color"> favourite playlist</strong> according to your choice.</p>
 				</div>
 			</div>
-			<a class="genre-page" href="/spotify"> <button class="btn-outline-primary mb-3 btn-lg"> Go To Music Search</button> </a>
+			<a class="genre-page" href="/spotify"> <button class="btn-outline-primary mb-3 btn-lg"> Go To Playlist Search</button> </a>
 			
 		</div>
+		<!--End Search Music -->
 
-
+		<!-- Search Music -->
+		<div id="searchlyrics" class="hero pad">
+			<div class="container">
+				<div class="default-heading">
+					<h2>Search Lyrics</h2>
+					<hr>
+					<p>Search for the <strong class="theme-color"> lyrics of your favourite songs</strong>.</p>
+				</div>
+			</div>
+			<a class="genre-page" href="/music-lyrics"> <button class="btn-outline-primary mb-3 btn-lg"> Go To Lyrics Search</button> </a>
+			
+		</div>
 		<!--End Search Music -->
 
 

@@ -10,8 +10,8 @@
 body{
     font-family: 'Gochi Hand', cursive;
     background: linear-gradient(to left, 
-    rgb(40, 40, 40),
-    rgb(40, 40, 40))
+    rgb(244, 171, 171),
+    rgb(233, 76, 76))
     
 }
 header{
@@ -63,7 +63,7 @@ input{
 button{
     width: 100px;
     max-width: 100%;
-    /* height: 40px; */
+
     background: #9E2092;
     color: white;
     border-radius: 50px;
@@ -76,7 +76,11 @@ button{
     outline: none;
 }
 button:hover{
-    transform: scale(0.95);
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
 }
 li{
     list-style: none;
@@ -115,7 +119,7 @@ li{
 
 }
 .song-list li{
-    margin-bottom: 20px;
+    margin: 20px;
     width: 500px;
     justify-content: space-evenly;
     letter-spacing: 1px;
@@ -166,6 +170,7 @@ li{
     width: 100px;
     text-transform: capitalize;
 }
+
 
 
 @media only screen and (max-width: 800px) {
