@@ -10,6 +10,7 @@ use App\Http\Controllers\MerchShowController;
 use App\Http\Controllers\ProductUploadController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\PusherController;
+use App\Http\Controllers\FollowController;
 use App\Http\Controllers\TicketController;
 use App\Http\Controllers\SslCommerzPaymentController;
 use App\Http\Controllers\HomeController;
@@ -126,5 +127,13 @@ Route::get('/group/delete/{id}', [GroupController::class, 'deleteGroup']);
 Route::get('/group/members_list/{id}', [GroupController::class, 'members_list']);
 Route::get('/remove_user/{id}/{user_id}', [GroupController::class, 'remove_user']);
 
+
+
+Route::post('/create-follow/{user:username}', [FollowController::class, 'createFollow']) -> middleware('App\Http\Middleware\MustBeLoggedIn');
+Route::post('/remove-follow/{user:username}', [FollowController::class, 'removeFollow']) -> middleware('App\Http\Middleware\MustBeLoggedIn');
+
+Route::get('/news', function () {
+    return view('news');
+}) -> middleware('App\Http\Middleware\MustBeLoggedIn');
 
 

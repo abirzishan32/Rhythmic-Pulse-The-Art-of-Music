@@ -114,8 +114,8 @@ li{
     left: 50%;
     transform: translate(-50% ,0);
     background: linear-gradient(to left, 
-    rgb(40, 40, 40),
-    rgb(40, 40, 40))
+    rgb(160, 160, 160),
+    rgb(84, 82, 82))
 
 }
 .song-list li{
@@ -128,7 +128,7 @@ li{
     text-decoration: overline;
     text-decoration-color: rgb(12, 147, 100);
     position: relative;
-    /* line-height: 30px; */
+
 }
 
 .song-list li::after{
