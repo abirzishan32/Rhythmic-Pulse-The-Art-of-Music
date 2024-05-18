@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use App\Models\Follow;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Validation\Rule;
 
@@ -44,16 +45,40 @@ class UserController extends Controller
 
 
    
-
-
-    public function profile(User $user){
+    private function getSharedData($user) {
         $currentlyFollowing = 0;
-        if(auth()->check()){
+
+        if (auth()->check()) {
             $currentlyFollowing = Follow::where([['user_id', '=', auth()->user()->id], ['followeduser', '=', $user->id]])->count();
         }
-        return view('profile-posts', ['currentlyFollowing' => $currentlyFollowing, 'avatar' => $user->avatar, 'username' => $user->username, 'posts' => $user->posts()->latest()->get(), 'postCount' => $user->posts()->count()]);
+
+        View::share('sharedData', ['currentlyFollowing' => $currentlyFollowing, 'avatar' => $user->avatar, 'username' => $user->username, 'postCount' => $user->posts()->count()]);
     }
 
+
+    public function profile(User $user) {
+        $this->getSharedData($user);
+        return view('profile-posts', ['posts' => $user->posts()->latest()->get()]);
+    }
+
+
+   
+    public function profileFollowers($username) {
+        $user = User::where('username', $username)->firstOrFail();
+        $this->getSharedData($user);
+        $followers = $user->followers()->with('userDoingTheFollowing')->latest()->get();
+        return view('followers', ['followers' => $followers]);
+    }
+    
+    
+
+    public function profileFollowing($username) {
+        $user = User::where('username', $username)->firstOrFail();
+        $this->getSharedData($user);
+        $following = $user->followingTheseUsers()->with('userBeingFollowed')->latest()->get();
+        return view('following', ['following' => $following]);
+    }
+    
 
     public function login(Request $request){
         $incomingFields = $request->validate(
@@ -95,4 +120,10 @@ class UserController extends Controller
 
         return "Ghumai";
     }
+
+    public function logout() {
+        auth()->logout();
+        return redirect('/')->with('success', 'You are now logged out.');
+    }
+
 }

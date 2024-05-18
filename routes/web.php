@@ -8,6 +8,7 @@ use App\Http\Controllers\EventController;
 use App\Http\Controllers\GroupController;
 use App\Http\Controllers\MerchShowController;
 use App\Http\Controllers\ProductUploadController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\PusherController;
 use App\Http\Controllers\FollowController;
@@ -38,6 +39,10 @@ Route::get('/spotify', function () {
     return view('spotify');
 });
 
+Route::get('/admin/following-list', function () {
+    return view('/admin/following-list');
+});
+
 Route::get('/music-news', function () {
     return view('music-news');
 });
@@ -48,7 +53,9 @@ Route::get('/admin/upcoming-events', [EventController::class, 'index1']);
 Route::get('/admin/create-news', [NewsController::class, 'create']);
 Route::post('/admin/create-news', [NewsController::class, 'store']);
 
+// Route::get('/admin/following-list', [AdminController::class, 'index']);
 
+Route::get('/admin/events-tickets', [TicketController::class, 'index']);
 
 Route::get('/admin/events-tickets', [TicketController::class, 'index']);
 
@@ -78,6 +85,7 @@ Route::get('/genre', function () {
 }) -> middleware('App\Http\Middleware\MustBeLoggedIn');
 
 
+
 Route::get('/music-lyrics', function () {
     return view('music-lyrics');
 }) -> middleware('App\Http\Middleware\MustBeLoggedIn');
@@ -91,8 +99,8 @@ Route:: get('/post/{post}/edit', [PostController::class, 'showEditForm'])->middl
 Route:: put('/post/{post}', [PostController::class, 'updatedPost'])->middleware('can:update,post');
 Route:: get('/edit-profile', [UserController::class, 'showAvatarForm']);
 Route:: post('/edit-profile', [UserController::class, 'storeAvatar']);
-
-
+Route:: get('/following/{username}', [UserController::class, 'profileFollowing']);
+Route:: get('/followers/{username}', [UserController::class, 'profileFollowers']);
 
 
 Route:: get('/profile/{user:username}', [UserController::class, 'profile']);
@@ -132,8 +140,14 @@ Route::get('/remove_user/{id}/{user_id}', [GroupController::class, 'remove_user'
 Route::post('/create-follow/{user:username}', [FollowController::class, 'createFollow']) -> middleware('App\Http\Middleware\MustBeLoggedIn');
 Route::post('/remove-follow/{user:username}', [FollowController::class, 'removeFollow']) -> middleware('App\Http\Middleware\MustBeLoggedIn');
 
+
+
 Route::get('/news', function () {
     return view('news');
 }) -> middleware('App\Http\Middleware\MustBeLoggedIn');
+
+Route::get('/meow', function () {
+    return view('meow');
+}) ;
 
 

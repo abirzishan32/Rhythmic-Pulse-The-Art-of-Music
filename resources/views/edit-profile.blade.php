@@ -105,6 +105,9 @@
 <body>
     <div class="container--narrow mt-5">
         <h1>Edit Profile</h1>
+
+
+
         <form action="/edit-profile" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="form-group mt-4">
@@ -116,6 +119,9 @@
             </div>
             <button type="submit" class="btn btn-primary mt-4">Save</button>
         </form>
+
+
+        
     </div>
 </body>
 </html>

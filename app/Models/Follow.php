@@ -9,12 +9,12 @@ class Follow extends Model
 {
     protected $table = 'following_table';
     protected $fillable = ['user_id', 'followeduser'];
-
-    public function user() {
+    public function userDoingTheFollowing() {
         return $this->belongsTo(User::class, 'user_id');
     }
 
-    public function followedUser() {
-        return $this->belongsTo(User::class, 'followeduser');
+    public function userBeingFollowed() {
+        return $this->belongsTo(User::class, 'followeduser', 'id');
     }
+    
 }

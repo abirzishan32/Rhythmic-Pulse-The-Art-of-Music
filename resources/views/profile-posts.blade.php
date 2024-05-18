@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -48,16 +49,16 @@
             margin-top: 12px;
             border-radius: 12px;
             margin-bottom: 15px;
-            background: linear-gradient(to left, 
-            rgb(84, 82, 82),
-            rgb(160, 160, 160));
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            background: linear-gradient(to left,
+                    rgb(84, 82, 82),
+                    rgb(160, 160, 160));
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
         }
 
         .list-group-item:hover {
             transform: translateY(-5px);
-            box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
         }
 
         .list-group-item img {
@@ -77,13 +78,29 @@
             color: #666;
         }
 
-        .btn-follow, .btn-unfollow {
+        .btn-profile {
+            background-color: #007bff;
+            color: navajowhite;
+            font-size: 15px;
+            border-radius: 8px;
+            padding: 8px 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-left: auto;
+        }
+
+        .btn-profile:hover {
+            background-color: #ffff;
+        }
+
+        .btn-follow,
+        .btn-unfollow {
             border: none;
             margin-bottom: 10px;
             border-radius: 12px;
             font-weight: bold;
-            padding: 6px 12px; 
-            font-size: 16px;    
+            padding: 6px 12px;
+            font-size: 16px;
             text-transform: uppercase;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -118,48 +135,46 @@
         .btn:hover {
             background-color: #0056b3;
         }
-
     </style>
 </head>
+
 <body>
     <div class="container py-md-5">
         <h2 class="mb-4">
-            <img class="avatar-small" src="{{$avatar}}" alt="Avatar" /> {{$username}}
+            <img class="avatar-small" src="{{$sharedData['avatar']}}" /> {{$sharedData['username']}}
             @auth
-            @if (!$currentlyFollowing AND auth()->user()->id != $username)
-            <form class="ml-2 d-inline" action="/create-follow/{{$username}}" method="POST">
-            @csrf 
-                <button class="btn-follow">Follow <i class="fas fa-user-plus"></i></button>
-                @if (auth()->user()->username == $username)
-                    <a href="/edit-profile" class="btn">Your Profile</a>
-                @endif
+            @if(!$sharedData['currentlyFollowing'] AND auth()->user()->username != $sharedData['username'])
+            <form class="ml-2 d-inline" action="/create-follow/{{$sharedData['username']}}" method="POST">
+                @csrf
+                <button class="btn btn-primary btn-sm">Follow <i class="fas fa-user-plus"></i></button>
             </form>
             @endif
 
-            @if ($currentlyFollowing)
-            <form class="ml-2 d-inline" action="/remove-follow/{{$username}}" method="POST">
-            @csrf 
-                <button class="btn-unfollow">Unfollow <i class="fas fa-user-plus"></i></button>
-                @if (auth()->user()->username == $username)
-                    <a href="/edit-profile" class="btn">Your Profile</a>
-                @endif
+            @if($sharedData['currentlyFollowing'])
+            <form class="ml-2 d-inline" action="/remove-follow/{{$sharedData['username']}}" method="POST">
+                @csrf
+                <button class="btn btn-danger btn-sm">Stop Following <i class="fas fa-user-times"></i></button>
             </form>
             @endif
+
+            @if(auth()->user()->username == $sharedData['username'])
+            <a href="/edit-profile" class="btn btn-secondary btn-sm">Edit Profile</a>
+            @endif
             @endauth
+            <a href="/followers/{{$sharedData['username']}}"> <button class="btn"> Followers </button></a>
+        <a href="/following/{{$sharedData['username']}}"> <button class="btn"> Followings </button></a>
         </h2>
 
         <div class="profile-nav nav nav-tabs pt-2 mb-4">
-            <a href="#" class="profile-nav-link nav-item nav-link active">Posts: {{$postCount}}</a>
-            <a href="#" class="profile-nav-link nav-item nav-link">Followers: 3</a>
-            <a href="#" class="profile-nav-link nav-item nav-link">Following: 2</a>
+            <a href="#" class="profile-nav-link nav-item nav-link active">Posts: {{$sharedData['postCount']}}</a>
         </div>
 
-        <a href="/create-post" > <button class="btn" >  Create Post </button></a>
+        <a href="/create-post"> <button class="btn"> Create Post </button></a>
 
         @foreach($posts as $post)
         <a href="/post/{{$post->id}}" class="list-group-item list-group-item-action">
             <div class="d-flex align-items-center">
-                <img class="avatar-tiny" src="{{$avatar}}" alt="Avatar">
+                <img class="avatar-tiny" src="{{$sharedData['avatar']}}" alt="Avatar">
                 <div class="flex-grow-1 ml-3">
                     <h5 class="post-title mb-1">{{$post->title}}</h5>
                     <p class="post-date mb-0"><small>{{$post->created_at->format('M j, Y')}}</small></p>
@@ -168,11 +183,12 @@
         </a>
         @endforeach
 
-        <a href="/home" > <button class="btn" >  Go To Home </button></a>
-
+        <a href="/home"> <button class="btn"> Go To Home </button></a>
+        
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
