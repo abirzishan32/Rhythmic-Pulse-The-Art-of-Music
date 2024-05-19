@@ -12,7 +12,7 @@ class AlbumController extends Controller
     public function create()
     {
 
-        return view('/home');
+        return view('/admin/add-album');
     }
 
     public function store(Request $request)
@@ -24,7 +24,7 @@ class AlbumController extends Controller
         ]);
 
         $album = Album::create($validated);
-        return redirect('/home')->with('success', 'Event created successfully!');
+        return redirect('/admin/add-album')->with('success', 'Album created successfully!');
     }
 
 }

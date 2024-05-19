@@ -1,30 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Band and Album List</title>
+<title>Band Information</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<link href="{{ asset('css/style.css') }}" rel="stylesheet">
+<link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
+<script src="{{ asset('js/jquery.js') }}"></script>
+<script src="{{ asset('js/bootstrap.min.js') }}"></script>
 </head>
 <body>
-    <h1>Band and Album List</h1>
-    
-    <ul>
-        @foreach($bands as $band)
-            <li>
-                <h2>{{ $band->name }}</h2>
-                <p>{{ $band->description }}</p>
-                <h3>Albums</h3>
-                <ul>
-                    @foreach($band->albums as $album)
-                        <li>
-                            <h4>{{ $album->title }}</h4>
-                            <p>{{ $album->description }}</p>
-                        </li>
-                    @endforeach
-                </ul>
-            </li>
-        @endforeach
-       
-    </ul>
+
+<div class="container mt-5">
+    @foreach ($bands as $band)
+    <div class="band-detail">
+        <h2>{{ $band->name }}</h2>
+        <p>Genre: {{ $band->genre }}</p>
+        <p>Country: {{ $band->country }}</p>
+        <p>Founding Year: {{ $band->founding_year }}</p>
+        <p>Description: {{ $band->description }}</p>
+        <h3>Albums:</h3>
+        <ul>
+            @forelse ($band->albums as $album)
+                <li>{{ $album->title }} - Released on: {{ $album->release_date }}</li>
+            @empty
+                <li>No albums found.</li>
+            @endforelse
+        </ul>
+    </div>
+    @endforeach
+</div>
+
+
+<footer class="text-center mt-4">
+    <p>All right reserved by Rhythmic Pulse - The Art of Music</p>
+</footer>
 </body>
 </html>
