@@ -48,7 +48,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/admin-only">
+            <a href="/admin/add-band" class="nav-link">
                 <span class="menu-title">Bands</span>
               </a>
             </li>

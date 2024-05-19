@@ -10,6 +10,7 @@ use App\Http\Controllers\MerchShowController;
 
 use App\Http\Controllers\ProductUploadController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AlbumController;
 use App\Http\Controllers\BandController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\PusherController;
@@ -155,6 +156,7 @@ Route::get('/news', function () {
     return view('news');
 }) -> middleware('App\Http\Middleware\MustBeLoggedIn');
 
-Route::get('/admin-only/add-band', [BandController::class, 'index'])->name('admin.add-band.index');
-Route::post('/admin-only/add-band', [BandController::class, 'store']);
-
+Route::get('/admin/add-band', [BandController::class, 'create'])->name('admin.add-band');
+Route::post('/admin/add-band', [BandController::class, 'store'])->name('admin.store-band');
+Route::get('/admin/add-album', [AlbumController::class, 'create']);
+Route::post('/admin/add-album', [AlbumController::class, 'store']);

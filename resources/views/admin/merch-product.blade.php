@@ -282,10 +282,10 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/admin-only">
-                                <span class="menu-title">Bands</span>
-                            </a>
-                        </li>
+            <a href="/admin/add-band" class="nav-link">
+                <span class="menu-title">Bands</span>
+              </a>
+            </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <span class="menu-title">Course</span>
