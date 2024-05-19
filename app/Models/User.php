@@ -52,6 +52,11 @@ class User extends Authenticatable
         return $value ? '/storage/avatars/' . $value : 'user.jpeg';
     }
 
+
+    public function feedPosts() {
+        return $this->hasManyThrough(Post::class, Follow::class, 'user_id', 'user_id', 'id', 'followeduser');
+    }
+
     public function posts(){
         return $this->hasMany(Post::class, 'user_id');
     }

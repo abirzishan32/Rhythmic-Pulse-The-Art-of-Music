@@ -630,31 +630,13 @@ input::-ms-input-placeholder {
     height: 90%;
 }
 
-.lesson_content ul li{
-    margin-bottom: 90px;
-    max-width: 70%;
-    line-height: 30px;
-}
-.lesson_content ul li i{
-    font-size: 40px;
-    color: #AB987A;
-    background: #032F3E;
-    width: 36px;
-    height: 60px;
-    line-height: 60px;
-    position: relative;
-}
-.lesson_content ul li a{
-    font-size: 1.125rem;
-    font-family: 'robotobold';
-    color: #fff;
-    text-transform: uppercase;
-    padding-left: 40px;
-    max-width: 60%;
-    display: inline-block;
-
+.lesson_content{
+    padding: 0px 0px 0px 15px;
 
 }
+
+
+
 
 /*main_portfolio_content_area*/
 .portfolio{}

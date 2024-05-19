@@ -322,22 +322,17 @@
 										<img class="img-responsive" src="{{ asset('storage/products/' . basename($product->image)) }}" />
 										<h2>৳{{$product->price}}</h2>
 										<p>{{$product->band_name}}</p>
-										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+										<a href="/checkout" class="btn btn-default add-to-cart">Order and Pay</a>
 									</div>
 									<div class="product-overlay">
 										<div class="overlay-content">
 											<h2>৳{{$product->price}}</h2>
 											<p>{{$product->band_name}}</p>
-											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+											<a href="/checkout" class="btn btn-default add-to-cart"></i>Order And Pay</a>
 										</div>
 									</div>
 								</div>
-								<div class="choose">
-									<ul class="nav nav-pills nav-justified">
-										<li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
-										<li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
-									</ul>
-								</div>
+
 							</div>
 						</div>
 						@endforeach

@@ -7,8 +7,10 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\GroupController;
 use App\Http\Controllers\MerchShowController;
+
 use App\Http\Controllers\ProductUploadController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\BandController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\PusherController;
 use App\Http\Controllers\FollowController;
@@ -85,9 +87,16 @@ Route::get('/genre', function () {
 }) -> middleware('App\Http\Middleware\MustBeLoggedIn');
 
 
+Route::get('/bands', function () {
+    return view('bands');
+}) -> middleware('App\Http\Middleware\MustBeLoggedIn');
 
 Route::get('/music-lyrics', function () {
     return view('music-lyrics');
+}) -> middleware('App\Http\Middleware\MustBeLoggedIn');
+
+Route::get('/homepage-feed', function () {
+    return view('homepage-feed');
 }) -> middleware('App\Http\Middleware\MustBeLoggedIn');
 
 
@@ -146,8 +155,6 @@ Route::get('/news', function () {
     return view('news');
 }) -> middleware('App\Http\Middleware\MustBeLoggedIn');
 
-Route::get('/meow', function () {
-    return view('meow');
-}) ;
-
+Route::get('/admin-only/add-band', [BandController::class, 'index'])->name('admin.add-band.index');
+Route::post('/admin-only/add-band', [BandController::class, 'store']);
 

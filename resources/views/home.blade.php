@@ -79,23 +79,7 @@
 
 		<!-- header area -->
 		<header>
-			<nav class="secondary-menu">
-				<div class="container">
-					<div class="sm-left">
-						<strong>Phone</strong>:&nbsp; <a href="#">555 555 555</a>&nbsp;&nbsp;&nbsp;&nbsp;
-						<strong>E-mail</strong>:&nbsp; <a href="#">music.site@melodi.com</a>
-					</div>
-					<div class="sm-right">
-						<div class="sm-social-link">
-							<a class="h-facebook" href="#"><i class="fa fa-facebook"></i></a>
-							<a class="h-twitter" href="#"><i class="fa fa-twitter"></i></a>
-							<a class="h-google" href="#"><i class="fa fa-google-plus"></i></a>
-							<a class="h-linkedin" href="#"><i class="fa fa-linkedin"></i></a>
-						</div>
-					</div>
-					<div class="clearfix"></div>
-				</div>
-			</nav>
+			
 			<!-- primary menu -->
 			<nav class="navbar navbar-fixed-top navbar-default">
 				<div class="container">
@@ -114,15 +98,15 @@
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul class="nav navbar-nav navbar-right">
 							<li><a href="#genre">Genre</a></li>
-							<li><a href="#latestalbum">Latest Album</a></li>
 							<li><a href="#searchmusic"> Search Playlist</a></li>
 							<li><a href="#searchlyrics"> Search Lyrics</a></li>
 							<li><a href="#events">Upcoming Events</a></li>
+							<li><a href="#bands">Bands</a></li>
 							<li><a href="#blog">Blog</a></li>
 							<li><a href="#course">Our Courses</a></li>
 							<li><a href="#merch">Merchandise</a></li>
 							<li><a href="#contact">Contact</a></li>
-							<li><a href="">Hi, Admin</a></li>
+							<li><a href="/admin-only">Hi, Admin</a></li>
 							<li> <a href="/profile/{{auth()->user()->username}}"><img class="avatar-tiny" src="{{auth()->user()->avatar}}" /></a> </li>
 
 						</ul>
@@ -136,10 +120,9 @@
 		<!-- banner area -->
 		<div class="banner">
 			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-
 				<div class="carousel-inner" role="listbox">
 					<div class="item active">
-						<img src="{{ asset('media/banner.jpg') }}" />
+						<img src="{{ asset('media/banner.jpeg') }}" />
 						<div class="container">
 							<div class="carousel-caption slide-one">
 								<h2 class="animated fadeInLeftBig"> Rhythmic Pulse - The Art of Music</h2>
@@ -148,7 +131,7 @@
 						</div>
 					</div>
 					<div class="item">
-						<img src="{{ asset('media/person-singing.jpg') }}" />
+						<img src="{{ asset('media/banner2.jpeg') }}" />
 						<div class="container">
 							<div class="carousel-caption slide-two">
 								<h2 class="animated fadeInLeftBig"><i class="fa fa-headphones"></i> Explore It</h2>
@@ -223,129 +206,16 @@
 
 
 		<!-- Hero block area -->
-		<div id="latestalbum" class="hero pad">
-			<div class="container">
-				<div class="default-heading">
-					<h2>Latest Album</h2>
-					<hr>
-					<p>We sing the best <strong class="theme-color">Songs</strong> and now we control the world best <strong class="theme-color">Music</strong>.</p>
-				</div>
-			</div>
-
-			<div class="hero-playlist">
-				<div class="row">
-					<div class="col-md-6 col-sm-6">
-						<div class="figure">
-							<img class="img-responsive" src="{{ asset('media/one-more-light.jpeg') }}" />
-
-						</div>
-						<div class="album-details">
-							<h4> One More Light </h4>
-							<h5>By Linkin Park</h5>
-							<p>One More Light is the seventh studio album by American rock band Linkin Park. It was released on May 19, 2017, through Warner Bros. Records and Machine Shop. It is the last Linkin Park album to feature lead vocalist
-								Chester Bennington before his death on July 20, 2017.</p>
-						</div>
-					</div>
-					<div class="col-md-6 col-sm-6">
-						<div class="playlist-content">
-							<ul class="list-unstyled">
-								<li class="playlist-number">
-									<div class="song-info">
-										<h4>Nobody Can Save Me </h4>
-										<p><strong>Written by</strong>: Jonathan Green &nbsp;|&nbsp; <strong>Produced by</strong>: Bradford Philip Delson &nbsp;|&nbsp; <strong>Length</strong>: 3:45</p>
-									</div>
-									<div class="clearfix"></div>
-								</li>
-
-
-								<li class="playlist-number">
-									<div class="song-info">
-										<h4> Good Goodbye </h4>
-										<p><strong>Written by</strong>: Jonathan Green &nbsp;|&nbsp; <strong>Produced by</strong>: Bradford Philip Delson &nbsp;|&nbsp; <strong>Length</strong>: 3:31</p>
-									</div>
-									<div class="clearfix"></div>
-								</li>
-
-
-
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+		
 	</div>
 	<!--/ hero end -->
 
-	<!-- promo -->
-	<div class="promo parallax-one pad">
-		<div class="container">
-			<div class="promo-element ">
-				<h3>Music An Art...</h3>
-				<p>Music is an art form and cultural activity whose medium is sound organized in time. The common elements of music are <strong>pitch</strong>, <strong>rhythm</strong>, <strong>dynamics</strong> and the sonic qualities of <strong>timbre</strong> and <strong>texture</strong>.</p>
-
-			</div>
-		</div>
-	</div>
-	<!--/ promo end -->
 
 
 
-
-	<div class="hero pad" id="merch">
-		<div class="default-heading">
-			<h2>Merchandise</h2>
-			<hr>
-		</div>
-
-		<!-- call to action -->
-		<div class="cta parallax-one pad">
-			<div class="container">
-				<!-- cta element -->
-				<div class="cta-element ">
-					<div class="row">
-						<div class="col-md-9 col-sm-8">
-							<h3>Visit Our Merchandise</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim sectetur adipiscing elit, sed do eiusmod tempoad minim veniam consequat.</p>
-						</div>
-						<div class="col-md-3 col-sm-4">
-							<div class="cta-btn text-center">
-								<a class="genre-page" href="{{url('/merch')}}"> <button class="btn-outline-primary mb-3 btn-lg"> Go To Merch</button> </a>
-
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- work with us -->
-		<div class="work-with-us pad" id="joinus">
-			<div class="container">
-				<div class="default-heading">
-					<h2>Work With Us</h2>
-					<hr>
-				</div>
-				<div class="why-content">
-					<p class="why-message">It would be a great pleasure to have you in our team, follow these steps to join us.</p>
-					<div class="row">
-						<div class="col-md-3 col-sm-6">
-							<div class="why-item  delay-one">
-								<span class="why-number">1</span>
-								<p>Sed ut perspi ciatis unde omnis iste natus error sit vol uptatem accus antium totam rem aperiam, eaque ipsa quae ab illo inventore veritatisnatus.</p>
-							</div>
-						</div>
+	
 
 
-
-					</div>
-					<div class="apply-btn">
-						<a class="btn btn-lg btn-theme" href="#">Join Now</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!--/ end work with us -->
 
 
 
@@ -418,6 +288,20 @@
 		</div>
 		<!-- events end -->
 
+		<!-- bands -->
+		<div id="bands" class="hero pad">
+			<div class="container">
+				<div class="default-heading">
+					<h2>Bands</h2>
+					<hr>
+					<p>Search and know your <strong class="theme-color"> favourite music bands</strong> .</p>
+				</div>
+			</div>
+			<a class="genre-page" href="/bands"> <button class="btn-outline-primary mb-3 btn-lg"> Go To Band</button> </a>
+			
+		</div>
+		<!--End Search Music -->
+
 
 		<!-- Our Courses start -->
 		<div class="hero pad" id="course">
@@ -432,43 +316,7 @@
 
 			<div id="lessons" class="lessons">
 				<div class="container">
-					<div class="row">
-						<div class="main_lessons">
-							<div class="col-sm-8 col-sm-offset-1">
-								<div class="main_lessons_area sections">
-									<div class="lesson_title">
-										<h1> <strong class="theme-color"> OUR LESSONS</strong> </h1>
-										<p>ARE EASY</p>
-									</div>
-									<div class="lesson_content">
-										<ul class="lessonsborder">
-											<li> <i class="fa fa-clone"></i>
-												<p>Get lessons from our <strong class="theme-color"> well trained </strong> instructors.</p>
-											</li>
-											<li> <i class="fa fa-globe"></i>
-												<p> <strong class="theme-color"> Recorded class, questions </strong> and personal sessions.</p>
-											</li>
-											<li> <i class="lnr lnr-rocket"></i>
-												<p>Weekly assignment and <strong class="theme-color"> progress update </strong> .</p>
-											</li>
-											<li> <i class="lnr lnr-volume-high"> </i>
-												<p> Get <strong class="theme-color"> lifetime membership </strong> of any course if you buy once.</p>
-											</li>
-
-
-										</ul>
-									</div>
-
-
-
-								</div>
-							</div>
-
-
-
-						</div>
-
-					</div>
+					
 
 				</div>
 			</div>
@@ -488,7 +336,7 @@
 									group rehearsals. School of Rock's core philosophy is that the best way for students to gain musical proficiency is through performance-based music education.
 									All of our lessons for guitar students include a performance aspect. </p>
 									<h3 class="course-head"> Price : 3000 BTD / month </h3>
-									<a class="enroll-btn" href="/exampleHosted"> <button class="btn-outline-primary mb-3 btn-lg"> Enroll Now </button> </a>
+
 						</div>
 
 					</div>
@@ -504,7 +352,6 @@
 									philosophy is that the best way for students to gain musical proficiency is through the
 									patented method and performance-based music education. All of our programs include a performance aspect.
 									<h3 class="course-head"> Price : 3500 BTD / month </h3>
-									<a class="enroll-btn" href="/exampleHosted"> <button class="btn-outline-primary mb-3 btn-lg"> Enroll Now </button> </a>
 						</div>
 					</div>
 
@@ -521,7 +368,7 @@
 									scales, pedaling, key differentiation and rhythm. We start with private keyboard lessons paired with band rehearsals to prepare our piano students to play a live gig
 									with a full band. The patented School of Rock Method builds musical proficiency through our proprietary Method App, Method Book collection, SongFirst approach, and performance-based music curriculum. All of our lessons programs include a performance aspect.</p>
 									<h3 class="course-head"> Price : 3000 BTD / month </h3>
-									<a class="enroll-btn" href="/exampleHosted"> <button class="btn-outline-primary mb-3 btn-lg"> Enroll Now </button> </a>
+
 						</div>
 					</div>
 				</div>
@@ -556,13 +403,14 @@
 												music can have. </p>
 
 											<div class="single_author_content">
-												<h2>John Doe</h2>
+												<h2>Abir Rahman</h2>
 												<p>Music Teacher</p>
 											</div>
 										</div>
 									</div>
 								</div>
 
+								<a class="genre-page" href="/checkout"> <button class="btn-outline-primary mb-3 btn-lg"> Go To Payment</button> </a>
 
 
 
@@ -578,12 +426,37 @@
 
 		<!-- Our Courses end -->
 
+		<div class="hero pad" id="merch">
+		<div class="default-heading">
+			<h2>Merchandise</h2>
+			<hr>
+		</div>
 
+		<!-- call to action -->
+		<div class="cta parallax-one pad">
+			<div class="container">
+				<!-- cta element -->
+				<div class="cta-element ">
+					<div class="row">
+						<div class="col-md-9 col-sm-8">
+							<h3>Visit Our Merchandise</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim sectetur adipiscing elit, sed do eiusmod tempoad minim veniam consequat.</p>
+						</div>
+						<div class="col-md-3 col-sm-4">
+							<div class="cta-btn text-center">
+								<a class="genre-page" href="{{url('/merch')}}"> <button class="btn-outline-primary mb-3 btn-lg"> Go To Merch</button> </a>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
 
 		<!-- Blog Start -->
-		<div class="blog parallax-five pad" id="blog">
-			<div class="default-heading-shadow">
+		<div class="blog" id="blog">
+			<div class="default-heading">
 				<h2>Blog </h2>
 				<hr>
 				<p> Welcome to the blog section. You can write about your <strong class="theme-color"> thoughts and opinion </strong> related to music.
