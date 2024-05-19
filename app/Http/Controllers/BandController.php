@@ -10,19 +10,17 @@ class BandController extends Controller
     public function store(Request $request)
     {
         $band = Band::create($request->only(['name', 'genre', 'country', 'founding_year', 'description']));
-        // $band->albums()->createMany([
-        //     ['title' => $request->input('first_album_title'), 'release_date' => $request->input('first_album_release_date')],
-        //     ['title' => $request->input('second_album_title'), 'release_date' => $request->input('second_album_release_date')]
-        // ]);
 
-        return redirect('/admin/add-album')->with('success', 'Event created successfully!');
+
+        return redirect('/home')->with('success', 'Event created successfully!');
 
     }
 
     public function create()
     {
+        $bands = Band::with('albums')->get(); 
+        return view('bands', compact('bands'));
 
-        return view('/admin/add-band');
     }
     
 

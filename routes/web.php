@@ -156,7 +156,7 @@ Route::get('/news', function () {
     return view('news');
 }) -> middleware('App\Http\Middleware\MustBeLoggedIn');
 
-Route::get('/admin/add-band', [BandController::class, 'create'])->name('admin.add-band');
-Route::post('/admin/add-band', [BandController::class, 'store'])->name('admin.store-band');
-Route::get('/admin/add-album', [AlbumController::class, 'create']);
-Route::post('/admin/add-album', [AlbumController::class, 'store']);
+Route::get('/admin/add-band/{username}', [BandController::class, 'create'])->name('admin.add-band');
+Route::post('/admin/add-band/{username}', [BandController::class, 'store'])->name('admin.store-band');
+Route::get('/admin/add-album/{username}', [AlbumController::class, 'create'])->name('admin.add-album');
+Route::post('/admin/add-album/{username}', [AlbumController::class, 'store']);

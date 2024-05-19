@@ -16,6 +16,14 @@
   <link href="{{ asset('css/style-color.css') }}" rel="stylesheet">
 
 
+  <style>
+    .go-to-band{
+      display: block;
+      margin-top: 10px;
+      text-align: center;
+      color: #333;
+    }
+  </style>
 
 </head>
 <body>

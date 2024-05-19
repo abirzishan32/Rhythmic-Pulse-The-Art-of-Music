@@ -7,16 +7,12 @@ use App\Models\Album;
 
 class AlbumController extends Controller
 {
-    public function index()
-    {
-        $albums = Album::with('band')->get();
-        return response()->json($albums);
-    }
+    
 
     public function create()
     {
 
-        return view('/admin/add-album');
+        return view('/home');
     }
 
     public function store(Request $request)
@@ -28,7 +24,7 @@ class AlbumController extends Controller
         ]);
 
         $album = Album::create($validated);
-        return redirect('/admin/add-band')->with('success', 'Event created successfully!');
+        return redirect('/home')->with('success', 'Event created successfully!');
     }
 
 }

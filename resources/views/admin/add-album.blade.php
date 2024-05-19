@@ -28,6 +28,7 @@
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
+    <a class="go-to-band" href="{{url('/bands')}}">Go To Band</a>
 </div>
 @endsection
 </body>

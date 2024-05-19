@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Album extends Model
 {
+    protected $table = 'albums';
     protected $fillable = ['title', 'band_id', 'release_date'];
 
     public function band()
