@@ -298,12 +298,7 @@
                                 </ul>
                             </div>
                         </li>
-                        <li class="nav-item">
-                            <a href="/admin/latest-album" class="nav-link">
-                                <span class="menu-title">Latest Album</span>
-                                <i class="menu-arrow"></i>
-                            </a>
-                        </li>
+                        
 
 
 

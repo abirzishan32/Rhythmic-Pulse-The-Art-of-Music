@@ -153,12 +153,12 @@
             <nav class="bottom-navbar">
                 <div class="container">
                     <ul class="nav page-navigation">
-                        <li class="nav-item">
-                            <a href="/admin/upcoming-events" class="nav-link">
-                                <span class="menu-title">Upcoming Events</span>
-                                <i class="menu-arrow"></i>
-                            </a>
-                        </li>
+                    <li class="nav-item">
+              <a href="/admin/upcoming-events" class="nav-link">
+                <span class="menu-title">Upcoming Events</span>
+                <i class="menu-arrow"></i>
+              </a>
+            </li>
 
                         <li class="nav-item">
                             <a href="/admin/event-tickets" class="nav-link">
@@ -183,12 +183,7 @@
                                 </ul>
                             </div>
                         </li>
-                        <li class="nav-item">
-                            <a href="/admin/latest-album" class="nav-link">
-                                <span class="menu-title">Latest Album</span>
-                                <i class="menu-arrow"></i>
-                            </a>
-                        </li>
+                        
 
                         <li class="nav-item">
                             <a href="/admin/events-tickets" class="nav-link">

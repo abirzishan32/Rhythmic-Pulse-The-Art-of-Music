@@ -20,56 +20,7 @@
 </head>
 
 <body>
-	<!-- modal for events ticket booking -->
-
-		<div class="modal fade" id="bookTicket" tabindex="-1" role="dialog" aria-labelledby="bookTicket">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title" id="myModalLabel">Buy Ticket &nbsp; </h4>
-					</div>
-
-					<form action="/home" method="POST" enctype="multipart/form-data">
-						@csrf
-						<div class="modal-body">
-
-							<label>Email</label>
-							<input name="email" type="email" class="form-control" id="exampleInputEmail1" placeholder="example@mail.com">
-
-
-							<label >Contact</label>
-							<input name="contact" type="text" class="form-control" id="exampleInputContact" placeholder="+91 55 5555 5555">
-
-
-							<label>Number of Tickets</label>
-							<select name="number" class="form-control" id="exampleInputSeats">
-								<option>1</option>
-								<option>2</option>
-								<option>3</option>
-								<option>4</option>
-								<option>5</option>
-							</select>
-
-
-
-							<label>Select Concert</label>
-							<select name="event_name" class="form-control" id="exampleInputSeats">
-								@foreach($events as $event)
-								<option>{{$event->name}}</option>
-								@endforeach
-							</select>
-
-
-
-						</div>
-						<div class="modal-footer">
-							<button  type="submit" class="btn btn-primary">Book Now</button>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
+	
 
 
 
@@ -433,14 +384,14 @@
 		</div>
 
 		<!-- call to action -->
-		<div class="cta parallax-one pad">
+		<div class="cta parallax-two pad">
 			<div class="container">
 				<!-- cta element -->
 				<div class="cta-element ">
 					<div class="row">
 						<div class="col-md-9 col-sm-8">
 							<h3>Visit Our Merchandise</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim sectetur adipiscing elit, sed do eiusmod tempoad minim veniam consequat.</p>
+							<p>We connect people with varities of products related to music.</p>
 						</div>
 						<div class="col-md-3 col-sm-4">
 							<div class="cta-btn text-center">
@@ -570,6 +521,57 @@
 		<!-- <span class="totop"><a href="#"><i class="fa fa-chevron-up"></i></a></span>  -->
 
 	</div>
+
+	<!-- modal for events ticket booking -->
+
+	<div class="modal fade" id="bookTicket" tabindex="-1" role="dialog" aria-labelledby="bookTicket">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">Buy Ticket &nbsp; </h4>
+					</div>
+
+					<form action="/home" method="POST" enctype="multipart/form-data">
+						@csrf
+						<div class="modal-body">
+
+							<label>Email</label>
+							<input name="email" type="email" class="form-control" id="exampleInputEmail1" placeholder="example@mail.com">
+
+
+							<label >Contact</label>
+							<input name="contact" type="text" class="form-control" id="exampleInputContact" placeholder="+91 55 5555 5555">
+
+
+							<label>Number of Tickets</label>
+							<select name="number" class="form-control" id="exampleInputSeats">
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+							</select>
+
+
+
+							<label>Select Concert</label>
+							<select name="event_name" class="form-control" id="exampleInputSeats">
+								@foreach($events as $event)
+								<option>{{$event->name}}</option>
+								@endforeach
+							</select>
+
+
+
+						</div>
+						<div class="modal-footer">
+							<button  type="submit" class="btn btn-primary">Book Now</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
 
 	<section id="footer_widget" class="footer_widget">
 		<div class="container">
