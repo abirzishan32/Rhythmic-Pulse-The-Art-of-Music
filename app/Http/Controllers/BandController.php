@@ -22,7 +22,11 @@ class BandController extends Controller
     return view('/bands', compact('bands'));
 }
 
-    
+public function create_admin()
+{
+    $bands = Band::with('albums')->get();
+    return view('/admin/add-band', compact('bands'));
+}
 
 
 }

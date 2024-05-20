@@ -253,7 +253,7 @@
 		<div class="events parallax-one pad" id="events">
 			<div class="container">
 				<div class="default-heading-shadow">
-					<h2>Coming Events</h2>
+					<h2>Upcoming Events</h2>
 					<hr>
 				</div>
 				<div class="events-element">
