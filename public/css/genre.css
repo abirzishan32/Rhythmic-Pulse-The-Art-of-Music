@@ -175,9 +175,9 @@ div#extra {
 
 
 
-/* Media Queries for Responsive Design */
 
-/* CSS for responsiveness */
+
+
 @media only screen and (max-width: 768px) {
     div#container {
         padding: 0 10px;

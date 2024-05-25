@@ -87,6 +87,10 @@ Route::get('/genre', function () {
     return view('genre');
 }) -> middleware('App\Http\Middleware\MustBeLoggedIn');
 
+;
+
+
+
 
 
 
@@ -159,3 +163,4 @@ Route::get('/admin/add-band', [BandController::class, 'create_admin']);
 Route::post('/admin/add-band', [BandController::class, 'store']);
 Route::get('/admin/add-album', [AlbumController::class, 'create']);
 Route::post('/admin/add-album', [AlbumController::class, 'store']);
+

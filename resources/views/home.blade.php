@@ -41,9 +41,8 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a class="navbar-brand" href="#home">
-							<img class="img-responsive" src="img/logo.png" alt="" />
-						</a>
+
+					
 					</div>
 
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -376,6 +375,7 @@
 		</div>
 
 		<!-- Our Courses end -->
+		
 
 		<div class="hero pad" id="merch">
 		<div class="default-heading">
@@ -386,10 +386,11 @@
 		<!-- call to action -->
 		<div class="cta parallax-two pad">
 			<div class="container">
-				<!-- cta element -->
+
 				<div class="cta-element ">
 					<div class="row">
-						<div class="col-md-9 col-sm-8">
+
+						<div class="col-md-9 col-sm-8 ">
 							<h3>Visit Our Merchandise</h3>
 							<p>We connect people with varities of products related to music.</p>
 						</div>
@@ -583,6 +584,7 @@
 						<div class="col-sm-4">
 							<div class="single_widget wow fadeIn" data-wow-duration="800ms">
 								<div class="footer_logo">
+									
 									<img src="assets/images/logo2.png" alt="" />
 								</div>
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in egestas lectus.
