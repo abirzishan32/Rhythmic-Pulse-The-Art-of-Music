@@ -43,6 +43,7 @@
 						</button>
 
 					
+					
 					</div>
 
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -50,7 +51,7 @@
 							<li><a href="#genre">Genre</a></li>
 							<li><a href="#searchmusic"> Search Playlist</a></li>
 							<li><a href="#searchlyrics"> Search Lyrics</a></li>
-							<li><a href="#events">Upcoming Events</a></li>
+							<li><a href="#events">Upcoming Events</a></li> 
 							<li><a href="#bands">Bands</a></li>
 							<li><a href="#blog">Blog</a></li>
 							<li><a href="#course">Our Courses</a></li>
@@ -333,7 +334,7 @@
 						<div class="row">
 							<div class="main_testimonial_area sections text-center">
 								<div class="head_title">
-									<h2>TESTIMONIALS</h2>
+									<h2>FROM THE INSTRUCTOR</h2>
 									<div class="separator"></div>
 								</div>
 								<div class="main_testimonial_content">

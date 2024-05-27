@@ -292,7 +292,7 @@ a:focus {
     font-size: 45px;
     color: #fff;
     text-transform: uppercase;
-    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+    background: linear-gradient(135deg, #ff272e 0%, #eb9f8a 99%, #fad0c4 100%);
     border-radius: 10px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     overflow: hidden;
@@ -964,14 +964,15 @@ hr {
 
 .course-box {
     width: 350px;
-    background-color: red;
-    border: 1px solid #ececec;
+    background-color: rgb(255, 70, 70);
+    border: 3px solid #000000;
     margin: 20px;
 }
 
 .course-text {
     font-size: 1.3rem;
     font-weight: 500;
+    font-family: 'Glyphicons Halflings';
     color: whitesmoke;
 }
 

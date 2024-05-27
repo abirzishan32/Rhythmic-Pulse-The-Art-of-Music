@@ -10,7 +10,7 @@ function loadClient() {
         .then(function() { console.log("GAPI client loaded for API"); },
                 function(err) { console.error("Error loading GAPI client for API", err); });
 };
-// Make sure the client is loaded before calling this method.
+
 
 
 /// api URL ///
@@ -67,11 +67,11 @@ function showData(data){
 
 
 
-//event listener in get lyrics button
+
 result.addEventListener('click', e=>{
     const clickedElement = e.target;
 
-    //checking clicked elemet is button or not
+
     if (clickedElement.tagName === 'SPAN'){
         const artist = clickedElement.getAttribute('data-artist');
         const songTitle = clickedElement.getAttribute('data-songtitle');
@@ -80,7 +80,7 @@ result.addEventListener('click', e=>{
     }
 })
 
-// Get lyrics for song
+
 async function getLyrics(artist, songTitle) {
   
     const res = await fetch(`${apiURL}/v1/${artist}/${songTitle}`);
@@ -95,11 +95,11 @@ async function getLyrics(artist, songTitle) {
     
 }
 
-//event listener in get song button
+
 result.addEventListener('click', e=>{
     const clickedElement = e.target;
 
-    //checking clicked elemet is button or not
+
     if (clickedElement.tagName === 'DIV'){
         const artist = clickedElement.getAttribute('data-artist');
         const songTitle = clickedElement.getAttribute('data-songtitle');
@@ -109,14 +109,6 @@ result.addEventListener('click', e=>{
     
 })
 
-/*************************************************
- * 
- * 
- * 
- * 
- * 
- * ************************************************
- */
 const execute = (artist, songTitle)=>{
     var pageToken = '';
 
@@ -148,7 +140,7 @@ const execute = (artist, songTitle)=>{
             });
             output += '</ul>';
  
-            // Output list
+
             document.getElementById('video').innerHTML = output
            
         }
