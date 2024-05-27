@@ -14,7 +14,6 @@
 
   <form class="add-events" action="/admin/upcoming-events" method="POST" enctype="multipart/form-data">
     @csrf
-    <h3> Add Events </h1>
       <label>Event Name</label>
       <input type="text" name="name" placeholder="Enter Event Name" required>
       <label>Location</label>
@@ -41,6 +40,9 @@
           <th>Date</th>
           <th>Time</th>
           <th>Description</th>
+          <th>Preview</th>
+          <th>Action</th>
+          
         </tr>
       </thead>
       <tbody>
@@ -51,6 +53,17 @@
           <td>{{ $event->event_date }}</td>
           <td>{{ $event->event_time }}</td>
           <td>{{ $event->description }}</td>
+          
+                    <td>
+                    <img class="img-preview" src="{{ asset('storage/events/' . basename($event->image)) }}" />
+                    </td>
+                    <td>
+                        <form action="{{ route('delete_event', $event->id) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit">Delete</button>
+                        </form>
+                    </td>
         </tr>
         @endforeach
       </tbody>

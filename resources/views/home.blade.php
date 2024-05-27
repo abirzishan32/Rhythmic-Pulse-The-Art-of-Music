@@ -143,7 +143,7 @@
 					</p>
 
 				</div>
-				<a class="genre-page" href="{{url('/genre')}}"> <button class="btn-outline-primary mb-3 btn-lg"> Go To Genre</button> </a>
+				<a class="genre-page" href="{{url('/genre')}}"> <button class="btn-outline-primary mb-3 btn-lg"> See More </button> </a>
 
 
 

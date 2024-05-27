@@ -54,12 +54,7 @@ class ProductUploadController extends Controller
         return redirect('/admin/merch-product')->with('success', 'Product deleted successfully');
     }
 
-    public function search(Request $request)
-    {
-        $search = $request->get('query');
-        $merch_product = Product::where('band_name', 'like', '%' . $search . '%')->with('band_name')->get();
-        return view('admin.merch-product', compact('merch_product'));
-    }
+    
 
 
 }

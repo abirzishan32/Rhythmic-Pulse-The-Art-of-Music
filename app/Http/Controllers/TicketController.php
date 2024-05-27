@@ -33,7 +33,7 @@ class TicketController extends Controller
 
         $ticket ->create($incomingFields);
         return view('ticket-booked');
-        // return redirect('/ticket-booked')->with('success', 'Ticket has been successfully booked!');
+
     }
 
     public function index()

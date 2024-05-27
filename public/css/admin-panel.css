@@ -161,12 +161,23 @@ body {
 
 
 form {
-  /* background-color: #ffffff;  */
   max-width: 600px;
   margin: 50px auto; 
-  /* padding: 20px;  */
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
   border-radius: 8px;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 
@@ -210,7 +221,7 @@ button:hover {
 
 
 
-.upcoming-events, .event-ticket, .add-band{
+.upcoming-events, .event-ticket, .add-band, .add-album{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -497,6 +508,12 @@ button:hover {
         margin: 0 auto;
     }
 
+    h4{
+      text-align: center;
+      padding: 10px 10px;
+      margin: 0 auto;
+    }
+
     /* Overall table styling */
     .table {
         width: 100%;
@@ -543,8 +560,20 @@ button:hover {
   background: white;
   margin: 4px 0;
   transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
 }
 
+.img-preview{
+  width: 200px;
+  height: 200px;
+  /* border-radius: 12px; */
+  /* margin-right: 4px; */
+  position: relative;
+  top: -1px;
+}
 
 @media (max-width: 768px) {
   .horizontal-menu .nav {

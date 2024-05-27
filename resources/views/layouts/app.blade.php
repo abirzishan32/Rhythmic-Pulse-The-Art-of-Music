@@ -30,7 +30,12 @@
                 </li>
                 <li class="nav-item">
                     <a href="/admin/add-band" class="nav-link">
-                        <span class="menu-title">Bands</span>
+                        <span class="menu-title"> Bands</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/admin/add-album" class="nav-link">
+                        <span class="menu-title"> Albums</span>
                     </a>
                 </li>
                 <li class="nav-item">
@@ -45,12 +50,7 @@
                         <i class="menu-arrow"></i>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="pages/tables/basic-table.html" class="nav-link">
-                        <span class="menu-title">Contact</span>
-                        <i class="menu-arrow"></i>
-                    </a>
-                </li>
+                
             </ul>
         </div>
     </nav>

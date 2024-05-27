@@ -158,6 +158,9 @@
             @if(auth()->user()->username == $sharedData['username'])
             <a href="/edit-profile" class="btn btn-secondary btn-sm">Edit Profile</a>
             @endif
+
+           
+
             @endauth
             <a href="/followers/{{$sharedData['username']}}"> <button class="btn"> Followers </button></a>
             <a href="/following/{{$sharedData['username']}}"> <button class="btn"> Followings </button></a>
@@ -182,6 +185,7 @@
         @endforeach
 
         <a href="/home"> <button class="btn"> Go To Home </button></a>
+        
 
     </div>
 

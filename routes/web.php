@@ -66,6 +66,9 @@ Route::post('/admin/merch-product', [ProductUploadController::class, 'storeProdu
 Route::get('/admin/merch-product', [ProductUploadController::class, 'index1']);
 Route::delete('/admin/merch-product/{id}', [ProductUploadController::class, 'delete'])->name('delete_product');
 
+
+Route::delete('/admin/upcoming-events/{id}', [EventController::class, 'delete'])->name('delete_event');
+
 Route::get('/merch', [ProductUploadController::class, 'index2']);
 
 
@@ -82,6 +85,7 @@ Route::get('/home', function () {
 Route::get('/home', [EventController::class, 'index2']);
 Route::post('/home', [TicketController::class, 'storeTicket'])->name('storeTicket');
 
+Route::get('/authentication', [UserController::class, 'logout']);
 
 
 

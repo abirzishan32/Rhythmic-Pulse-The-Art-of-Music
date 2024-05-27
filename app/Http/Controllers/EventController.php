@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\Event;
 use Illuminate\Http\Request;
+
 use Illuminate\Support\Facades\View;
 
 class EventController extends Controller
@@ -44,5 +45,13 @@ public function index2()
     $events = Event::all(); 
     return view('/home', compact('events')); 
 }
+
+public function delete($id)
+    {
+        $events = Event::findOrFail($id);
+        $events->delete();
+
+        return redirect('/admin/upcoming-events')->with('success', 'Product deleted successfully');
+    }
 
 }

@@ -121,12 +121,12 @@ class UserController extends Controller
 
         User::create($incomingFields);
 
-        return "Ghumai";
+
     }
 
     public function logout() {
         auth()->logout();
-        return redirect('/')->with('success', 'You are now logged out.');
+        return redirect('/authentication')->with('success', 'You are now logged out.');
     }
 
 }

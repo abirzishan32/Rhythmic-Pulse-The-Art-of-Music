@@ -12,7 +12,7 @@ class BandController extends Controller
         $band = Band::create($request->only(['name', 'genre', 'country', 'founding_year', 'description']));
 
 
-        return redirect('/admin/add-band')->with('success', 'Event created successfully!');
+        return redirect('/admin/add-album')->with('success', 'Band created successfully!');
 
     }
 
