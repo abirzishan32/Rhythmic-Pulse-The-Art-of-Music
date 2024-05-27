@@ -20,7 +20,7 @@
 </head>
 
 <body>
-	
+
 
 
 
@@ -30,7 +30,7 @@
 
 		<!-- header area -->
 		<header>
-			
+
 			<!-- primary menu -->
 			<nav class="navbar navbar-fixed-top navbar-default">
 				<div class="container">
@@ -42,20 +42,20 @@
 							<span class="icon-bar"></span>
 						</button>
 
-					
-					
+
+
 					</div>
 
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul class="nav navbar-nav navbar-right">
 							<li><a href="#genre">Genre</a></li>
+							<li><a href="#events">Upcoming Events</a></li>
 							<li><a href="#searchmusic"> Search Playlist</a></li>
 							<li><a href="#searchlyrics"> Search Lyrics</a></li>
-							<li><a href="#events">Upcoming Events</a></li> 
 							<li><a href="#bands">Bands</a></li>
-							<li><a href="#blog">Blog</a></li>
 							<li><a href="#course">Our Courses</a></li>
 							<li><a href="#merch">Merchandise</a></li>
+							<li><a href="#blog">Blog</a></li>
 							<li><a href="#contact">Contact</a></li>
 							<li><a href="/admin-only">Hi, Admin</a></li>
 							<li> <a href="/profile/{{auth()->user()->username}}"><img class="avatar-tiny" src="{{auth()->user()->avatar}}" /></a> </li>
@@ -85,7 +85,7 @@
 						<img src="{{ asset('media/banner2.jpeg') }}" />
 						<div class="container">
 							<div class="carousel-caption slide-two">
-								<h2 class="animated fadeInLeftBig"><i class="fa fa-headphones"></i> Explore It</h2>
+								<h2 class="animated fadeInLeftBig">Explore It</h2>
 								<h3 class="animated fadeInRightBig">Explore the art of music...</h3>
 							</div>
 						</div>
@@ -157,228 +157,221 @@
 
 
 		<!-- Hero block area -->
-		
+
 	</div>
 	<!--/ hero end -->
 
 
-
-
-	
-
-
-
-
-
-		<!-- Search Music -->
-		<div id="searchmusic" class="hero pad">
-			<div class="container">
-				<div class="default-heading">
-					<h2>Search Playlist</h2>
-					<hr>
-					<p>Yes, you can search for your <strong class="theme-color"> favourite songs</strong> and get your own <strong class="theme-color"> favourite playlist</strong> according to your choice.</p>
-				</div>
-			</div>
-			<a class="genre-page" href="/spotify"> <button class="btn-outline-primary mb-3 btn-lg"> Go To Playlist Search</button> </a>
-			
-		</div>
-		<!--End Search Music -->
-
-		<!-- Search Music -->
-		<div id="searchlyrics" class="hero pad">
-			<div class="container">
-				<div class="default-heading">
-					<h2>Search Lyrics</h2>
-					<hr>
-					<p>Search for the <strong class="theme-color"> lyrics of your favourite songs</strong>.</p>
-				</div>
-			</div>
-			<a class="genre-page" href="/music-lyrics"> <button class="btn-outline-primary mb-3 btn-lg"> Go To Lyrics Search</button> </a>
-			
-		</div>
-		<!--End Search Music -->
-
-
-
-		<!-- events -->
-		<div class="events parallax-one pad" id="events">
-			<div class="container">
-				<div class="default-heading-shadow">
-					<h2>Upcoming Events</h2>
-					<hr>
-				</div>
-				<div class="events-element">
-					<div class="row">
-
-						@foreach($events as $event)
-						<div class="col-md-6 col-sm-6">
-							<div class="events-item ">
-								<div class="figure">
-									<div class="event-date">
-										DATE : {{$event->event_date}}
-										<div class="clearfix"></div>
-										<span class="etime"> TIME : {{$event->event_time}} </span>
-									</div>
-									<span class="event-location">Location : {{$event->location}} </span>
-
-									<img class="img-responsive" src="{{ asset('storage/events/' . basename($event->image)) }}" />
-
-								</div>
-								<div class="event-info">
-									<h3>{{$event->name}}</h3>
-									<hr />
-									<p>{{ $event->description }}</p>
-									<button href="#bookTicket" class="btn btn-lg btn-theme" data-toggle="modal">Book Ticket</button>
-								</div>
-							</div>
-						</div>
-						@endforeach
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- events end -->
-
-		<!-- bands -->
-		<div id="bands" class="hero pad">
-			<div class="container">
-				<div class="default-heading">
-					<h2>Bands</h2>
-					<hr>
-					<p>Search and know your <strong class="theme-color"> favourite music bands</strong> .</p>
-				</div>
-			</div>
-			<a class="genre-page" href="/bands"> <button class="btn-outline-primary mb-3 btn-lg"> Go To Band</button> </a>
-			
-		</div>
-		<!--End Search Music -->
-
-
-		<!-- Our Courses start -->
-		<div class="hero pad" id="course">
-
-			<div class="default-heading">
-				<h2>Our Courses</h2>
+	<!-- events -->
+	<div class="events parallax-one pad" id="events">
+		<div class="container">
+			<div class="default-heading-shadow">
+				<h2>Upcoming Events</h2>
 				<hr>
-				<p> Rhythmic Pulse offers <strong class="theme-color"> vocal, guitar, piano, drumming and flute </strong> learning courses with our well trained instructors. </p>
-				<p> Browse and <strong class="theme-color"> enroll now! </strong> </p>
 			</div>
+			<div class="events-element">
+				<div class="row">
 
-
-			<div id="lessons" class="lessons">
-				<div class="container">
-					
-
-				</div>
-			</div>
-
-
-			<div class="course">
-				<div class="course-container">
-					<div class="course-box">
-						<img class="img-course" src="{{ asset('media/guitar2.jpg') }}" />
-						<div class="course-text">
-							<h4 class="course-head"> Guitar Lesson </h2>
-								<p> Utilizing the patented Rhythmic Pulse Method, our highly-trained professional instructors
-									teach guitar lessons to beginners starting with the fundamentals, including scales, chords,
-									tuning, arpeggios and rhythm. They then use famous rock songs to help guide guitar students
-									through the early stages of musical development. Our beginner guitar lessons inspire creativity
-									and help develop new students into world-class players with weekly private guitar lessons and
-									group rehearsals. School of Rock's core philosophy is that the best way for students to gain musical proficiency is through performance-based music education.
-									All of our lessons for guitar students include a performance aspect. </p>
-									<h3 class="course-head"> Price : 3000 BTD / month </h3>
-
-						</div>
-
-					</div>
-
-
-					<div class="course-box">
-						<img class="img-course" src="{{ asset('media/drums.jpg') }}" />
-						<div class="course-text">
-							<h4 class="course-head"> Drums Lesson </h2>
-								<p> We offer simple yet effective drum lessons for beginners that bypass entry-level pad training. Students get behind a drum kit during their
-									first lesson to start learning how to play the drums. Through private drum lessons, group rehearsals, and live performances, students will learn introductory rudiments to drum
-									fills and solos. We have been teaching drum lessons to kids and adults for decades and we have given more drummers a start in the business than any other music program in the world. Our core
-									philosophy is that the best way for students to gain musical proficiency is through the
-									patented method and performance-based music education. All of our programs include a performance aspect.
-									<h3 class="course-head"> Price : 3500 BTD / month </h3>
-						</div>
-					</div>
-
-
-
-
-
-					<div class="course-box">
-						<img class="img-course" src="{{ asset('media/piano.jpg') }}" />
-						<div class="course-text">
-							<h4 class="course-head"> Keyboard & Piano Lesson </h2>
-								<p>Our keyboard lessons are vastly different from traditional one-on-one beginner piano lessons that most students end up dreading. Our keyboard teachers get
-									students to love the keyboard (and piano) by teaching them to play popular rock songs while implementing basic concepts and skills like finger placement,
-									scales, pedaling, key differentiation and rhythm. We start with private keyboard lessons paired with band rehearsals to prepare our piano students to play a live gig
-									with a full band. The patented School of Rock Method builds musical proficiency through our proprietary Method App, Method Book collection, SongFirst approach, and performance-based music curriculum. All of our lessons programs include a performance aspect.</p>
-									<h3 class="course-head"> Price : 3000 BTD / month </h3>
-
-						</div>
-					</div>
-				</div>
-
-				
-
-
-
-
-				<div id="testimonial" class="testimonial">
-					<div class="container">
-						<div class="row">
-							<div class="main_testimonial_area sections text-center">
-								<div class="head_title">
-									<h2>FROM THE INSTRUCTOR</h2>
-									<div class="separator"></div>
+					@foreach($events as $event)
+					<div class="col-md-6 col-sm-6">
+						<div class="events-item ">
+							<div class="figure">
+								<div class="event-date">
+									DATE : {{$event->event_date}}
+									<div class="clearfix"></div>
+									<span class="etime"> TIME : {{$event->event_time}} </span>
 								</div>
-								<div class="main_testimonial_content">
-									<div class="single_testimonial">
-										<div class="single_test_thumbnail">
-											<img class="img-responsive" src="{{ asset('media/man.png') }}" />
-										</div>
-										<div class="single_test_content">
-											<p>Hey there!</p> <br>
-											<p> I have been teaching music lesson for more than 5 years. Music is not just a subject to me; it's a lifelong passion that I am eager to share with others.
-												I believe that music education goes beyond learning notes and chords; it fosters creativity, discipline, and confidence in individuals.
-												Whether it's teaching the fundamentals of rhythm and melody to beginners or guiding advanced students in their musical journeys,
-												I am committed to providing a nurturing and enriching learning environment. <br>
+								<span class="event-location">Location : {{$event->location}} </span>
 
-												Throughout my career, I have had the privilege of witnessing the transformative power of music in the lives of my students.
-												From helping a shy beginner find their voice to preparing talented musicians for prestigious performances, every moment in the classroom is a reminder of the impact
-												music can have. </p>
+								<img class="img-responsive" src="{{ asset('storage/events/' . basename($event->image)) }}" />
 
-											<div class="single_author_content">
-												<h2>Abir Rahman</h2>
-												<p>Music Teacher</p>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<a class="genre-page" href="/checkout"> <button class="btn-outline-primary mb-3 btn-lg"> Go To Payment</button> </a>
-
-
-
-
-
+							</div>
+							<div class="event-info">
+								<h3>{{$event->name}}</h3>
+								<hr />
+								<p>{{ $event->description }}</p>
+								<button href="#bookTicket" class="btn btn-lg btn-theme" data-toggle="modal">Book Ticket</button>
 							</div>
 						</div>
 					</div>
+					@endforeach
 				</div>
+			</div>
+		</div>
+	</div>
+	<!-- events end -->
+
+
+
+
+	<!-- Search Music -->
+	<div id="searchmusic" class="hero pad">
+		<div class="container">
+			<div class="default-heading">
+				<h2>Search Playlist</h2>
+				<hr>
+				<p>Yes, you can search for your <strong class="theme-color"> favourite songs</strong> and get your own <strong class="theme-color"> favourite playlist</strong> according to your choice.</p>
+			</div>
+		</div>
+		<a class="genre-page" href="/spotify"> <button class="btn-outline-primary mb-3 btn-lg"> Go To Playlist Search</button> </a>
+
+	</div>
+	<!--End Search Music -->
+
+	<!-- Search Lyrics -->
+	<div id="searchlyrics" class="hero pad">
+		<div class="container">
+			<div class="default-heading">
+				<h2>Search Lyrics</h2>
+				<hr>
+				<p>Search for the <strong class="theme-color"> lyrics of your favourite songs</strong>.</p>
+			</div>
+		</div>
+		<a class="genre-page" href="/music-lyrics"> <button class="btn-outline-primary mb-3 btn-lg"> Go To Lyrics Search</button> </a>
+
+	</div>
+	<!--End Search Lyrics -->
+
+	<!-- bands -->
+	<div id="bands" class="hero pad">
+		<div class="container">
+			<div class="default-heading">
+				<h2>Bands</h2>
+				<hr>
+				<p>Search and know your <strong class="theme-color"> favourite music bands</strong> .</p>
+			</div>
+		</div>
+		<a class="genre-page" href="/bands"> <button class="btn-outline-primary mb-3 btn-lg"> Go To Band</button> </a>
+
+	</div>
+	<!--End Search Music -->
+
+
+	<!-- Our Courses start -->
+	<div class="hero pad" id="course">
+
+		<div class="default-heading">
+			<h2>Our Courses</h2>
+			<hr>
+			<p> Rhythmic Pulse offers <strong class="theme-color"> vocal, guitar, piano, drumming and flute </strong> learning courses with our well trained instructors. </p>
+			<p> Browse and <strong class="theme-color"> enroll now! </strong> </p>
+		</div>
+
+
+		<div id="lessons" class="lessons">
+			<div class="container">
+
 
 			</div>
 		</div>
 
-		<!-- Our Courses end -->
-		
 
-		<div class="hero pad" id="merch">
+		<div class="course">
+			<div class="course-container">
+				<div class="course-box">
+					<img class="img-course" src="{{ asset('media/guitar2.jpg') }}" />
+					<div class="course-text">
+						<h4 class="course-head"> Guitar Lesson </h2>
+							<p> Utilizing the patented Rhythmic Pulse Method, our highly-trained professional instructors
+								teach guitar lessons to beginners starting with the fundamentals, including scales, chords,
+								tuning, arpeggios and rhythm. They then use famous rock songs to help guide guitar students
+								through the early stages of musical development. Our beginner guitar lessons inspire creativity
+								and help develop new students into world-class players with weekly private guitar lessons and
+								group rehearsals. School of Rock's core philosophy is that the best way for students to gain musical proficiency is through performance-based music education.
+								All of our lessons for guitar students include a performance aspect. </p>
+							<h3 class="course-head"> Price : 3000 BTD / month </h3>
+
+					</div>
+
+				</div>
+
+
+				<div class="course-box">
+					<img class="img-course" src="{{ asset('media/drums.jpg') }}" />
+					<div class="course-text">
+						<h4 class="course-head"> Drums Lesson </h2>
+							<p> We offer simple yet effective drum lessons for beginners that bypass entry-level pad training. Students get behind a drum kit during their
+								first lesson to start learning how to play the drums. Through private drum lessons, group rehearsals, and live performances, students will learn introductory rudiments to drum
+								fills and solos. We have been teaching drum lessons to kids and adults for decades and we have given more drummers a start in the business than any other music program in the world. Our core
+								philosophy is that the best way for students to gain musical proficiency is through the
+								patented method and performance-based music education. All of our programs include a performance aspect.
+							<h3 class="course-head"> Price : 3500 BTD / month </h3>
+					</div>
+				</div>
+
+
+
+
+
+				<div class="course-box">
+					<img class="img-course" src="{{ asset('media/piano.jpg') }}" />
+					<div class="course-text">
+						<h4 class="course-head"> Keyboard & Piano Lesson </h2>
+							<p>Our keyboard lessons are vastly different from traditional one-on-one beginner piano lessons that most students end up dreading. Our keyboard teachers get
+								students to love the keyboard (and piano) by teaching them to play popular rock songs while implementing basic concepts and skills like finger placement,
+								scales, pedaling, key differentiation and rhythm. We start with private keyboard lessons paired with band rehearsals to prepare our piano students to play a live gig
+								with a full band. The patented School of Rock Method builds musical proficiency through our proprietary Method App, Method Book collection, SongFirst approach, and performance-based music curriculum. All of our lessons programs include a performance aspect.</p>
+							<h3 class="course-head"> Price : 3000 BTD / month </h3>
+
+					</div>
+				</div>
+			</div>
+
+
+
+
+
+
+			<div id="testimonial" class="testimonial">
+				<div class="container">
+					<div class="row">
+						<div class="main_testimonial_area sections text-center">
+							<div class="head_title">
+								<h2>FROM THE INSTRUCTOR</h2>
+								<div class="separator"></div>
+							</div>
+							<div class="main_testimonial_content">
+								<div class="single_testimonial">
+									<div class="single_test_thumbnail">
+										<img class="img-responsive" src="{{ asset('media/man.png') }}" />
+									</div>
+									<div class="single_test_content">
+										<p>Hey there!</p> <br>
+										<p> I have been teaching music lesson for more than 5 years. Music is not just a subject to me; it's a lifelong passion that I am eager to share with others.
+											I believe that music education goes beyond learning notes and chords; it fosters creativity, discipline, and confidence in individuals.
+											Whether it's teaching the fundamentals of rhythm and melody to beginners or guiding advanced students in their musical journeys,
+											I am committed to providing a nurturing and enriching learning environment. <br>
+
+											Throughout my career, I have had the privilege of witnessing the transformative power of music in the lives of my students.
+											From helping a shy beginner find their voice to preparing talented musicians for prestigious performances, every moment in the classroom is a reminder of the impact
+											music can have. </p>
+
+										<div class="single_author_content">
+											<h2>Abir Rahman</h2>
+											<p>Music Teacher</p>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<a class="genre-page" href="/checkout"> <button class="btn-outline-primary mb-3 btn-lg"> Go To Payment</button> </a>
+
+
+
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<!-- Our Courses end -->
+
+
+	<div class="hero pad" id="merch">
 		<div class="default-heading">
 			<h2>Merchandise</h2>
 			<hr>
@@ -422,11 +415,6 @@
 
 
 		</div>
-
-
-
-
-
 
 
 
@@ -478,102 +466,68 @@
 					</div>
 				</section>
 
-
-				<!-- form content -->
-				<div class="form-content ">
-					<!-- paragraph -->
-					<p>Do you have any idea in your mind? Drop us a line.</p>
-					<form role="form" id="contactForm" method="post">
-						<div class="row">
-							<div class="col-md-6 col-sm-6">
-								<div class="form-group">
-									<label for="name">Name</label>
-									<input type="text" class="form-control" id="name" name="name" placeholder="Enter name">
-								</div>
-								<div class="form-group">
-									<label for="email">Email</label>
-									<input type="email" class="form-control" id="email" name="email" placeholder="Enter email">
-								</div>
-								<div class="form-group">
-									<label for="phone">Phone</label>
-									<input type="text" class="form-control" id="phone" name="phone" placeholder="Enter phone">
-								</div>
-							</div>
-							<div class="col-md-6 col-sm-6">
-								<div class="form-group">
-									<label for="message">Message</label>
-									<textarea class="form-control" id="message" name="message" rows="9" placeholder="Enter message"></textarea>
-								</div>
-							</div>
-						</div>
-						<div class="text-center">
-							<button type="submit" class="btn btn-lg btn-theme">Send Message</button>
-						</div>
-					</form>
-
-				</div>
-
 			</div>
 		</div>
 		<!-- contact end -->
-
-
-
-		<!-- Scroll to top -->
-		<!-- <span class="totop"><a href="#"><i class="fa fa-chevron-up"></i></a></span>  -->
 
 	</div>
 
 	<!-- modal for events ticket booking -->
 
 	<div class="modal fade" id="bookTicket" tabindex="-1" role="dialog" aria-labelledby="bookTicket">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title" id="myModalLabel">Buy Ticket &nbsp; </h4>
-					</div>
-
-					<form action="/home" method="POST" enctype="multipart/form-data">
-						@csrf
-						<div class="modal-body">
-
-							<label>Email</label>
-							<input name="email" type="email" class="form-control" id="exampleInputEmail1" placeholder="example@mail.com">
-
-
-							<label >Contact</label>
-							<input name="contact" type="text" class="form-control" id="exampleInputContact" placeholder="+91 55 5555 5555">
-
-
-							<label>Number of Tickets</label>
-							<select name="number" class="form-control" id="exampleInputSeats">
-								<option>1</option>
-								<option>2</option>
-								<option>3</option>
-								<option>4</option>
-								<option>5</option>
-							</select>
-
-
-
-							<label>Select Concert</label>
-							<select name="event_name" class="form-control" id="exampleInputSeats">
-								@foreach($events as $event)
-								<option>{{$event->name}}</option>
-								@endforeach
-							</select>
-
-
-
-						</div>
-						<div class="modal-footer">
-							<button  type="submit" class="btn btn-primary">Book Now</button>
-						</div>
-					</form>
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">Buy Ticket &nbsp; </h4>
 				</div>
+
+				<form action="/home" method="POST" enctype="multipart/form-data">
+					@csrf
+					<div class="modal-body">
+
+						@if (session('error'))
+						<div class="alert alert-danger">
+							{{ session('error') }}
+						</div>
+						@endif
+
+						<label>Email</label>
+						<input name="email" type="email" class="form-control" id="exampleInputEmail1" placeholder="example@mail.com">
+
+
+						<label>Contact</label>
+						<input name="contact" type="text" class="form-control" id="exampleInputContact" placeholder="+91 55 5555 5555">
+
+
+						<label>Number of Tickets</label>
+						<select name="number" class="form-control" id="exampleInputSeats">
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+						</select>
+
+
+
+						<label>Select Concert</label>
+						<select name="event_name" class="form-control" id="exampleInputSeats">
+							@foreach($events as $event)
+							<option>{{$event->name}}</option>
+							@endforeach
+						</select>
+
+
+
+					</div>
+					<div class="modal-footer">
+						<button type="submit" class="btn btn-primary">Book Now</button>
+					</div>
+				</form>
 			</div>
 		</div>
+	</div>
 
 	<section id="footer_widget" class="footer_widget">
 		<div class="container">
@@ -585,7 +539,7 @@
 						<div class="col-sm-4">
 							<div class="single_widget wow fadeIn" data-wow-duration="800ms">
 								<div class="footer_logo">
-									
+
 									<img src="assets/images/logo2.png" alt="" />
 								</div>
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in egestas lectus.
@@ -684,7 +638,7 @@
 		});
 	</script>
 
-	
+
 
 
 

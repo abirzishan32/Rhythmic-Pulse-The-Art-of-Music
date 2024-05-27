@@ -83,6 +83,9 @@ Route::get('/home', [EventController::class, 'index2']);
 Route::post('/home', [TicketController::class, 'storeTicket'])->name('storeTicket');
 
 
+
+
+
 Route::get('/genre', function () {
     return view('genre');
 }) -> middleware('App\Http\Middleware\MustBeLoggedIn');

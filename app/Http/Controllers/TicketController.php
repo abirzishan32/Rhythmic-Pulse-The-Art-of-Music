@@ -22,8 +22,18 @@ class TicketController extends Controller
         $incomingFields['number'] = strip_tags($incomingFields['number']);
         $incomingFields['event_name'] = strip_tags($incomingFields['event_name']);
 
+
+        $existingTicket = Ticket::where('email', $incomingFields['email'])
+                                ->where('event_name', $incomingFields['event_name'])
+                                ->first();
+
+        if ($existingTicket) {
+            return back()->with('error', 'You have already purchased a ticket for this event.');
+        }
+
         $ticket ->create($incomingFields);
-        return redirect('/home')->with('success', 'Ticket has been successfully booked!');
+        return view('ticket-booked');
+        // return redirect('/ticket-booked')->with('success', 'Ticket has been successfully booked!');
     }
 
     public function index()

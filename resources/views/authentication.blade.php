@@ -23,19 +23,11 @@
     <div class="input-box">
         <input type="text" name="username" value="{{old('username')}}" placeholder="Enter your username">
 
-        <!-- @error('username')
-        <p class="m-0 small alert alert-danger shadow-sm">{{$message}}</p>
-        @enderror -->
-
     </div>
 
 
     <div class="input-box">
         <input type="text" name="email" value="{{old('email')}}"  placeholder="Enter your email">
-
-        <!-- @error('email')
-        <p class="m-0 small alert alert-danger shadow-sm">{{$message}}</p>
-        @enderror -->
     </div>
 
 
@@ -43,18 +35,11 @@
     <div class="input-box">
         <input type="password" name="password"  placeholder="Create password">
 
-        <!-- @error('password')
-        <p class="m-0 small alert alert-danger shadow-sm">{{$message}}</p>
-        @enderror -->
     </div>
 
 
     <div class="input-box">
         <input type="password" name="password_confirmation" placeholder="Confirm password">
-
-        <!-- @error('password')
-        <p class="m-0 small alert alert-danger shadow-sm">{{$message}}</p>
-        @enderror -->
     </div>
 
 

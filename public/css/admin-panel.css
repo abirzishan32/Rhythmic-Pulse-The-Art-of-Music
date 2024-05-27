@@ -527,21 +527,101 @@ button:hover {
         background-color: #f1f1f1;
     }
 
+    
 
 
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
-        .table {
-            display: block;
-            overflow-x: auto;
-        }
-    }
+/* Hamburger menu */
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger-menu span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin: 4px 0;
+  transition: 0.4s;
+}
 
 
 @media (max-width: 768px) {
   .horizontal-menu .nav {
-    flex-direction: column;
+      display: none;
+      flex-direction: column;
+      width: 100%;
   }
+
+  .horizontal-menu .nav.nav-open {
+      display: flex;
+  }
+
+  .hamburger-menu {
+      display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+    .table {
+        display: block;
+        overflow-x: auto;
+        width: 100%;
+    }
+
+    .table thead,
+    .table tbody,
+    .table th,
+    .table td,
+    .table tr {
+        display: block;
+    }
+
+    .table thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    .table tr {
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+    }
+
+    .table td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+        text-align: left;
+    }
+
+    .table td:before {
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    .table td:nth-of-type(1):before {
+        content: "Email";
+    }
+
+    .table td:nth-of-type(2):before {
+        content: "Contact Number";
+    }
+
+    .table td:nth-of-type(3):before {
+        content: "Number of Seats";
+    }
+
+    .table td:nth-of-type(4):before {
+        content: "Event Name";
+    }
 }
 
 

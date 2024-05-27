@@ -49,9 +49,7 @@
             margin-top: 12px;
             border-radius: 12px;
             margin-bottom: 15px;
-            background: linear-gradient(to left,
-                    rgb(84, 82, 82),
-                    rgb(160, 160, 160));
+            background: whitesmoke;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
         }
@@ -162,7 +160,7 @@
             @endif
             @endauth
             <a href="/followers/{{$sharedData['username']}}"> <button class="btn"> Followers </button></a>
-        <a href="/following/{{$sharedData['username']}}"> <button class="btn"> Followings </button></a>
+            <a href="/following/{{$sharedData['username']}}"> <button class="btn"> Followings </button></a>
         </h2>
 
         <div class="profile-nav nav nav-tabs pt-2 mb-4">
@@ -184,7 +182,7 @@
         @endforeach
 
         <a href="/home"> <button class="btn"> Go To Home </button></a>
-        
+
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
