@@ -1,4 +1,4 @@
-# Laravel Music Web Application
+# Rhythmic Pulse - The Art of Music
 
 A web application built with the Laravel framework that allows everyone to learn about band music and ignite the passion of music enthusiasts.
 
